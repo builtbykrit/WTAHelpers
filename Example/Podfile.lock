@@ -1,0 +1,14 @@
+PODS:
+  - WTAHelpers (0.1.0)
+
+DEPENDENCIES:
+  - WTAHelpers (from `../WTAHelpers.podspec`)
+
+EXTERNAL SOURCES:
+  WTAHelpers:
+    :path: ../WTAHelpers.podspec
+
+SPEC CHECKSUMS:
+  WTAHelpers: 0ef11a6648e97104a3b88d28fa28d6804633cb1a
+
+COCOAPODS: 0.29.0
