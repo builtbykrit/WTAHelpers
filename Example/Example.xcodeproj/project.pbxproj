@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		5C4BDCAC48184BC79FC4A918 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F47E968CFEED476A8783AF49 /* libPods.a */; };
+		9A18B91D18B021EB00A1C57D /* NSString+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B90F18B021EB00A1C57D /* NSString+Base64.m */; };
+		9A18B91E18B021EB00A1C57D /* UIColor+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91118B021EB00A1C57D /* UIColor+Helpers.m */; };
+		9A18B91F18B021EB00A1C57D /* UIFont+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91318B021EB00A1C57D /* UIFont+Helpers.m */; };
+		9A18B92018B021EB00A1C57D /* UIImage+Color.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91518B021EB00A1C57D /* UIImage+Color.m */; };
+		9A18B92118B021EB00A1C57D /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91718B021EB00A1C57D /* UIImage+ImageEffects.m */; };
+		9A18B92218B021EB00A1C57D /* UIImageView+WTANetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91918B021EB00A1C57D /* UIImageView+WTANetworking.m */; };
+		9A18B92318B021EB00A1C57D /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91B18B021EB00A1C57D /* UIView+NibLoading.m */; };
+		9A18B92418B021EB00A1C57D /* WTAHelpers.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9A18B91C18B021EB00A1C57D /* WTAHelpers.podspec */; };
+		9A18B92718B022A400A1C57D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B92618B022A400A1C57D /* NSString+MD5.m */; };
 		9AFC721318AA9B8300DCDC27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC721218AA9B8300DCDC27 /* Foundation.framework */; };
 		9AFC721518AA9B8300DCDC27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC721418AA9B8300DCDC27 /* CoreGraphics.framework */; };
 		9AFC721718AA9B8300DCDC27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC721618AA9B8300DCDC27 /* UIKit.framework */; };
@@ -35,6 +44,23 @@
 
 /* Begin PBXFileReference section */
 		7FE3754B099948CFB2642701 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		9A18B90E18B021EB00A1C57D /* NSString+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Base64.h"; sourceTree = "<group>"; };
+		9A18B90F18B021EB00A1C57D /* NSString+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Base64.m"; sourceTree = "<group>"; };
+		9A18B91018B021EB00A1C57D /* UIColor+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Helpers.h"; sourceTree = "<group>"; };
+		9A18B91118B021EB00A1C57D /* UIColor+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Helpers.m"; sourceTree = "<group>"; };
+		9A18B91218B021EB00A1C57D /* UIFont+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Helpers.h"; sourceTree = "<group>"; };
+		9A18B91318B021EB00A1C57D /* UIFont+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Helpers.m"; sourceTree = "<group>"; };
+		9A18B91418B021EB00A1C57D /* UIImage+Color.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Color.h"; sourceTree = "<group>"; };
+		9A18B91518B021EB00A1C57D /* UIImage+Color.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Color.m"; sourceTree = "<group>"; };
+		9A18B91618B021EB00A1C57D /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
+		9A18B91718B021EB00A1C57D /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
+		9A18B91818B021EB00A1C57D /* UIImageView+WTANetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WTANetworking.h"; sourceTree = "<group>"; };
+		9A18B91918B021EB00A1C57D /* UIImageView+WTANetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WTANetworking.m"; sourceTree = "<group>"; };
+		9A18B91A18B021EB00A1C57D /* UIView+NibLoading.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NibLoading.h"; sourceTree = "<group>"; };
+		9A18B91B18B021EB00A1C57D /* UIView+NibLoading.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NibLoading.m"; sourceTree = "<group>"; };
+		9A18B91C18B021EB00A1C57D /* WTAHelpers.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WTAHelpers.podspec; sourceTree = "<group>"; };
+		9A18B92518B022A400A1C57D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		9A18B92618B022A400A1C57D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		9AFC720F18AA9B8300DCDC27 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFC721218AA9B8300DCDC27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AFC721418AA9B8300DCDC27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -51,7 +77,7 @@
 		9AFC723318AA9B8300DCDC27 /* ExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ExampleTests-Info.plist"; sourceTree = "<group>"; };
 		9AFC723518AA9B8300DCDC27 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		9AFC723718AA9B8300DCDC27 /* ExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExampleTests.m; sourceTree = "<group>"; };
-		9AFC725018ABFC9E00DCDC27 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		9AFC725018ABFC9E00DCDC27 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Storyboard.storyboard; path = ../Storyboard.storyboard; sourceTree = "<group>"; };
 		F47E968CFEED476A8783AF49 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -80,9 +106,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9A18B90D18B021EB00A1C57D /* Gists */ = {
+			isa = PBXGroup;
+			children = (
+				9AFC725018ABFC9E00DCDC27 /* Storyboard.storyboard */,
+				9A18B90E18B021EB00A1C57D /* NSString+Base64.h */,
+				9A18B90F18B021EB00A1C57D /* NSString+Base64.m */,
+				9A18B91018B021EB00A1C57D /* UIColor+Helpers.h */,
+				9A18B91118B021EB00A1C57D /* UIColor+Helpers.m */,
+				9A18B91218B021EB00A1C57D /* UIFont+Helpers.h */,
+				9A18B91318B021EB00A1C57D /* UIFont+Helpers.m */,
+				9A18B91418B021EB00A1C57D /* UIImage+Color.h */,
+				9A18B91518B021EB00A1C57D /* UIImage+Color.m */,
+				9A18B91618B021EB00A1C57D /* UIImage+ImageEffects.h */,
+				9A18B91718B021EB00A1C57D /* UIImage+ImageEffects.m */,
+				9A18B91818B021EB00A1C57D /* UIImageView+WTANetworking.h */,
+				9A18B91918B021EB00A1C57D /* UIImageView+WTANetworking.m */,
+				9A18B91A18B021EB00A1C57D /* UIView+NibLoading.h */,
+				9A18B91B18B021EB00A1C57D /* UIView+NibLoading.m */,
+				9A18B91C18B021EB00A1C57D /* WTAHelpers.podspec */,
+				9A18B92518B022A400A1C57D /* NSString+MD5.h */,
+				9A18B92618B022A400A1C57D /* NSString+MD5.m */,
+			);
+			name = Gists;
+			path = Example/Gists;
+			sourceTree = "<group>";
+		};
 		9AFC720618AA9B8300DCDC27 = {
 			isa = PBXGroup;
 			children = (
+				9A18B90D18B021EB00A1C57D /* Gists */,
 				9AFC721818AA9B8300DCDC27 /* Example */,
 				9AFC723118AA9B8300DCDC27 /* ExampleTests */,
 				9AFC721118AA9B8300DCDC27 /* Frameworks */,
@@ -119,7 +172,6 @@
 				9AFC722218AA9B8300DCDC27 /* WTAAppDelegate.m */,
 				9AFC722418AA9B8300DCDC27 /* Images.xcassets */,
 				9AFC721918AA9B8300DCDC27 /* Supporting Files */,
-				9AFC725018ABFC9E00DCDC27 /* Storyboard.storyboard */,
 			);
 			path = Example;
 			sourceTree = "<group>";
@@ -232,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9AFC721D18AA9B8300DCDC27 /* InfoPlist.strings in Resources */,
+				9A18B92418B021EB00A1C57D /* WTAHelpers.podspec in Resources */,
 				9AFC722518AA9B8300DCDC27 /* Images.xcassets in Resources */,
 				9AFC725118ABFC9E00DCDC27 /* Storyboard.storyboard in Resources */,
 			);
@@ -285,8 +338,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A18B91F18B021EB00A1C57D /* UIFont+Helpers.m in Sources */,
+				9A18B92218B021EB00A1C57D /* UIImageView+WTANetworking.m in Sources */,
+				9A18B92718B022A400A1C57D /* NSString+MD5.m in Sources */,
+				9A18B92318B021EB00A1C57D /* UIView+NibLoading.m in Sources */,
+				9A18B91D18B021EB00A1C57D /* NSString+Base64.m in Sources */,
+				9A18B92118B021EB00A1C57D /* UIImage+ImageEffects.m in Sources */,
 				9AFC721F18AA9B8300DCDC27 /* main.m in Sources */,
+				9A18B92018B021EB00A1C57D /* UIImage+Color.m in Sources */,
 				9AFC722318AA9B8300DCDC27 /* WTAAppDelegate.m in Sources */,
+				9A18B91E18B021EB00A1C57D /* UIColor+Helpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

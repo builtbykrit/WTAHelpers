@@ -1,14 +1,27 @@
 PODS:
-  - WTAHelpers (0.1.0)
+  - AFNetworking (2.1.0):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+    - AFNetworking/UIKit
+  - AFNetworking/NSURLConnection (2.1.0):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.1.0):
+    - AFNetworking/NSURLConnection
+  - AFNetworking/Reachability (2.1.0)
+  - AFNetworking/Security (2.1.0)
+  - AFNetworking/Serialization (2.1.0)
+  - AFNetworking/UIKit (2.1.0):
+    - AFNetworking/NSURLConnection
 
 DEPENDENCIES:
-  - WTAHelpers (from `../WTAHelpers.podspec`)
-
-EXTERNAL SOURCES:
-  WTAHelpers:
-    :path: ../WTAHelpers.podspec
+  - AFNetworking
 
 SPEC CHECKSUMS:
-  WTAHelpers: 0ef11a6648e97104a3b88d28fa28d6804633cb1a
+  AFNetworking: c7d7901a83f631414c7eda1737261f696101a5cd
 
 COCOAPODS: 0.29.0

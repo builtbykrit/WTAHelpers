@@ -41,4 +41,10 @@
     return [[NSString alloc] initWithData:mutableData encoding:NSASCIIStringEncoding];
 }
 
+- (void)viewDidLoad{
+    NSString *testVariable = @"hey";
+    
+    NSLog(@" ** %@ ", testVariable);
+}
+
 @end

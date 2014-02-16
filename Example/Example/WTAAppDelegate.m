@@ -7,7 +7,7 @@
 //
 
 #import "WTAAppDelegate.h"
-#import <NSString+MD5.h>
+#import "NSString+MD5.h"
 
 @implementation WTAAppDelegate
 
