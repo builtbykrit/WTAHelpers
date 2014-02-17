@@ -17,6 +17,8 @@
 		9A18B92318B021EB00A1C57D /* UIView+NibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B91B18B021EB00A1C57D /* UIView+NibLoading.m */; };
 		9A18B92418B021EB00A1C57D /* WTAHelpers.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 9A18B91C18B021EB00A1C57D /* WTAHelpers.podspec */; };
 		9A18B92718B022A400A1C57D /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A18B92618B022A400A1C57D /* NSString+MD5.m */; };
+		9A4F412418B18835005380BB /* NSFetchedResultsController+Helpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A4F412318B18835005380BB /* NSFetchedResultsController+Helpers.m */; };
+		9A4F412618B18AF8005380BB /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A4F412518B18AF8005380BB /* CoreData.framework */; };
 		9AFC721318AA9B8300DCDC27 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC721218AA9B8300DCDC27 /* Foundation.framework */; };
 		9AFC721518AA9B8300DCDC27 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC721418AA9B8300DCDC27 /* CoreGraphics.framework */; };
 		9AFC721718AA9B8300DCDC27 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFC721618AA9B8300DCDC27 /* UIKit.framework */; };
@@ -61,6 +63,9 @@
 		9A18B91C18B021EB00A1C57D /* WTAHelpers.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = WTAHelpers.podspec; sourceTree = "<group>"; };
 		9A18B92518B022A400A1C57D /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		9A18B92618B022A400A1C57D /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		9A4F412218B18835005380BB /* NSFetchedResultsController+Helpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSFetchedResultsController+Helpers.h"; sourceTree = "<group>"; };
+		9A4F412318B18835005380BB /* NSFetchedResultsController+Helpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSFetchedResultsController+Helpers.m"; sourceTree = "<group>"; };
+		9A4F412518B18AF8005380BB /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		9AFC720F18AA9B8300DCDC27 /* Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AFC721218AA9B8300DCDC27 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9AFC721418AA9B8300DCDC27 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A4F412618B18AF8005380BB /* CoreData.framework in Frameworks */,
 				9AFC721518AA9B8300DCDC27 /* CoreGraphics.framework in Frameworks */,
 				9AFC721718AA9B8300DCDC27 /* UIKit.framework in Frameworks */,
 				9AFC721318AA9B8300DCDC27 /* Foundation.framework in Frameworks */,
@@ -110,8 +116,12 @@
 			isa = PBXGroup;
 			children = (
 				9AFC725018ABFC9E00DCDC27 /* Storyboard.storyboard */,
+				9A4F412218B18835005380BB /* NSFetchedResultsController+Helpers.h */,
+				9A4F412318B18835005380BB /* NSFetchedResultsController+Helpers.m */,
 				9A18B90E18B021EB00A1C57D /* NSString+Base64.h */,
 				9A18B90F18B021EB00A1C57D /* NSString+Base64.m */,
+				9A18B92518B022A400A1C57D /* NSString+MD5.h */,
+				9A18B92618B022A400A1C57D /* NSString+MD5.m */,
 				9A18B91018B021EB00A1C57D /* UIColor+Helpers.h */,
 				9A18B91118B021EB00A1C57D /* UIColor+Helpers.m */,
 				9A18B91218B021EB00A1C57D /* UIFont+Helpers.h */,
@@ -125,8 +135,6 @@
 				9A18B91A18B021EB00A1C57D /* UIView+NibLoading.h */,
 				9A18B91B18B021EB00A1C57D /* UIView+NibLoading.m */,
 				9A18B91C18B021EB00A1C57D /* WTAHelpers.podspec */,
-				9A18B92518B022A400A1C57D /* NSString+MD5.h */,
-				9A18B92618B022A400A1C57D /* NSString+MD5.m */,
 			);
 			name = Gists;
 			path = Example/Gists;
@@ -156,6 +164,7 @@
 		9AFC721118AA9B8300DCDC27 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A4F412518B18AF8005380BB /* CoreData.framework */,
 				9AFC721218AA9B8300DCDC27 /* Foundation.framework */,
 				9AFC721418AA9B8300DCDC27 /* CoreGraphics.framework */,
 				9AFC721618AA9B8300DCDC27 /* UIKit.framework */,
@@ -340,6 +349,7 @@
 			files = (
 				9A18B91F18B021EB00A1C57D /* UIFont+Helpers.m in Sources */,
 				9A18B92218B021EB00A1C57D /* UIImageView+WTANetworking.m in Sources */,
+				9A4F412418B18835005380BB /* NSFetchedResultsController+Helpers.m in Sources */,
 				9A18B92718B022A400A1C57D /* NSString+MD5.m in Sources */,
 				9A18B92318B021EB00A1C57D /* UIView+NibLoading.m in Sources */,
 				9A18B91D18B021EB00A1C57D /* NSString+Base64.m in Sources */,
