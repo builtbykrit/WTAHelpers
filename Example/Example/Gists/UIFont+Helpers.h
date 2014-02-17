@@ -7,9 +7,9 @@
 
 #import <UIKit/UIKit.h>
 
-// UIFont extension
-// Font caching by name
-// Font loading from JSON and Plist
+// UIFont extension:
+//  - Font caching by name
+//  - Font loading from JSON and Plist
 
 @interface UIFont (Helpers)
 

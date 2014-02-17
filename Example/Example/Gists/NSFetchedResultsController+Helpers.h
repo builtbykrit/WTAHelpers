@@ -8,6 +8,8 @@
 
 #import <CoreData/CoreData.h>
 
+// Returns number of objects, first object & last object from fetched results.
+
 @interface NSFetchedResultsController (Helpers)
 
 - (NSInteger)numberOfObjects;

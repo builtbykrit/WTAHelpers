@@ -8,13 +8,6 @@
 
 #import "UIColor+Helpers.h"
 
-// UIColor extension
-// Color from 8bit RGB and hex values
-// Color from CSS RGB and hex strings
-// Color caching by name
-// Color loading from JSON and Plist
-// Core graphics equivalent extensions
-
 NSString *const UIColorPrimaryColorName = @"primaryColor";
 NSString *const UIColorSecondaryColorName = @"secondaryColor";
 NSString *const UIColorTertiaryColorName = @"tertiaryColor";

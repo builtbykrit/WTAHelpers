@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-// Encoding/decoding to base64
+// Encoding/decoding to Base64.
 
 @interface NSString (Base64)
 

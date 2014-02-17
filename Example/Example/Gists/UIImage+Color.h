@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-//Makes an image out of color
+// Makes an image out of color.
 
 @interface UIImage (Color)
 

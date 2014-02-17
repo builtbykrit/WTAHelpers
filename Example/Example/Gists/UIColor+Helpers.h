@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+// UIColor extension:
+// - Color from 8bit RGB and hex values
+// - Color from CSS RGB and hex strings
+// - Color caching by name
+// - Color loading from JSON and Plist
+// - Core graphics equivalent extensions
+
 UIKIT_EXTERN NSString *const UIColorPrimaryColorName;
 UIKIT_EXTERN NSString *const UIColorSecondaryColorName;
 UIKIT_EXTERN NSString *const UIColorTertiaryColorName;

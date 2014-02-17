@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+// Apple sample code that does blurring on the CPU.
+
 @interface UIImage (ImageEffects)
 
 - (UIImage *)applyLightEffect;

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+// Returns MD5 hash of a string.
+
 @interface NSString (MD5)
 
 -(NSString*)MD5;
