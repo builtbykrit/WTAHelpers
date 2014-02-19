@@ -62,11 +62,12 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
             break;
             
         case WTAExampleViewCellTypeAlignOffset:
-            
-            [self configureAlignCellOffset:cell];
-            title = @"Aligning and Centering in Superview with Offset";
+        {
+            CGFloat offset = 5.0;
+            [self configureAlignCellOffset:cell offset:5.0];
+            title = [NSString stringWithFormat:@"Aligning and Centering in Superview with Offset: %2.fpx", offset];
             break;
-            
+        }
         default:
             break;
     }
@@ -126,16 +127,20 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [rightLabel setText:@"Center: V\nAlign: Right"];
     UILabel *bottomLabel = [WTAExampleViewController createTestLabel];
     [bottomLabel setText:@"Center: H\nAlign: Bottom"];
+    UILabel *centerLabel = [WTAExampleViewController createTestLabel];
+    [centerLabel setText:@"Center: V, H"];
     
     [parentView addSubview:leftLabel];
     [parentView addSubview:rightLabel];
     [parentView addSubview:topLabel];
     [parentView addSubview:bottomLabel];
+    [parentView addSubview:centerLabel];
     
     [leftLabel wta_centerAlignVerticallyInSuperview];
     [rightLabel wta_centerAlignVerticallyInSuperview];
     [leftLabel wta_leftAlignInSuperview];
     [rightLabel wta_rightAlignInSuperview];
+    [centerLabel wta_centerAlignInSuperview];
     
     [topLabel wta_centerAlignHorizontallyInSuperview];
     [bottomLabel wta_centerAlignHorizontallyInSuperview];
@@ -143,7 +148,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [bottomLabel wta_bottomAlignInSuperview];
 }
 
-- (void)configureAlignCellOffset:(WTAFrameHelpersCell *)cell
+- (void)configureAlignCellOffset:(WTAFrameHelpersCell *)cell offset:(CGFloat)offset
 {
     UIView *parentView = [cell parentView];
     
@@ -155,21 +160,25 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [rightLabel setText:@"Center: V\nAlign: Right"];
     UILabel *bottomLabel = [WTAExampleViewController createTestLabel];
     [bottomLabel setText:@"Center: H\nAlign: Bottom"];
+    UILabel *centerLabel = [WTAExampleViewController createTestLabel];
+    [centerLabel setText:@"Center: V, H"];
     
     [parentView addSubview:leftLabel];
     [parentView addSubview:rightLabel];
     [parentView addSubview:topLabel];
     [parentView addSubview:bottomLabel];
+    [parentView addSubview:centerLabel];
     
-    [leftLabel wta_centerAlignVerticallyInSuperviewOffset:10.0];
-    [rightLabel wta_centerAlignVerticallyInSuperviewOffset:10.0];
-    [leftLabel wta_leftAlignInSuperviewOffset:10.0];
-    [rightLabel wta_rightAlignInSuperviewOffset:10.0];
+    [leftLabel wta_centerAlignVerticallyInSuperviewOffset:offset];
+    [rightLabel wta_centerAlignVerticallyInSuperviewOffset:offset];
+    [leftLabel wta_leftAlignInSuperviewOffset:offset];
+    [rightLabel wta_rightAlignInSuperviewOffset:offset];
+    [centerLabel wta_centerAlignInSuperviewOffset:CGPointMake(offset, offset)];
     
-    [topLabel wta_centerAlignHorizontallyInSuperviewOffset:10.0];
-    [bottomLabel wta_centerAlignHorizontallyInSuperviewOffset:10.0];
-    [topLabel wta_topAlignInSuperviewOffset:10.0];
-    [bottomLabel wta_bottomAlignInSuperviewOffset:10.0];
+    [topLabel wta_centerAlignHorizontallyInSuperviewOffset:offset];
+    [bottomLabel wta_centerAlignHorizontallyInSuperviewOffset:offset];
+    [topLabel wta_topAlignInSuperviewOffset:offset];
+    [bottomLabel wta_bottomAlignInSuperviewOffset:offset];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
