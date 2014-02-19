@@ -13,9 +13,9 @@
  */
 @interface UIView (WTAFrameHelpers)
 
-///---------------------------------------------
+///---------------------------------
 /// @name Convenience Frame Getters
-///---------------------------------------------
+///---------------------------------
 
 /**
  @return The frame size of the view.
@@ -47,90 +47,298 @@
  */
 - (CGFloat)wta_frameOriginY;
 
-///---------------------------------------------
-/// @name Convenience Objective-C CGRectGet* Methods
-///---------------------------------------------
+///---------------------------------
+/// @name Convenience Frame Setters
+///---------------------------------
 
 /**
- This method replaces the need to use CGRectGetMinX(frame) on the view's frame.
+ Sets the frame size of the view.
+ 
+ @param size The new size of the view.
+ */
+- (void)wta_setFrameSize:(CGSize)size;
+
+/**
+ Sets the height of the view.
+ 
+ @param height The new height of the view.
+ */
+- (void)wta_setFrameSizeHeight:(CGFloat)height;
+
+/**
+ Sets the width of the view.
+ 
+ @param width The new width of the view.
+ */
+- (void)wta_setFrameSizeWidth:(CGFloat)width;
+
+/**
+ Sets the origin of the view.
+ 
+ @param origin The new origin of the view.
+ */
+- (void)wta_setFrameOrigin:(CGPoint)origin;
+
+/**
+ Sets the x of the view.
+ 
+ @param origin The new x of the view.
+ */
+- (void)wta_setFrameOriginX:(CGFloat)x;
+
+/**
+ Sets the y of the view.
+ 
+ @param origin The new y of the view.
+ */
+- (void)wta_setFrameOriginY:(CGFloat)y;
+
+///--------------------------------------------------
+/// @name Convenience Objective-C CGRectGet* Methods
+///--------------------------------------------------
+
+/**
+ Replaces the need to use CGRectGetMinX(frame) on the view's frame.
  
  @return The frame minimum x of the view.
  */
 - (CGFloat)wta_frameMinX;
 
 /**
- This method replaces the need to use CGRectGetMinY(frame) on the view's frame.
+ Replaces the need to use CGRectGetMinY(frame) on the view's frame.
  
  @return The frame minimum y of the view.
  */
 - (CGFloat)wta_frameMinY;
 
 /**
- This method replaces the need to use CGRectGetMidX(frame) on the view's frame.
+ Replaces the need to use CGRectGetMidX(frame) on the view's frame.
  
  @return The frame minimum y of the view.
  */
 - (CGFloat)wta_frameMidX;
 
 /**
- This method replaces the need to use CGRectGetMidY(frame) on the view's frame.
+ Replaces the need to use CGRectGetMidY(frame) on the view's frame.
  
  @return The frame minimum y of the view.
  */
 - (CGFloat)wta_frameMidY;
 
 /**
- This method replaces the need to use CGRectGetMaxX(frame) on the view's frame.
+ Replaces the need to use CGRectGetMaxX(frame) on the view's frame.
  
  @return The frame maximum x of the view.
  */
 - (CGFloat)wta_frameMaxX;
 
 /**
- This method replaces the need to use CGRectGetMaxY(frame) on the view's frame.
+ Replaces the need to use CGRectGetMaxY(frame) on the view's frame.
  
  @return The frame maximum y of the view.
  */
 - (CGFloat)wta_frameMaxY;
 
-///---------------------------------------------
-/// @name Edge Alignment Methods
-///---------------------------------------------
+///-----------------------------------------------
+/// @name Edge Alignment Methods For a Given View
+///-----------------------------------------------
 
-- (void)wta_leftAlignInView:(UIView *)view;
-- (void)wta_rightAlignInView:(UIView *)view;
+/**
+ Aligns the current view to the top of the supplied view. In most cases the view parameter will be the superview. Use `wta_topAlignInSuperview` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ */
 - (void)wta_topAlignInView:(UIView *)view;
+
+/**
+ Aligns the current view to the left of the supplied view. In most cases the view parameter will be the superview. Use `wta_leftAlignInSuperview` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ */
+- (void)wta_leftAlignInView:(UIView *)view;
+
+/**
+ Aligns the current view to the bottom of the supplied view. In most cases the view parameter will be the superview. Use `wta_bottomAlignInSuperview` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ */
 - (void)wta_bottomAlignInView:(UIView *)view;
 
-- (void)wta_leftAlignInSuperview;
-- (void)wta_rightAlignInSuperview;
-- (void)wta_topAlignInSuperview;
-- (void)wta_bottomAlignInSuperview;
+/**
+ Aligns the current view to the right of the supplied view. In most cases the view parameter will be the superview. Use `wta_rightAlignInSuperview` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ */
+- (void)wta_rightAlignInView:(UIView *)view;
 
-- (void)wta_leftAlignInView:(UIView *)view offset:(CGFloat)offset;
-- (void)wta_rightAlignInView:(UIView *)view offset:(CGFloat)offset;
+/**
+ Aligns the current view to the top of the supplied view with an offset from the edge. In most cases the view parameter will be the superview. Use `wta_topAlignInSuperviewOffset:` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ @param offset The padding from the top edge.
+ */
 - (void)wta_topAlignInView:(UIView *)view offset:(CGFloat)offset;
+
+/**
+ Aligns the current view to the left of the supplied view with an offset from the edge. In most cases the view parameter will be the superview. Use `wta_leftAlignInSuperviewOffset:` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ @param offset The padding from the left edge.
+ */
+- (void)wta_leftAlignInView:(UIView *)view offset:(CGFloat)offset;
+
+/**
+ Aligns the current view to the bottom of the supplied view with an offset from the edge. In most cases the view parameter will be the superview. Use `wta_bottomAlignInSuperviewOffset:` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ @param offset The padding from the bottom edge.
+ */
 - (void)wta_bottomAlignInView:(UIView *)view offset:(CGFloat)offset;
 
-- (void)wta_leftAlignInSuperviewOffset:(CGFloat)offset;
-- (void)wta_rightAlignInSuperviewOffset:(CGFloat)offset;
+/**
+ Aligns the current view to the right of the supplied view with an offset from the edge. In most cases the view parameter will be the superview. Use `wta_rightAlignInSuperviewOffset:` if the view has already been added a subview.
+ 
+ @param view The view that the current view should be aligned in relation to.
+ @param offset The padding from the right edge.
+ */
+- (void)wta_rightAlignInView:(UIView *)view offset:(CGFloat)offset;
+
+///---------------------------------------------
+/// @name Edge Alignment Methods For Superview
+///---------------------------------------------
+
+/**
+ Aligns the current view to the top its superview.
+ */
+- (void)wta_topAlignInSuperview;
+
+/**
+ Aligns the current view to the left its superview.
+ */
+- (void)wta_leftAlignInSuperview;
+
+/**
+ Aligns the current view to the bottom its superview.
+ */
+- (void)wta_bottomAlignInSuperview;
+
+/**
+ Aligns the current view to the right its superview.
+ */
+- (void)wta_rightAlignInSuperview;
+
+/**
+ Aligns the current view to the top its superview with an offset from the edge.
+ 
+ @param offset The padding from the top edge;
+ */
 - (void)wta_topAlignInSuperviewOffset:(CGFloat)offset;
+
+/**
+ Aligns the current view to the left its superview with an offset from the edge.
+ 
+ @param offset The padding from the left edge;
+ */
+- (void)wta_leftAlignInSuperviewOffset:(CGFloat)offset;
+
+/**
+ Aligns the current view to the bottom its superview with an offset from the edge.
+ 
+ @param offset The padding from the bottom edge;
+ */
 - (void)wta_bottomAlignInSuperviewOffset:(CGFloat)offset;
 
-///---------------------------------------------
-/// @name Centering Methods
-///---------------------------------------------
+/**
+ Aligns the current view to the right its superview with an offset from the edge.
+ 
+ @param offset The padding from the right edge;
+ */
+- (void)wta_rightAlignInSuperviewOffset:(CGFloat)offset;
 
-- (void)wta_centerInSuperview;
-- (void)wta_centerVerticallyInSuperview;
-- (void)wta_centerHorizontallyInSuperview;
+///-----------------------------------
+/// @name Centering Methods in a View
+///-----------------------------------
 
-- (void)wta_centerInView:(UIView *)view;
-- (void)wta_centerVerticallyInView:(UIView *)view;
-- (void)wta_centerHorizontallyInView:(UIView *)view;
+/**
+ Centers the view horizontally and vertically in a provided view. In most cases the provided view will become the current view's superview.
+ 
+ @param view The view that the current view should be centered in relation to.
+ */
+- (void)wta_centerAlignInView:(UIView *)view;
 
-- (void)wta_centerInView:(UIView *)view offset:(CGPoint)offset;
-- (void)wta_centerVerticallyInView:(UIView *)view offset:(CGFloat)offset;
-- (void)wta_centerHorizontallyInView:(UIView *)view offset:(CGFloat)offset;
+/**
+ Centers the view vertically in a provided view. In most cases the provided view will become the current view's superview.
+ 
+ @param view The view that the current view should be centered in relation to.
+ */
+- (void)wta_centerAlignVerticallyInView:(UIView *)view;
+
+/**
+ Centers the view horizontally in a provided view. In most cases the provided view will become the current view's superview.
+ 
+ @param view The view that the current view should be centered in relation to.
+ */
+- (void)wta_centerAlignHorizontallyInView:(UIView *)view;
+
+/**
+ Centers the view horizontally and vertically in a provided view. In most cases the provided view will become the current view's superview.
+ 
+ @param view The view that the current view should be centered in relation to.
+ @param offset The x and y offset from the center.
+ */
+- (void)wta_centerAlignInView:(UIView *)view offset:(CGPoint)offset;
+
+/**
+ Centers the view vertically in a provided view. In most cases the provided view will become the current view's superview.
+ 
+ @param view The view that the current view should be centered in relation to.
+ @param offset The y offset from the center.
+ */
+- (void)wta_centerAlignVerticallyInView:(UIView *)view offset:(CGFloat)offset;
+
+/**
+ Centers the view horizontally in a provided view. In most cases the provided view will become the current view's superview.
+ 
+ @param view The view that the current view should be centered in relation to.
+ @param offset The x offset from the center.
+ */
+- (void)wta_centerAlignHorizontallyInView:(UIView *)view offset:(CGFloat)offset;
+
+///-------------------------------------------
+/// @name Centering Methods in its Superview
+///-------------------------------------------
+
+/**
+ Centers the view horizontally and vertically in its superview.
+ */
+- (void)wta_centerAlignInSuperview;
+
+/**
+ Centers the view vertically in its superview.
+ */
+- (void)wta_centerAlignVerticallyInSuperview;
+
+/**
+ Centers the view horizontally in its superview.
+ */
+- (void)wta_centerAlignHorizontallyInSuperview;
+
+/**
+ Centers the view horizontally and vertically in its superview.
+ @param offset The x and y offset from the center.
+ */
+- (void)wta_centerAlignInSuperviewOffset:(CGFloat)offset;
+
+/**
+ Centers the view vertically in its superview.
+ @param offset The y offset from the center.
+ */
+- (void)wta_centerAlignVerticallyInSuperviewOffset:(CGFloat)offset;
+
+/**
+ Centers the view horizontally in its superview.
+ @param offset The x offset from the center.
+ */
+- (void)wta_centerAlignHorizontallyInSuperviewOffset:(CGFloat)offset;
 
 @end
