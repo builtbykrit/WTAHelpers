@@ -327,7 +327,7 @@
  Centers the view horizontally and vertically in its superview.
  @param offset The x and y offset from the center.
  */
-- (void)wta_centerAlignInSuperviewOffset:(CGFloat)offset;
+- (void)wta_centerAlignInSuperviewOffset:(CGPoint)offset;
 
 /**
  Centers the view vertically in its superview.

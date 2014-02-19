@@ -134,22 +134,22 @@
 
 - (void)wta_topAlignInView:(UIView *)view
 {
-
+    [self wta_topAlignInView:view offset:0.0f];
 }
 
 - (void)wta_leftAlignInView:(UIView *)view
 {
-
+    [self wta_leftAlignInView:view offset:0.0f];
 }
 
 - (void)wta_bottomAlignInView:(UIView *)view
 {
-
+    [self wta_bottomAlignInView:view offset:0.0f];
 }
 
 - (void)wta_rightAlignInView:(UIView *)view
 {
-    
+    [self wta_rightAlignInView:view offset:0.0f];
 }
 
 - (void)wta_topAlignInView:(UIView *)view offset:(CGFloat)offset
@@ -178,106 +178,109 @@
 
 - (void)wta_topAlignInSuperview
 {
-    
+    [self wta_topAlignInView:[self superview]];
 }
 
 - (void)wta_leftAlignInSuperview
 {
-    
+    [self wta_leftAlignInView:[self superview]];
 }
 
 - (void)wta_bottomAlignInSuperview
 {
-    
+    [self wta_bottomAlignInView:[self superview]];
 }
 
 - (void)wta_rightAlignInSuperview
 {
-    
+    [self wta_rightAlignInView:[self superview]];
 }
 
 - (void)wta_topAlignInSuperviewOffset:(CGFloat)offset
 {
-    
+    [self wta_topAlignInView:[self superview] offset:offset];
 }
 
 - (void)wta_leftAlignInSuperviewOffset:(CGFloat)offset
 {
-    
+    [self wta_leftAlignInView:[self superview] offset:offset];
 }
 
 - (void)wta_bottomAlignInSuperviewOffset:(CGFloat)offset
 {
-    
+    [self wta_bottomAlignInView:[self superview] offset:offset];
 }
 
 - (void)wta_rightAlignInSuperviewOffset:(CGFloat)offset
 {
-    
+    [self wta_rightAlignInView:[self superview] offset:offset];
 }
 
 #pragma mark - Centering Methods in a View
 
 - (void)wta_centerAlignInView:(UIView *)view
 {
-    
+    [self wta_centerAlignInView:view offset:CGPointZero];
 }
 
 - (void)wta_centerAlignVerticallyInView:(UIView *)view
 {
-    
+    [self wta_centerAlignVerticallyInView:view offset:0.0f];
 }
 
 - (void)wta_centerAlignHorizontallyInView:(UIView *)view
 {
-    
+    [self wta_centerAlignHorizontallyInView:view offset:0.0f];
 }
 
 - (void)wta_centerAlignInView:(UIView *)view offset:(CGPoint)offset
 {
-    
+    [self wta_centerAlignHorizontallyInView:view offset:offset.x];
+    [self wta_centerAlignVerticallyInView:view offset:offset.y];
 }
 
 - (void)wta_centerAlignVerticallyInView:(UIView *)view offset:(CGFloat)offset
 {
-    
+    CGFloat y = roundf(([view wta_frameSizeHeight] - [self wta_frameSizeHeight])/2.0f) + offset;
+    [self wta_setFrameOriginY:y];
 }
 
 - (void)wta_centerAlignHorizontallyInView:(UIView *)view offset:(CGFloat)offset
 {
-    
+    CGFloat x = roundf(([view wta_frameSizeWidth] - [self wta_frameSizeWidth])/2.0f) + offset;
+    [self wta_setFrameOriginX:x];
 }
 
 #pragma mark - Centering Methods in its Superview
 
 - (void)wta_centerAlignInSuperview
 {
-    
+    [self wta_centerAlignInView:[self superview]];
 }
 
 - (void)wta_centerAlignVerticallyInSuperview
 {
-    
+    [self wta_centerAlignVerticallyInView:[self superview]];
 }
 
 - (void)wta_centerAlignHorizontallyInSuperview
 {
-    
+    [self wta_centerAlignHorizontallyInView:[self superview]];
 }
 
-- (void)wta_centerAlignInSuperviewOffset:(CGFloat)offset
+- (void)wta_centerAlignInSuperviewOffset:(CGPoint)offset
 {
-    
+    [self wta_centerAlignInView:[self superview] offset:offset];
 }
 
 - (void)wta_centerAlignVerticallyInSuperviewOffset:(CGFloat)offset
 {
-    
+    [self wta_centerAlignVerticallyInView:[self superview] offset:offset];
 }
 
 - (void)wta_centerAlignHorizontallyInSuperviewOffset:(CGFloat)offset
 {
-    
+    [self wta_centerAlignHorizontallyInView:[self superview] offset:offset];
 }
 
 @end
