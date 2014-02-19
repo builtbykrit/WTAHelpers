@@ -15,6 +15,5 @@ FOUNDATION_EXPORT NSString *const WTAFrameHelpersCellNibName;
 
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *titleLabel;
 @property (nonatomic, readwrite, weak) IBOutlet UIView *parentView;
-@property (nonatomic, readwrite, weak) IBOutlet UIView *childView;
 
 @end
