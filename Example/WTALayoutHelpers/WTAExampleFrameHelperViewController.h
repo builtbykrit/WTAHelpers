@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WTAExampleViewController : UIViewController
+@interface WTAExampleFrameHelperViewController : UIViewController
 
 @property (nonatomic, readwrite, weak) IBOutlet UITableView *tableView;
 

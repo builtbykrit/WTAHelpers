@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		87278BB718B41801000DD190 /* UIView+WTAFrameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 87278BB618B41801000DD190 /* UIView+WTAFrameHelpers.m */; };
 		879CB61718B3FDF8002DCDAA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61618B3FDF8002DCDAA /* Foundation.framework */; };
 		879CB61918B3FDF8002DCDAA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61818B3FDF8002DCDAA /* CoreGraphics.framework */; };
 		879CB61B18B3FDF8002DCDAA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61A18B3FDF8002DCDAA /* UIKit.framework */; };
@@ -15,15 +14,14 @@
 		879CB62318B3FDF8002DCDAA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 879CB62218B3FDF8002DCDAA /* main.m */; };
 		879CB62718B3FDF8002DCDAA /* WTAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 879CB62618B3FDF8002DCDAA /* WTAAppDelegate.m */; };
 		879CB62A18B3FDF8002DCDAA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 879CB62818B3FDF8002DCDAA /* Main.storyboard */; };
-		879CB62D18B3FDF8002DCDAA /* WTAExampleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879CB62C18B3FDF8002DCDAA /* WTAExampleViewController.m */; };
+		879CB62D18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 879CB62C18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.m */; };
 		879CB62F18B3FDF8002DCDAA /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 879CB62E18B3FDF8002DCDAA /* Images.xcassets */; };
 		879CB64E18B3FFA6002DCDAA /* WTAFrameHelpersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 879CB64D18B3FFA6002DCDAA /* WTAFrameHelpersCell.xib */; };
 		879CB65118B3FFB1002DCDAA /* WTAFrameHelpersCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 879CB65018B3FFB1002DCDAA /* WTAFrameHelpersCell.m */; };
+		87DBE8C118B5323B00C99E25 /* UIView+WTAFrameHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 87DBE8C018B5323B00C99E25 /* UIView+WTAFrameHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		87278BB518B41801000DD190 /* UIView+WTAFrameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WTAFrameHelpers.h"; path = "Classes/UIView+WTAFrameHelpers.h"; sourceTree = "<group>"; };
-		87278BB618B41801000DD190 /* UIView+WTAFrameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WTAFrameHelpers.m"; path = "Classes/UIView+WTAFrameHelpers.m"; sourceTree = "<group>"; };
 		879CB61318B3FDF8002DCDAA /* WTALayoutHelpers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTALayoutHelpers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		879CB61618B3FDF8002DCDAA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		879CB61818B3FDF8002DCDAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -35,13 +33,15 @@
 		879CB62518B3FDF8002DCDAA /* WTAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAAppDelegate.h; sourceTree = "<group>"; };
 		879CB62618B3FDF8002DCDAA /* WTAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAAppDelegate.m; sourceTree = "<group>"; };
 		879CB62918B3FDF8002DCDAA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		879CB62B18B3FDF8002DCDAA /* WTAExampleViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAExampleViewController.h; sourceTree = "<group>"; };
-		879CB62C18B3FDF8002DCDAA /* WTAExampleViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAExampleViewController.m; sourceTree = "<group>"; };
+		879CB62B18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WTAExampleFrameHelperViewController.h; sourceTree = "<group>"; };
+		879CB62C18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WTAExampleFrameHelperViewController.m; sourceTree = "<group>"; };
 		879CB62E18B3FDF8002DCDAA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		879CB63518B3FDF8002DCDAA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		879CB64D18B3FFA6002DCDAA /* WTAFrameHelpersCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAFrameHelpersCell.xib; sourceTree = "<group>"; };
 		879CB64F18B3FFB1002DCDAA /* WTAFrameHelpersCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAFrameHelpersCell.h; sourceTree = "<group>"; };
 		879CB65018B3FFB1002DCDAA /* WTAFrameHelpersCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAFrameHelpersCell.m; sourceTree = "<group>"; };
+		87DBE8BF18B5323B00C99E25 /* UIView+WTAFrameHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UIView+WTAFrameHelpers.h"; path = "../../Classes/UIView+WTAFrameHelpers.h"; sourceTree = "<group>"; };
+		87DBE8C018B5323B00C99E25 /* UIView+WTAFrameHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIView+WTAFrameHelpers.m"; path = "../../Classes/UIView+WTAFrameHelpers.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,8 +67,8 @@
 				879CB64D18B3FFA6002DCDAA /* WTAFrameHelpersCell.xib */,
 				879CB64F18B3FFB1002DCDAA /* WTAFrameHelpersCell.h */,
 				879CB65018B3FFB1002DCDAA /* WTAFrameHelpersCell.m */,
-				879CB62B18B3FDF8002DCDAA /* WTAExampleViewController.h */,
-				879CB62C18B3FDF8002DCDAA /* WTAExampleViewController.m */,
+				879CB62B18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.h */,
+				879CB62C18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.m */,
 			);
 			name = Sample;
 			sourceTree = "<group>";
@@ -76,8 +76,8 @@
 		87278BB118B41284000DD190 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				87278BB518B41801000DD190 /* UIView+WTAFrameHelpers.h */,
-				87278BB618B41801000DD190 /* UIView+WTAFrameHelpers.m */,
+				87DBE8BF18B5323B00C99E25 /* UIView+WTAFrameHelpers.h */,
+				87DBE8C018B5323B00C99E25 /* UIView+WTAFrameHelpers.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -199,11 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87278BB718B41801000DD190 /* UIView+WTAFrameHelpers.m in Sources */,
+				87DBE8C118B5323B00C99E25 /* UIView+WTAFrameHelpers.m in Sources */,
 				879CB62318B3FDF8002DCDAA /* main.m in Sources */,
 				879CB62718B3FDF8002DCDAA /* WTAAppDelegate.m in Sources */,
 				879CB65118B3FFB1002DCDAA /* WTAFrameHelpersCell.m in Sources */,
-				879CB62D18B3FDF8002DCDAA /* WTAExampleViewController.m in Sources */,
+				879CB62D18B3FDF8002DCDAA /* WTAExampleFrameHelperViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
