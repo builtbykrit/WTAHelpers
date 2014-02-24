@@ -31,7 +31,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="618" y="240"/>
+            <point key="canvasLocation" x="618" y="18"/>
+        </scene>
+        <!--Example Auto Layout Helper View Controller-->
+        <scene sceneID="fv3-8e-iMF">
+            <objects>
+                <viewController id="Ba9-Fb-kNx" customClass="WTAExampleAutoLayoutHelperViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aMb-Fh-9qi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Bbg-xY-Sum"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7m9-cb-nP1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="618" y="747"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IdO-Tc-u9C">
@@ -67,6 +82,16 @@
                                 </state>
                                 <connections>
                                     <segue destination="vXZ-lx-hvc" kind="push" id="wkX-6p-cq0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="aKa-fO-aaF">
+                                <rect key="frame" x="108" y="292" width="104" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Layout Helpers">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ba9-Fb-kNx" kind="push" id="fdi-qH-Zz7"/>
                                 </connections>
                             </button>
                         </subviews>
