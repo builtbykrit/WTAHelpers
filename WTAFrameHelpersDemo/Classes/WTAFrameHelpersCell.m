@@ -10,4 +10,9 @@
 
 @implementation WTAFrameHelpersCell
 
+- (void)prepareForReuse
+{
+    [[[self parentView] subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
+}
+
 @end

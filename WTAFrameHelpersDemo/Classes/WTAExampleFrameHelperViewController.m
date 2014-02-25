@@ -16,6 +16,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {
     WTAExampleViewCellTypeFrameGetterSetter = 0,
     WTAExampleViewCellTypeAlign,
+    WTAExampleViewCellTypeAdjacentViews,
     WTAExampleViewCellTypeCount,
 };
 
@@ -71,39 +72,6 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [parentView addSubview:sizeLabel2];
 }
 
-- (void)configureAlignCell:(WTAFrameHelpersCell *)cell
-{
-    UIView *parentView = [cell parentView];
-    
-    UILabel *leftLabel = [WTAExampleFrameHelperViewController createTestLabel];
-    [leftLabel setText:@"Center: V\nAlign: Left"];
-    UILabel *topLabel = [WTAExampleFrameHelperViewController createTestLabel];
-    [topLabel setText:@"Center: H\nAlign: Top"];
-    UILabel *rightLabel = [WTAExampleFrameHelperViewController createTestLabel];
-    [rightLabel setText:@"Center: V\nAlign: Right"];
-    UILabel *bottomLabel = [WTAExampleFrameHelperViewController createTestLabel];
-    [bottomLabel setText:@"Center: H\nAlign: Bottom"];
-    UILabel *centerLabel = [WTAExampleFrameHelperViewController createTestLabel];
-    [centerLabel setText:@"Center: V, H"];
-    
-    [parentView addSubview:leftLabel];
-    [parentView addSubview:rightLabel];
-    [parentView addSubview:topLabel];
-    [parentView addSubview:bottomLabel];
-    [parentView addSubview:centerLabel];
-    
-    [leftLabel wta_centerAlignVerticallyInSuperview];
-    [rightLabel wta_centerAlignVerticallyInSuperview];
-    [leftLabel wta_leftAlignInSuperview];
-    [rightLabel wta_rightAlignInSuperview];
-    [centerLabel wta_centerAlignInSuperview];
-    
-    [topLabel wta_centerAlignHorizontallyInSuperview];
-    [bottomLabel wta_centerAlignHorizontallyInSuperview];
-    [topLabel wta_topAlignInSuperview];
-    [bottomLabel wta_bottomAlignInSuperview];
-}
-
 - (void)configureAlignCellOffset:(WTAFrameHelpersCell *)cell offset:(CGFloat)offset
 {
     UIView *parentView = [cell parentView];
@@ -137,6 +105,40 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [bottomLabel wta_bottomAlignInSuperviewOffset:offset];
 }
 
+- (void)configureAdjacentCell:(WTAFrameHelpersCell *)cell
+{
+    UIView *parentView = [cell parentView];
+    
+    UILabel *centeredView = [WTAExampleFrameHelperViewController createTestLabel];
+    [parentView addSubview:centeredView];
+    [centeredView setText:@"Center: V, H"];
+    [centeredView wta_centerAlignInSuperview];
+    
+    UILabel *leftView = [WTAExampleFrameHelperViewController createTestLabel];
+    [parentView addSubview:leftView];
+    [leftView setText:@"Adjacent Left"];
+    [leftView wta_centerAlignVerticallyInSuperview];
+    [leftView wta_setFrameOriginXLeftOfView:centeredView offset:5.0];
+    
+    UILabel *rightView = [WTAExampleFrameHelperViewController createTestLabel];
+    [parentView addSubview:rightView];
+    [rightView setText:@"Adjacent Right"];
+    [rightView wta_centerAlignVerticallyInSuperview];
+    [rightView wta_setFrameOriginXRightOfView:centeredView offset:5.0];
+    
+    UILabel *topView = [WTAExampleFrameHelperViewController createTestLabel];
+    [parentView addSubview:topView];
+    [topView setText:@"Adjacent Right"];
+    [topView wta_centerAlignHorizontallyInSuperview];
+    [topView wta_setFrameOriginYAboveView:centeredView offset:5.0];
+    
+    UILabel *bottomView = [WTAExampleFrameHelperViewController createTestLabel];
+    [parentView addSubview:bottomView];
+    [bottomView setText:@"Adjacent Right"];
+    [bottomView wta_centerAlignHorizontallyInSuperview];
+    [bottomView wta_setFrameOriginYBelowView:centeredView offset:5.0];
+}
+
 #pragma mark - UITableViewDelegate Methods
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -162,8 +164,14 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
             break;
             
         case WTAExampleViewCellTypeAlign:
-            [self configureAlignCell:cell];
-            title = @"Aligning and Centering in Superview";
+            [self configureAlignCellOffset:cell offset:5.0];
+            title = @"Aligning and Centering in Superview With Offset";
+            break;
+            
+        case WTAExampleViewCellTypeAdjacentViews:
+            
+            [self configureAdjacentCell:cell];
+            title = @"Place View Adjacent to Sibling Views";
             break;
             
         default:

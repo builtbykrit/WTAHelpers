@@ -292,7 +292,7 @@
 
 - (void)wta_setFrameOriginXRightOfView:(UIView *)view offset:(CGFloat)offset;
 {
-    [self wta_setFrameOriginX:[view wta_frameSizeWidth] + offset];
+    [self wta_setFrameOriginX:[view wta_frameOriginX] + [view wta_frameSizeWidth] + offset];
 }
 
 - (void)wta_setFrameOriginXLeftOfView:(UIView *)view;
@@ -312,7 +312,7 @@
 
 - (void)wta_setFrameOriginYBelowView:(UIView *)view offset:(CGFloat)offset;
 {
-    [self wta_setFrameOriginY:[view wta_frameSizeHeight] + offset];
+    [self wta_setFrameOriginY:[view wta_frameOriginY] + [view wta_frameSizeHeight] + offset];
 }
 
 - (void)wta_setFrameOriginYAboveView:(UIView *)view;

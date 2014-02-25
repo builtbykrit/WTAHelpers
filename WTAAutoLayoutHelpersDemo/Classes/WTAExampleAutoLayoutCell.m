@@ -23,4 +23,5 @@
 {
     [[[self parentView] subviews] makeObjectsPerformSelector:@selector(removeFromSuperview)];
 }
+
 @end
