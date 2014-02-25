@@ -9,6 +9,8 @@
 #import "WTAExampleFrameHelperViewController.h"
 #import "WTAFrameHelpersCell.h"
 #import "UIView+WTAFrameHelpers.h"
+#import "WTAReusableIdentifier.h"
+#import "UIView+WTANibLoading.h"
 
 typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {
@@ -27,9 +29,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    [[self tableView] registerNib:[UINib nibWithNibName:WTAFrameHelpersCellNibName bundle:nil]
-           forCellReuseIdentifier:WTAFrameHelpersCellIdentifier];
+    [[self tableView] registerNib:[WTAFrameHelpersCell wta_nib] forCellReuseIdentifier:[WTAFrameHelpersCell wta_reuseableIdentifier]];
 }
 
 #pragma mark - UITableViewDelegate Methods
@@ -43,7 +43,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WTAFrameHelpersCell *cell = [tableView dequeueReusableCellWithIdentifier:WTAFrameHelpersCellIdentifier
+    WTAFrameHelpersCell *cell = [tableView dequeueReusableCellWithIdentifier:[WTAFrameHelpersCell wta_reuseableIdentifier]
                                                                 forIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     UILabel *titleLabel = [cell titleLabel];

@@ -59,7 +59,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4VU-zH-0ii" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="418" y="-5"/>
+            <point key="canvasLocation" x="185" y="-15"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

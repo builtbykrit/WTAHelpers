@@ -8,9 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-FOUNDATION_EXPORT NSString *const WTAFrameHelpersCellIdentifier;
-FOUNDATION_EXPORT NSString *const WTAFrameHelpersCellNibName;
-
 @interface WTAFrameHelpersCell : UITableViewCell
 
 @property (nonatomic, readwrite, weak) IBOutlet UILabel *titleLabel;

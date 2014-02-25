@@ -8,9 +8,6 @@
 
 #import "WTAFrameHelpersCell.h"
 
-NSString *const WTAFrameHelpersCellIdentifier = @"WTAFrameHelpersCellIdentifier";
-NSString *const WTAFrameHelpersCellNibName = @"WTAFrameHelpersCell";
-
 @implementation WTAFrameHelpersCell
 
 @end
