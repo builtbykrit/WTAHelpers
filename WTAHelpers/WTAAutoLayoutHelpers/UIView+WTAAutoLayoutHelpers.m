@@ -15,7 +15,7 @@
 
 + (id)wta_autolayoutView;
 {
-    UIView *view = [UIView new];
+    id view = [self new];
     [view setTranslatesAutoresizingMaskIntoConstraints:NO];
     return view;
 }
@@ -109,6 +109,13 @@
 }
 
 #pragma mark - Size Constraints
+
+- (NSArray *)wta_addSizeConstraints:(CGSize)size
+{
+    NSLayoutConstraint *widthConstraint = [self wta_addWidthConstraint:size.width];
+    NSLayoutConstraint *heightConstraint = [self wta_addHeightConstraint:size.height];
+    return @[widthConstraint, heightConstraint];
+}
 
 - (NSLayoutConstraint *)wta_addHeightConstraint:(CGFloat)height
 {

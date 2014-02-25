@@ -6,39 +6,41 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="433" id="33A-2x-Mzo" customClass="WTAExampleAutoLayoutCell">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="225"/>
-            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="33A-2x-Mzo" id="VbV-bk-due">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="224"/>
-                <autoresizingMask key="autoresizingMask"/>
-                <subviews>
-                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="ztk-hG-AaJ">
-                        <rect key="frame" x="20" y="11" width="280" height="41"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="41" id="vCJ-Y2-heh"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
-                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nxv-ii-hjP">
-                        <rect key="frame" x="20" y="60" width="280" height="153"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.74901960779999999" green="0.83137254900000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                </subviews>
-                <constraints>
-                    <constraint firstAttribute="trailing" secondItem="nxv-ii-hjP" secondAttribute="trailing" constant="20" id="0mY-HT-z9S"/>
-                    <constraint firstItem="nxv-ii-hjP" firstAttribute="leading" secondItem="VbV-bk-due" secondAttribute="leading" constant="20" id="5xl-57-bUU"/>
-                    <constraint firstItem="nxv-ii-hjP" firstAttribute="top" secondItem="VbV-bk-due" secondAttribute="top" constant="60" id="YF9-4z-P7w"/>
-                    <constraint firstItem="ztk-hG-AaJ" firstAttribute="top" secondItem="VbV-bk-due" secondAttribute="top" constant="11" id="iyA-HW-Uk0"/>
-                    <constraint firstAttribute="trailing" secondItem="ztk-hG-AaJ" secondAttribute="trailing" constant="20" id="uj5-wF-hJh"/>
-                    <constraint firstAttribute="bottom" secondItem="nxv-ii-hjP" secondAttribute="bottom" constant="11" id="xVv-fJ-Tax"/>
-                    <constraint firstItem="ztk-hG-AaJ" firstAttribute="leading" secondItem="VbV-bk-due" secondAttribute="leading" constant="20" id="ype-Sp-Usl"/>
-                </constraints>
-            </tableViewCellContentView>
-        </tableViewCell>
+        <view contentMode="scaleToFill" id="djM-MM-wFZ" customClass="WTAExampleAutoLayoutCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="8k6-cM-7fG">
+                    <rect key="frame" x="20" y="20" width="280" height="41"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="41" id="ScJ-4F-OyA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="14A-IU-Chd">
+                    <rect key="frame" x="20" y="69" width="280" height="151"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <color key="backgroundColor" red="0.74901960779999999" green="0.83137254900000002" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="8k6-cM-7fG" firstAttribute="leading" secondItem="djM-MM-wFZ" secondAttribute="leading" constant="20" id="0Sv-PP-ghM"/>
+                <constraint firstAttribute="bottom" secondItem="14A-IU-Chd" secondAttribute="bottom" constant="20" id="7Y5-Kt-LwN"/>
+                <constraint firstItem="14A-IU-Chd" firstAttribute="top" secondItem="8k6-cM-7fG" secondAttribute="bottom" constant="8" id="HtE-Q5-ZS2"/>
+                <constraint firstAttribute="trailing" secondItem="8k6-cM-7fG" secondAttribute="trailing" constant="20" id="Rfj-6D-mwW"/>
+                <constraint firstAttribute="trailing" secondItem="14A-IU-Chd" secondAttribute="trailing" constant="20" id="WNQ-Ib-wSH"/>
+                <constraint firstItem="14A-IU-Chd" firstAttribute="leading" secondItem="djM-MM-wFZ" secondAttribute="leading" constant="20" id="bRB-Or-eTx"/>
+                <constraint firstItem="8k6-cM-7fG" firstAttribute="top" secondItem="djM-MM-wFZ" secondAttribute="top" constant="20" id="f7v-Sf-aE0"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="parentView" destination="14A-IU-Chd" id="38I-H1-2gl"/>
+                <outlet property="titleLabel" destination="8k6-cM-7fG" id="hIZ-Ql-pNC"/>
+            </connections>
+        </view>
     </objects>
 </document>

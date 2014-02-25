@@ -13,4 +13,7 @@ FOUNDATION_EXPORT NSString *const WTAFrameHelpersCellNibName;
 
 @interface WTAExampleAutoLayoutCell : UITableViewCell
 
+@property (nonatomic, readwrite, weak) IBOutlet UILabel *titleLabel;
+@property (nonatomic, readwrite, weak) IBOutlet UIView *parentView;
+
 @end

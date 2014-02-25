@@ -142,6 +142,14 @@
 ///--------------------------------------------------
 
 /**
+ Adds constraints for height and width from the given size struct.
+ 
+ @param size for the view.
+ @return array of size constraints.
+ */
+- (NSArray *)wta_addSizeConstraints:(CGSize)size;
+
+/**
  Adds a constraint to set the height of the current view.
  
  @param height of the view.

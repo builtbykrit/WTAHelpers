@@ -26,8 +26,6 @@
 		878CD8DA18BBA59D00C4DCF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61818B3FDF8002DCDAA /* CoreGraphics.framework */; };
 		878CD8DB18BBA59D00C4DCF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61A18B3FDF8002DCDAA /* UIKit.framework */; };
 		878CD91B18BBA60A00C4DCF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 878CD90918BBA60A00C4DCF4 /* Main.storyboard */; };
-		878CD91C18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CD90D18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.m */; };
-		878CD91D18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 878CD90E18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.xib */; };
 		878CD91E18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CD91018BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.m */; };
 		878CD92118BBA60A00C4DCF4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CD91418BBA60A00C4DCF4 /* main.m */; };
 		878CD92218BBA60A00C4DCF4 /* WTAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 878CD91618BBA60A00C4DCF4 /* WTAAppDelegate.m */; };
@@ -65,9 +63,6 @@
 		878CD87E18BB9CCB00C4DCF4 /* UIView+WTAFrameHelpers.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WTAFrameHelpers.m"; sourceTree = "<group>"; };
 		878CD8D818BBA59D00C4DCF4 /* WTAAutoLayoutHelpersDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WTAAutoLayoutHelpersDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		878CD90A18BBA60A00C4DCF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		878CD90C18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAExampleAutoLayoutHelperView.h; sourceTree = "<group>"; };
-		878CD90D18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAExampleAutoLayoutHelperView.m; sourceTree = "<group>"; };
-		878CD90E18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WTAExampleAutoLayoutHelperView.xib; sourceTree = "<group>"; };
 		878CD90F18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAExampleAutoLayoutHelperViewController.h; sourceTree = "<group>"; };
 		878CD91018BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WTAExampleAutoLayoutHelperViewController.m; sourceTree = "<group>"; };
 		878CD91418BBA60A00C4DCF4 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -203,9 +198,6 @@
 				873F3C2A18BD1B290052E0DC /* WTAExampleAutoLayoutCell.h */,
 				873F3C2B18BD1B290052E0DC /* WTAExampleAutoLayoutCell.m */,
 				873F3C2D18BD1B320052E0DC /* WTAExampleAutoLayoutCell.xib */,
-				878CD90C18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.h */,
-				878CD90D18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.m */,
-				878CD90E18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.xib */,
 				878CD90F18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.h */,
 				878CD91018BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.m */,
 			);
@@ -325,7 +317,6 @@
 			files = (
 				873F3C2E18BD1B320052E0DC /* WTAExampleAutoLayoutCell.xib in Resources */,
 				878CD91B18BBA60A00C4DCF4 /* Main.storyboard in Resources */,
-				878CD91D18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +339,6 @@
 			files = (
 				873F3C2C18BD1B290052E0DC /* WTAExampleAutoLayoutCell.m in Sources */,
 				873F3C4618BD24FA0052E0DC /* NSLayoutConstraint+WTAAutoLayoutHelpers.m in Sources */,
-				878CD91C18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperView.m in Sources */,
 				873F3C4818BD24FA0052E0DC /* UIView+WTAAutoLayoutHelpers.m in Sources */,
 				878CD92118BBA60A00C4DCF4 /* main.m in Sources */,
 				878CD91E18BBA60A00C4DCF4 /* WTAExampleAutoLayoutHelperViewController.m in Sources */,

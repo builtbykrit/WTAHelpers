@@ -32,50 +32,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [[self tableView] registerNib:[WTAFrameHelpersCell wta_nib] forCellReuseIdentifier:[WTAFrameHelpersCell wta_reuseableIdentifier]];
 }
 
-#pragma mark - UITableViewDelegate Methods
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @"UIView+WTAFrameHelpers";
-}
-
-#pragma mark - UITableViewDataSource Methods
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    WTAFrameHelpersCell *cell = [tableView dequeueReusableCellWithIdentifier:[WTAFrameHelpersCell wta_reuseableIdentifier]
-                                                                forIndexPath:indexPath];
-    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
-    UILabel *titleLabel = [cell titleLabel];
-    NSString *title = nil;
-    
-    switch ((WTAExampleViewCellType)[indexPath row])
-    {
-        case WTAExampleViewCellTypeFrameGetterSetter:
-            [self configureFrameGetterSetterCell:cell];
-            title = @"Getting and Setter Frame Methods";
-            break;
-            
-        case WTAExampleViewCellTypeAlign:
-            [self configureAlignCell:cell];
-            title = @"Aligning and Centering in Superview";
-            break;
-            
-        case WTAExampleViewCellTypeAlignOffset:
-        {
-            CGFloat offset = 5.0;
-            [self configureAlignCellOffset:cell offset:5.0];
-            title = [NSString stringWithFormat:@"Aligning and Centering in Superview with Offset: %2.fpx", offset];
-            break;
-        }
-        default:
-            break;
-    }
-    
-    [titleLabel setText:title];
-    
-    return cell;
-}
+#pragma mark - Instance Methods
 
 + (UILabel *)createTestLabel
 {
@@ -96,10 +53,10 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [sizeLabel wta_setFrameSize:CGSizeMake(100.0, 40.0)];
     [sizeLabel wta_setFrameOrigin:CGPointMake(20.0, 40.0)];
     [sizeLabel setText:[NSString stringWithFormat:@"Origin: {%2.f, %2.f}\nSize: {%2.f, %2.f}",
-                       [sizeLabel wta_frameOriginX],
-                       [sizeLabel wta_frameOriginY],
-                       [sizeLabel wta_frameSizeWidth],
-                       [sizeLabel wta_frameSizeHeight]]];
+                        [sizeLabel wta_frameOriginX],
+                        [sizeLabel wta_frameOriginY],
+                        [sizeLabel wta_frameSizeWidth],
+                        [sizeLabel wta_frameSizeHeight]]];
     
     [parentView addSubview:sizeLabel];
     
@@ -109,8 +66,8 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [sizeLabel2 wta_setFrameOriginX:120.0];
     [sizeLabel2 wta_setFrameOriginY:100.0];
     [sizeLabel2 setText:[NSString stringWithFormat:@"Origin: %@\nSize: %@",
-                       NSStringFromCGPoint([sizeLabel2 wta_frameOrigin]),
-                       NSStringFromCGSize([sizeLabel2 wta_frameSize])]];
+                         NSStringFromCGPoint([sizeLabel2 wta_frameOrigin]),
+                         NSStringFromCGSize([sizeLabel2 wta_frameSize])]];
     
     [parentView addSubview:sizeLabel2];
 }
@@ -179,6 +136,51 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     [bottomLabel wta_centerAlignHorizontallyInSuperviewOffset:offset];
     [topLabel wta_topAlignInSuperviewOffset:offset];
     [bottomLabel wta_bottomAlignInSuperviewOffset:offset];
+}
+
+#pragma mark - UITableViewDelegate Methods
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return @"UIView+WTAFrameHelpers";
+}
+
+#pragma mark - UITableViewDataSource Methods
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    WTAFrameHelpersCell *cell = [tableView dequeueReusableCellWithIdentifier:[WTAFrameHelpersCell wta_reuseableIdentifier]
+                                                                forIndexPath:indexPath];
+    [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+    UILabel *titleLabel = [cell titleLabel];
+    NSString *title = nil;
+    
+    switch ((WTAExampleViewCellType)[indexPath row])
+    {
+        case WTAExampleViewCellTypeFrameGetterSetter:
+            [self configureFrameGetterSetterCell:cell];
+            title = @"Getting and Setter Frame Methods";
+            break;
+            
+        case WTAExampleViewCellTypeAlign:
+            [self configureAlignCell:cell];
+            title = @"Aligning and Centering in Superview";
+            break;
+            
+        case WTAExampleViewCellTypeAlignOffset:
+        {
+            CGFloat offset = 5.0;
+            [self configureAlignCellOffset:cell offset:5.0];
+            title = [NSString stringWithFormat:@"Aligning and Centering in Superview with Offset: %2.fpx", offset];
+            break;
+        }
+        default:
+            break;
+    }
+    
+    [titleLabel setText:title];
+    
+    return cell;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
