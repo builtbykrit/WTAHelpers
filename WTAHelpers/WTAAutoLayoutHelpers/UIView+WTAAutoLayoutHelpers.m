@@ -28,8 +28,8 @@
     NSLayoutConstraint *leadingConstraint = [self wta_addLeadingConstraintToSuperviewOffset:inset.left];
     
     // Bottom and right insets are negated because constants in autolayout are always positive to the right down.
-    NSLayoutConstraint *bottomConstraint = [self wta_addBottomConstraintToSuperviewOffset:-inset.bottom];
-    NSLayoutConstraint *trailingConstraint = [self wta_addTrailingConstraintToSuperviewOffset:-inset.right];
+    NSLayoutConstraint *bottomConstraint = [self wta_addBottomConstraintToSuperviewOffset:inset.bottom];
+    NSLayoutConstraint *trailingConstraint = [self wta_addTrailingConstraintToSuperviewOffset:inset.right];
     
     return @[topConstraint, leadingConstraint, bottomConstraint, trailingConstraint];
 }
@@ -91,6 +91,7 @@
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingToLeadingConstraintWithTrailingView:self
                                                                                              leadingView:view
                                                                                               separation:separation];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
@@ -99,6 +100,7 @@
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingToLeadingConstraintWithTrailingView:view
                                                                                              leadingView:self
                                                                                               separation:separation];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
@@ -107,6 +109,7 @@
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomToTopConstraintWithTopView:self
                                                                                    bottomView:view
                                                                                    separation:separation];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
@@ -115,6 +118,7 @@
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomToTopConstraintWithTopView:view
                                                                                    bottomView:self
                                                                                    separation:separation];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 

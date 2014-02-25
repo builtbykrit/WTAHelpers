@@ -26,10 +26,10 @@
 
 + (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:toView
                                                                   attribute:NSLayoutAttributeTrailing
                                                                   relatedBy:NSLayoutRelationEqual
-                                                                     toItem:toView
+                                                                     toItem:withView
                                                                   attribute:NSLayoutAttributeTrailing
                                                                  multiplier:1.0
                                                                    constant:offset];
@@ -50,10 +50,10 @@
 
 + (NSLayoutConstraint *)wta_bottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:toView
                                                                   attribute:NSLayoutAttributeBottom
                                                                   relatedBy:NSLayoutRelationEqual
-                                                                     toItem:toView
+                                                                     toItem:withView
                                                                   attribute:NSLayoutAttributeBottom
                                                                  multiplier:1.0
                                                                    constant:offset];
@@ -64,11 +64,11 @@
 
 + (NSLayoutConstraint *)wta_trailingToLeadingConstraintWithTrailingView:(UIView *)trailingView leadingView:(UIView *)leadingView separation:(CGFloat)separation;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:leadingView
-                                                                  attribute:NSLayoutAttributeTrailing
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:trailingView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:trailingView
                                                                   attribute:NSLayoutAttributeLeading
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:leadingView
+                                                                  attribute:NSLayoutAttributeTrailing
                                                                  multiplier:1.0
                                                                    constant:separation];
     return constraint;
