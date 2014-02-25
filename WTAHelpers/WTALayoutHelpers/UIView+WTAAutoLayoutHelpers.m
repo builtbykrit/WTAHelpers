@@ -95,6 +95,19 @@
     return constraint;
 }
 
++ (NSLayoutConstraint *)wta_addVerticallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
+                                                                  attribute:NSLayoutAttributeCenterY
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:toView
+                                                                  attribute:NSLayoutAttributeCenterY
+                                                                 multiplier:1
+                                                                   constant:offset];
+    [[withView superview] addConstraint:constraint];
+    return constraint;
+}
+
 #pragma mark - Size Constraints
 
 - (NSLayoutConstraint *)wta_addHeightConstraint:(CGFloat)height
