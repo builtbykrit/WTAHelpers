@@ -62,7 +62,7 @@
 /// @name Convenience Methods for Common Constraints
 ///--------------------------------------------------
 
-- (NSLayoutConstraint *)wta_horizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_horizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeCenterX
@@ -74,13 +74,13 @@
     return constraint;
 }
 
-- (NSLayoutConstraint *)wta_verticallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_verticallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeCenterY
                                                                   relatedBy:NSLayoutRelationEqual
                                                                      toItem:toView
-                                                                  attribute:NSLayoutAttributeCenterX
+                                                                  attribute:NSLayoutAttributeCenterY
                                                                  multiplier:1
                                                                    constant:offset];
     return constraint;
@@ -90,7 +90,7 @@
 /// @name Convenience Methods for Common Constraints
 ///--------------------------------------------------
 
-- (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height;
++ (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
                                                                   attribute:NSLayoutAttributeHeight
@@ -102,7 +102,7 @@
     return constraint;
 }
 
-- (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width;
++ (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
                                                                   attribute:NSLayoutAttributeWidth

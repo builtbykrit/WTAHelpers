@@ -88,6 +88,14 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     }
 }
 
+- (void)configureInsetCell:(WTAExampleAutoLayoutCell *)cell
+{
+    UILabel *bottomLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [bottomLabel setText:@"Top, Leading, Bottom, Trailing Constraints"];
+    [[cell parentView] addSubview:bottomLabel];
+    [bottomLabel wta_addEdgeConstraintsToSuperview:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)];
+}
+
 #pragma mark - UITableViewDataSource Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -103,12 +111,13 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
         case WTAExampleCellTypeEdges:
         {
             [self configureEdgesCell:cell];
-            title = @"Edge Constraints Example";
+            title = @"Edge Constraints and Centering Example";
             break;
         }
             
         case WTAExampleCellTypeInset:
-            
+            [self configureInsetCell:cell];
+            title = @"Inset constraints";
             break;
             
         case WTAExampleCellTypeCenter:

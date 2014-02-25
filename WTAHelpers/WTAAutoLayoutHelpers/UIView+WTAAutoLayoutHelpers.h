@@ -26,6 +26,14 @@
 ///--------------------------------------------------
 
 /**
+ Creates Top, Leading, Bottom and Trailing constraints with inset. The constraints are added to the view's superview.
+ 
+ @param inset for the constraints.
+ @return array of constraints
+ */
+- (NSArray *)wta_addEdgeConstraintsToSuperview:(UIEdgeInsets)inset;
+
+/**
  Creates a leading constraint to the current view with offset. The constraint is added the view's superview
  
  @param offset from the edge.
