@@ -8,26 +8,38 @@
 
 #import <UIKit/UIKit.h>
 
+/**
+ This category adds a method to `UICollectionReusableView` to make reusableIdentifiers easier.
+ */
 @interface UICollectionReusableView (WTAReusableIdentifier)
 
+/**
+ @return An NSString of the class's name.
+ */
 + (NSString *)wta_reuseableIdentifier;
 
 @end
 
+/**
+ This category adds a method to `UITableViewCell` to make reusableIdentifiers easier.
+ */
 @interface UITableViewCell (WTAReusableIdentifier)
 
+/**
+ @return An NSString of the class's name.
+ */
 + (NSString *)wta_reuseableIdentifier;
 
 @end
 
-@interface UICollectionViewCell (WTAReusableIdentifier)
-
-+ (NSString *)wta_reuseableIdentifier;
-
-@end
-
+/**
+ This category adds a method to `UITableViewHeaderFooterView` to make reusableIdentifiers easier.
+ */
 @interface UITableViewHeaderFooterView (WTAReusableIdentifier)
 
+/**
+ @return An NSString of the class's name.
+ */
 + (NSString *)wta_reuseableIdentifier;
 
 @end

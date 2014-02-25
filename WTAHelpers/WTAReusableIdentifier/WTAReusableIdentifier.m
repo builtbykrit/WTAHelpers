@@ -26,15 +26,6 @@
 
 @end
 
-@implementation UICollectionViewCell (WTAReusableIdentifier)
-
-+ (NSString *)wta_reuseableIdentifier
-{
-    return NSStringFromClass([self class]);
-}
-
-@end
-
 @implementation UITableViewHeaderFooterView (WTAReusableIdentifier)
 
 + (NSString *)wta_reuseableIdentifier
