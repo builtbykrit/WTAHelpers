@@ -16,7 +16,6 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {
     WTAExampleViewCellTypeFrameGetterSetter = 0,
     WTAExampleViewCellTypeAlign,
-    WTAExampleViewCellTypeAlignOffset,
     WTAExampleViewCellTypeCount,
 };
 
@@ -167,13 +166,6 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
             title = @"Aligning and Centering in Superview";
             break;
             
-        case WTAExampleViewCellTypeAlignOffset:
-        {
-            CGFloat offset = 5.0;
-            [self configureAlignCellOffset:cell offset:5.0];
-            title = [NSString stringWithFormat:@"Aligning and Centering in Superview with Offset: %2.fpx", offset];
-            break;
-        }
         default:
             break;
     }

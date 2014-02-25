@@ -18,6 +18,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     WTAExampleCellTypeInset,
     WTAExampleCellTypeHorizontalSibling,
     WTAExampleCellTypeVerticalSibling,
+    WTAExampleCellTypeCentering,
     WTAExampleCellTypeCount,
 };
 
@@ -199,25 +200,30 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
         case WTAExampleCellTypeEdges:
             
             [self configureEdgesCell:cell];
-            title = @"Edge Constraints and Centering Example";
+            title = @"Edge in Superview";
             break;
             
         case WTAExampleCellTypeInset:
             
             [self configureInsetCell:cell];
-            title = @"Inset Constraints Example";
+            title = @"Inset in Superview";
             break;
             
         case WTAExampleCellTypeHorizontalSibling:
             
-            title = @"Horizontal Sibling Example";
+            title = @"Horizontal Siblings";
             [self configureHorizontalSiblingCell:cell];
             break;
             
         case WTAExampleCellTypeVerticalSibling:
             
-            title = @"Vertical Sibling Example";
+            title = @"Vertical Siblings";
             [self configureVerticalSiblingCell:cell];
+            break;
+            
+        case WTAExampleCellTypeCentering:
+            
+            title = @"Centering Views";
             break;
             
         default:

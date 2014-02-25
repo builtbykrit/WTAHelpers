@@ -181,9 +181,9 @@
  */
 + (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 
-///--------------------------------------------------
+///-------------------------
 /// @name Size Constraints
-///--------------------------------------------------
+///-------------------------
 
 /**
  Adds constraints for height and width from the given size struct.
