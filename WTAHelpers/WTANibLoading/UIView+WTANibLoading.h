@@ -2,7 +2,7 @@
 //  UIView+WTANibLoading.h
 //  WTAHelpers
 //
-//  Created by Trung Tran on 2/25/14.
+//  Created by Matt Yohe on 2/25/14.
 //  Copyright (c) 2014 WillowTree Apps, Inc. All rights reserved.
 //
 
