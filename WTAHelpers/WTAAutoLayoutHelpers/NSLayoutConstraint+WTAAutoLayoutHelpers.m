@@ -76,11 +76,11 @@
 
 + (NSLayoutConstraint *)wta_bottomToTopConstraintWithTopView:(UIView *)topView bottomView:(UIView *)bottomView separation:(CGFloat)separation;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:topView
-                                                                  attribute:NSLayoutAttributeBottom
-                                                                  relatedBy:NSLayoutRelationEqual
-                                                                     toItem:bottomView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:bottomView
                                                                   attribute:NSLayoutAttributeTop
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:topView
+                                                                  attribute:NSLayoutAttributeBottom
                                                                  multiplier:1.0
                                                                    constant:separation];
     return constraint;

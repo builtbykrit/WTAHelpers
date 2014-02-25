@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     // Leading constraint
     UILabel *leadingLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     {
-        [leadingLabel setText:@"Leading Constraint"];
+        [leadingLabel setText:@"Leading, W, H"];
         [[cell parentView] addSubview:leadingLabel];
         [leadingLabel wta_addSizeConstraints:CGSizeMake(50.0, 30.0)];
         [leadingLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
@@ -61,7 +61,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     // Trailing constraint
     UILabel *trailingLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     {
-        [trailingLabel setText:@"Trailing Constraint"];
+        [trailingLabel setText:@"Trailing, W, H"];
         [[cell parentView] addSubview:trailingLabel];
         [trailingLabel wta_addSizeConstraints:CGSizeMake(50.0, 30.0)];
         [trailingLabel wta_addTrailingConstraintToSuperviewOffset:5.0];
@@ -71,7 +71,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     // Top constraint
     UILabel *topLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     {
-        [topLabel setText:@"Top Constraint"];
+        [topLabel setText:@"Top, W, H"];
         [[cell parentView] addSubview:topLabel];
         [topLabel wta_addSizeConstraints:CGSizeMake(50.0, 30.0)];
         [topLabel wta_addTopConstraintToSuperviewOffset:5.0];
@@ -81,7 +81,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     // Bottom constraint
     UILabel *bottomLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     {
-        [bottomLabel setText:@"Bottom Constraint"];
+        [bottomLabel setText:@"Bottom, W, H"];
         [[cell parentView] addSubview:bottomLabel];
         [bottomLabel wta_addSizeConstraints:CGSizeMake(50.0, 30.0)];
         [bottomLabel wta_addBottomConstraintToSuperviewOffset:5.0];
@@ -123,6 +123,22 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [thirdLabel wta_addTrailingConstraintToSuperviewOffset:5.0];
     
     [secondLabel wta_addConstraintPlacingViewLeftOfView:thirdLabel separation:5.0];
+    
+    UILabel *alignLeftLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [alignLeftLabel setText:@"Left Align"];
+    [[cell parentView] addSubview:alignLeftLabel];
+    [alignLeftLabel wta_addHeightConstraint:30.0];
+    [alignLeftLabel wta_addWidthConstraint:50.0];
+    [alignLeftLabel wta_addTopConstraintToSuperviewOffset:5.0];
+    [alignLeftLabel wta_addLeadingConstraintToView:firstLabel offset:0.0];
+    
+    UILabel *alignRightLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [alignRightLabel setText:@"Right Align"];
+    [[cell parentView] addSubview:alignRightLabel];
+    [alignRightLabel wta_addHeightConstraint:30.0];
+    [alignRightLabel wta_addWidthConstraint:50.0];
+    [alignRightLabel wta_addTopConstraintToSuperviewOffset:5.0];
+    [alignRightLabel wta_addTrailingConstraintToView:thirdLabel offset:0.0];
 }
 
 - (void)configureVerticalSiblingCell:(WTAExampleAutoLayoutCell *)cell
@@ -130,27 +146,42 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     UILabel *firstLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     [firstLabel setText:@"Top, Height"];
     [[cell parentView] addSubview:firstLabel];
-    [firstLabel wta_addHeightConstraint:50.0];
+    [firstLabel wta_addHeightConstraint:30.0];
     [firstLabel wta_addWidthConstraint:50.0];
-    [firstLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
-    [firstLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
+    [firstLabel wta_addHorizontallyCenterConstraintToSuperviewOffset:0.0];
+    [firstLabel wta_addTopConstraintToSuperviewOffset:5.0];
     
     UILabel *secondLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     [secondLabel setText:@"Top, Bottom"];
     [[cell parentView] addSubview:secondLabel];
-    [secondLabel wta_addHeightConstraint:50.0];
-    [secondLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
-    [secondLabel wta_addConstraintPlacingViewRightOfView:firstLabel separation:5.0];
+    [secondLabel wta_addWidthConstraint:50.0];
+    [secondLabel wta_addHorizontallyCenterConstraintToSuperviewOffset:0.0];
+    [secondLabel wta_addConstraintPlacingViewBelowView:firstLabel separation:5.0];
     
     UILabel *thirdLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
     [thirdLabel setText:@"Bottom, Height"];
     [[cell parentView] addSubview:thirdLabel];
-    [thirdLabel wta_addHeightConstraint:50.0];
+    [thirdLabel wta_addHeightConstraint:30.0];
     [thirdLabel wta_addWidthConstraint:50.0];
-    [thirdLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
-    [thirdLabel wta_addTrailingConstraintToSuperviewOffset:5.0];
+    [thirdLabel wta_addHorizontallyCenterConstraintToSuperviewOffset:0.0];
+    [thirdLabel wta_addBottomConstraintToSuperviewOffset:5.0];
+    [secondLabel wta_addConstraintPlacingViewAboveView:thirdLabel separation:5.0];
     
-    [secondLabel wta_addConstraintPlacingViewLeftOfView:thirdLabel separation:5.0];
+    UILabel *alignTopLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [alignTopLabel setText:@"Top Align"];
+    [[cell parentView] addSubview:alignTopLabel];
+    [alignTopLabel wta_addHeightConstraint:30.0];
+    [alignTopLabel wta_addWidthConstraint:50.0];
+    [alignTopLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
+    [alignTopLabel wta_addTopConstraintToView:firstLabel offset:0.0];
+    
+    UILabel *alignBottomLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [alignBottomLabel setText:@"Bottom Align"];
+    [[cell parentView] addSubview:alignBottomLabel];
+    [alignBottomLabel wta_addHeightConstraint:30.0];
+    [alignBottomLabel wta_addWidthConstraint:50.0];
+    [alignBottomLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
+    [alignBottomLabel wta_addBottomConstraintToView:thirdLabel offset:0.0];
 }
 
 #pragma mark - UITableViewDataSource Methods
