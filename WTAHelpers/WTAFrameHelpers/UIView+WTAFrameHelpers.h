@@ -271,4 +271,44 @@
 - (void)wta_centerAlignHorizontallyInSuperview;
 - (void)wta_centerAlignHorizontallyInSuperviewOffset:(CGFloat)offset;
 
+///-------------------------------------------
+/// @name Placing Views Next to Sibling Views
+///-------------------------------------------
+
+/**
+ Places current current view to the right of a view.
+ 
+ @param view to be placed beside.
+ @param offset from the view.
+ */
+- (void)wta_setFrameOriginXRightOfView:(UIView *)view;
+- (void)wta_setFrameOriginXRightOfView:(UIView *)view offset:(CGFloat)offset;
+
+/**
+ Places current current view to the left of a view.
+ 
+ @param view to be placed beside.
+ @param offset from the view.
+ */
+- (void)wta_setFrameOriginXLeftOfView:(UIView *)view;
+- (void)wta_setFrameOriginXLeftOfView:(UIView *)view offset:(CGFloat)offset;
+
+/**
+ Places current current view to the below of a view.
+ 
+ @param view to be placed beside.
+ @param offset from the view.
+ */
+- (void)wta_setFrameOriginYBelowView:(UIView *)view;
+- (void)wta_setFrameOriginYBelowView:(UIView *)view offset:(CGFloat)offset;
+
+/**
+ Places current current view to the above of a view.
+ 
+ @param view to be placed beside.
+ @param offset from the view.
+ */
+- (void)wta_setFrameOriginYAboveView:(UIView *)view;
+- (void)wta_setFrameOriginYAboveView:(UIView *)view offset:(CGFloat)offset;
+
 @end

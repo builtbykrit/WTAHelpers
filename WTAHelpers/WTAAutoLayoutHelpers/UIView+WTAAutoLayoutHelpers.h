@@ -141,9 +141,9 @@
  */
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation;
 
-///--------------------------------------------------
+///-----------------------------
 /// @name Centering Constraints
-///--------------------------------------------------
+///-----------------------------
 
 /**
  Creates a constraint to vertically center the current view. The constraint is added to the view's superview.
