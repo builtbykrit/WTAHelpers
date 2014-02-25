@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
 {
     WTAExampleCellTypeEdges,
     WTAExampleCellTypeInset,
-    WTAExampleCellTypeCenter,
+    WTAExampleCellTypeHorizontalSibling,
     WTAExampleCellTypeCount,
 };
 
@@ -96,6 +96,25 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [bottomLabel wta_addEdgeConstraintsToSuperview:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)];
 }
 
+- (void)configureHorizontalSiblingCell:(WTAExampleAutoLayoutCell *)cell
+{
+    UILabel *firstLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [firstLabel setText:@"Leading, Width"];
+    [[cell parentView] addSubview:firstLabel];
+    [firstLabel wta_addHeightConstraint:50.0];
+    [firstLabel wta_addWidthConstraint:80.0];
+    [firstLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
+    [firstLabel wta_addLeadingConstraintToSuperviewOffset:10.0];
+    
+    UILabel *secondLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    [secondLabel setText:@"Leading, Width"];
+    [[cell parentView] addSubview:secondLabel];
+    [secondLabel wta_addHeightConstraint:50.0];
+    [secondLabel wta_addWidthConstraint:80.0];
+    [secondLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
+    [secondLabel wta_addLeadingConstraintToView:firstLabel offset:0.0];
+}
+
 #pragma mark - UITableViewDataSource Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -117,12 +136,13 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
             
         case WTAExampleCellTypeInset:
             [self configureInsetCell:cell];
-            title = @"Inset constraints";
+            title = @"Inset Constraints Example";
             break;
             
-        case WTAExampleCellTypeCenter:
+        case WTAExampleCellTypeHorizontalSibling:
         {
-            title = @"Centering Constraints Example";
+            title = @"Horizontal Sibling Example";
+            [self configureHorizontalSiblingCell:cell];
             break;
         }
         default:

@@ -10,25 +10,32 @@
 
 @interface NSLayoutConstraint (WTAAutoLayoutHelpers)
 
-///--------------------------------------------------
-/// @name Convenience Methods for Edge Constraints
-///--------------------------------------------------
+///---------------------------------
+/// @name Edge Creating Constraints
+///---------------------------------
 
-+ (NSLayoutConstraint *)wta_leadingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
-+ (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 + (NSLayoutConstraint *)wta_topConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_leadingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 + (NSLayoutConstraint *)wta_bottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 
-///--------------------------------------------------
-/// @name Convenience Methods for Centering Constraints
-///--------------------------------------------------
+///----------------------------------------
+/// @name Side-by-Side separation Constraints
+///----------------------------------------
+
++ (NSLayoutConstraint *)wta_trailingToLeadingConstraintWithTrailingView:(UIView *)trailingView leadingView:(UIView *)leadingView separation:(CGFloat)separation;
++ (NSLayoutConstraint *)wta_bottomToTopConstraintWithTopView:(UIView *)topView bottomView:(UIView *)bottomView separation:(CGFloat)separation;
+
+///------------------------------
+/// @name Centering Constraints
+///------------------------------
 
 + (NSLayoutConstraint *)wta_horizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 + (NSLayoutConstraint *)wta_verticallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 
-///--------------------------------------------------
-/// @name Convenience Methods for Size Constraints
-///--------------------------------------------------
+///------------------------
+/// @name Size Constraints
+///------------------------
 
 + (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height;
 + (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width;

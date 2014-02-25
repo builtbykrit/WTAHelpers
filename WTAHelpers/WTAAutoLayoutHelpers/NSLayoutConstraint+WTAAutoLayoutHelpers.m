@@ -10,6 +10,8 @@
 
 @implementation NSLayoutConstraint (WTAAutoLayoutHelpers)
 
+#pragma mark - Edge Creating Constraints
+
 + (NSLayoutConstraint *)wta_leadingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
@@ -58,9 +60,33 @@
     return constraint;
 }
 
-///--------------------------------------------------
-/// @name Convenience Methods for Common Constraints
-///--------------------------------------------------
+#pragma mark - Side-by-Side separation Constraints
+
++ (NSLayoutConstraint *)wta_trailingToLeadingConstraintWithTrailingView:(UIView *)trailingView leadingView:(UIView *)leadingView separation:(CGFloat)separation;
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:leadingView
+                                                                  attribute:NSLayoutAttributeTrailing
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:trailingView
+                                                                  attribute:NSLayoutAttributeLeading
+                                                                 multiplier:1.0
+                                                                   constant:separation];
+    return constraint;
+}
+
++ (NSLayoutConstraint *)wta_bottomToTopConstraintWithTopView:(UIView *)topView bottomView:(UIView *)bottomView separation:(CGFloat)separation;
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:topView
+                                                                  attribute:NSLayoutAttributeBottom
+                                                                  relatedBy:NSLayoutRelationEqual
+                                                                     toItem:bottomView
+                                                                  attribute:NSLayoutAttributeTop
+                                                                 multiplier:1.0
+                                                                   constant:separation];
+    return constraint;
+}
+
+#pragma mark - Centering Constraints
 
 + (NSLayoutConstraint *)wta_horizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
@@ -86,9 +112,7 @@
     return constraint;
 }
 
-///--------------------------------------------------
-/// @name Convenience Methods for Common Constraints
-///--------------------------------------------------
+#pragma mark - Size Constraints
 
 + (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height;
 {

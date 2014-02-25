@@ -20,7 +20,7 @@
     return view;
 }
 
-#pragma mark - Convenience Methods for Common Constraints
+#pragma mark - Edge Constraints to Superview
 
 - (NSArray *)wta_addEdgeConstraintsToSuperview:(UIEdgeInsets)inset
 {
@@ -36,49 +36,85 @@
 
 - (NSLayoutConstraint *)wta_addLeadingConstraintToSuperviewOffset:(CGFloat)offset
 {
-    return [UIView wta_addLeadingConstraintWithView:self toView:[self superview] offset:offset];
+    return [self wta_addLeadingConstraintToView:[self superview] offset:offset];
 }
 
 - (NSLayoutConstraint *)wta_addTrailingConstraintToSuperviewOffset:(CGFloat)offset
 {
-    return [UIView wta_addTrailingConstraintWithView:self toView:[self superview] offset:offset];
+    return [self wta_addTrailingConstraintToView:[self superview] offset:offset];
 }
 
 - (NSLayoutConstraint *)wta_addTopConstraintToSuperviewOffset:(CGFloat)offset
 {
-    return [UIView wta_addTopConstraintWithView:self toView:[self superview] offset:offset];
+    return [self wta_addTopConstraintToView:[self superview] offset:offset];
 }
 
 - (NSLayoutConstraint *)wta_addBottomConstraintToSuperviewOffset:(CGFloat)offset
 {
-    return [UIView wta_addBottomConstraintWithView:self toView:[self superview] offset:offset];
+    return [self wta_addBottomConstraintToView:[self superview] offset:offset];
 }
 
-+ (NSLayoutConstraint *)wta_addLeadingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+#pragma mark - Align Edges for Sibling Views
+
+- (NSLayoutConstraint *)wta_addLeadingConstraintToView:(UIView *)toView offset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_leadingConstraintWithView:withView toView:toView offset:offset];
-    [[withView superview] addConstraint:constraint];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_leadingConstraintWithView:self toView:toView offset:offset];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_addTrailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+- (NSLayoutConstraint *)wta_addTrailingConstraintToView:(UIView *)toView offset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingConstraintWithView:withView toView:toView offset:offset];
-    [[withView superview] addConstraint:constraint];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingConstraintWithView:self toView:toView offset:offset];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_addTopConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+- (NSLayoutConstraint *)wta_addTopConstraintToView:(UIView *)toView offset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_topConstraintWithView:withView toView:toView offset:offset];
-    [[withView superview] addConstraint:constraint];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_topConstraintWithView:self toView:toView offset:offset];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_addBottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+- (NSLayoutConstraint *)wta_addBottomConstraintToView:(UIView *)toView offset:(CGFloat)offset
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomConstraintWithView:withView toView:toView offset:offset];
-    [[withView superview] addConstraint:constraint];
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomConstraintWithView:self toView:toView offset:offset];
+    [[self superview] addConstraint:constraint];
+    return constraint;
+}
+
+#pragma mark - Separation Sibling Views
+
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view separation:(CGFloat)separation;
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingToLeadingConstraintWithTrailingView:self
+                                                                                             leadingView:view
+                                                                                              separation:separation];
+    return constraint;
+}
+
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view separation:(CGFloat)separation;
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingToLeadingConstraintWithTrailingView:view
+                                                                                             leadingView:self
+                                                                                              separation:separation];
+    return constraint;
+}
+
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view separation:(CGFloat)separation;
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomToTopConstraintWithTopView:self
+                                                                                   bottomView:view
+                                                                                   separation:separation];
+    return constraint;
+}
+
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation
+{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomToTopConstraintWithTopView:view
+                                                                                   bottomView:self
+                                                                                   separation:separation];
     return constraint;
 }
 
