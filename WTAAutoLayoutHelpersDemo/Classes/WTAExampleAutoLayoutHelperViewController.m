@@ -45,17 +45,17 @@
     [edgeView setBackgroundColor:[UIColor orangeColor]];
     [parentView addSubview:edgeView];
     
-    [edgeView wta_addBottomConstraintForSuperviewOffset:-10.0];
-    [edgeView wta_addTopConstraintForSuperviewOffset:10.0];
-    [edgeView wta_addLeadingConstraintForSuperviewOffset:10.0];
-    [edgeView wta_addTrailingConstraintForSuperviewOffset:-10.0];
+    [edgeView wta_addBottomConstraintToSuperviewOffset:-10.0];
+    [edgeView wta_addTopConstraintToSuperviewOffset:10.0];
+    [edgeView wta_addLeadingConstraintToSuperviewOffset:10.0];
+    [edgeView wta_addTrailingConstraintToSuperviewOffset:-10.0];
     
     UIView *sizeView = [UIView wta_autolayoutView];
     [sizeView setBackgroundColor:[UIColor blueColor]];
     [parentView addSubview:sizeView];
     
-    [sizeView wta_addLeadingConstraintForSuperviewOffset:20.0];
-    [sizeView wta_addTopConstraintForSuperviewOffset:20.0];
+    [sizeView wta_addLeadingConstraintToSuperviewOffset:20.0];
+    [sizeView wta_addTopConstraintToSuperviewOffset:20.0];
     [sizeView wta_addWidthConstraint:100.0];
     [sizeView wta_addHeightConstraint:100.0];
 }

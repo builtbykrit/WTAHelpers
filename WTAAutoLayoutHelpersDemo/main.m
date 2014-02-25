@@ -1,8 +1,8 @@
 //
 //  main.m
-//  WTALayoutHelpers
+//  WTAAutoLayoutHelpersDemo
 //
-//  Created by Trung Tran on 2/18/14.
+//  Created by Trung Tran on 2/24/14.
 //  Copyright (c) 2014 WillowTree Apps, Inc. All rights reserved.
 //
 
