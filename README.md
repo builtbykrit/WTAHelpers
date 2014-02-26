@@ -37,7 +37,9 @@ pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WT
 
 If you are using a lot of the helpers, you can import all of them at once with:
 
-`#import <WTAHelpers/WTAHelpers.h>` 
+```objective-c
+#import <WTAHelpers/WTAHelpers.h>
+```
 
 Otherwise import each helper separately:
 
