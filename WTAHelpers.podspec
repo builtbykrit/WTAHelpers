@@ -8,8 +8,6 @@ Pod::Spec.new do |s|
   s.source   = { :git => 'https://github.com/willowtreeapps/WTAHelpers', :git => :head }
   s.requires_arc = true
   s.ios.deployment_target = '6.0'
-
-  s.public_header_files = 'WTAHelpers/*.h'
   s.source_files = 'WTAHelpers/*.{h,m}'
 
   s.subspec 'WTAFrameHelpers' do |ss|
