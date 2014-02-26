@@ -56,4 +56,4 @@ Otherwise import each helper separately:
 
 ## License
 
-AFNetworking is available under the MIT license. See the LICENSE file for more info.
+WTAHelpers is available under the MIT license.
