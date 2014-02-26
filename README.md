@@ -16,19 +16,19 @@ WTAHelpers is a collection of useful categories for iOS development that will he
 
 [CocoaPods](http://cocoapods.org) is the dependency manager for Objective-C projects. It has thousands of libraries and can help you scale your projects elegantly.
 
-Currently WTAHelpers is not tagged and not in a CocoaPods spec repository because it is still undergoing rapid development. But if you want to use it in your project, you can point to a specific commit in your Podfile or `:head` if you're feeling dangerous.
+Currently WTAHelpers is not in a CocoaPods spec repository because it is still undergoing rapid development.
 
 Including all of the helpers in your Podfile:
 
 ```ruby
-pod 'WTAHelpers', :git => 'git@github.com:willowtreeapps/WTAHelpers.git', :commit => 'f38e20f'
+pod 'WTAHelpers', :git => 'git@github.com:willowtreeapps/WTAHelpers.git', :tag => '0.0.1'
 ```
 
 Including specific subspecs in your Podfile:
 
 ```ruby
-pod "WTAHelpers/WTAFrameHelpers", :git => 'git@github.com:willowtreeapps/WTAHelpers.git', :commit => 'f38e20f'
-pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WTAHelpers.git', :commit => 'f38e20f'
+pod "WTAHelpers/WTAFrameHelpers", :git => 'git@github.com:willowtreeapps/WTAHelpers.git', :tag => '0.0.1'
+pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WTAHelpers.git', :tag => '0.0.1'
 ```
 
 ## Usage
@@ -37,9 +37,7 @@ pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WT
 
 If you are using a lot of the helpers, you can import all of them at once with:
 
-```objective-c
-#import <WTAHelpers/WTAHelpers.h>
-```
+`#import <WTAHelpers/WTAHelpers.h>` 
 
 Otherwise import each helper separately:
 
@@ -56,4 +54,4 @@ Otherwise import each helper separately:
 
 ## License
 
-WTAHelpers is available under the MIT license.
+AFNetworking is available under the MIT license. See the LICENSE file for more info.
