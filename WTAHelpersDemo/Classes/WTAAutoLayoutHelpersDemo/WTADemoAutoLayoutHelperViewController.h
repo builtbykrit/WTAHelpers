@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface WTAExampleAutoLayoutHelperViewController : UITableViewController
+@interface WTADemoAutoLayoutHelperViewController : UITableViewController
 
 @end

@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 WillowTree Apps, Inc. All rights reserved.
 //
 
-#import "WTAExampleFrameHelperViewController.h"
+#import "WTADemoFrameHelperViewController.h"
 #import "WTAFrameHelpersCell.h"
 #import "UIView+WTAFrameHelpers.h"
 #import "WTAReusableIdentifier.h"
@@ -20,15 +20,16 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     WTAExampleViewCellTypeCount,
 };
 
-@interface WTAExampleFrameHelperViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface WTADemoFrameHelperViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
-@implementation WTAExampleFrameHelperViewController
+@implementation WTADemoFrameHelperViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self setTitle:@"WTFrameHelpers"];
     [[self tableView] registerNib:[WTAFrameHelpersCell wta_nib] forCellReuseIdentifier:[WTAFrameHelpersCell wta_reuseableIdentifier]];
 }
 
@@ -37,7 +38,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 + (UILabel *)createTestLabel
 {
     UILabel *testLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 80.0, 40.0)];
-    [testLabel setBackgroundColor:[UIColor greenColor]];
+    [testLabel setBackgroundColor:[UIColor colorWithWhite:1.0 alpha:1.0]];
     [testLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.0]];
     [testLabel setNumberOfLines:2];
     [testLabel setTextAlignment:NSTextAlignmentCenter];
@@ -49,7 +50,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {
     UIView *parentView = [cell parentView];
     
-    UILabel *sizeLabel = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *sizeLabel = [WTADemoFrameHelperViewController createTestLabel];
     [sizeLabel wta_setFrameSize:CGSizeMake(100.0, 40.0)];
     [sizeLabel wta_setFrameOrigin:CGPointMake(20.0, 40.0)];
     [sizeLabel setText:[NSString stringWithFormat:@"Origin: {%2.f, %2.f}\nSize: {%2.f, %2.f}",
@@ -60,7 +61,7 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
     
     [parentView addSubview:sizeLabel];
     
-    UILabel *sizeLabel2 = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *sizeLabel2 = [WTADemoFrameHelperViewController createTestLabel];
     [sizeLabel2 wta_setFrameSizeWidth:100.0];
     [sizeLabel2 wta_setFrameSizeHeight:40.0];
     [sizeLabel2 wta_setFrameOriginX:120.0];
@@ -76,15 +77,15 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {
     UIView *parentView = [cell parentView];
     
-    UILabel *leftLabel = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *leftLabel = [WTADemoFrameHelperViewController createTestLabel];
     [leftLabel setText:@"Center: V\nAlign: Left"];
-    UILabel *topLabel = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *topLabel = [WTADemoFrameHelperViewController createTestLabel];
     [topLabel setText:@"Center: H\nAlign: Top"];
-    UILabel *rightLabel = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *rightLabel = [WTADemoFrameHelperViewController createTestLabel];
     [rightLabel setText:@"Center: V\nAlign: Right"];
-    UILabel *bottomLabel = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *bottomLabel = [WTADemoFrameHelperViewController createTestLabel];
     [bottomLabel setText:@"Center: H\nAlign: Bottom"];
-    UILabel *centerLabel = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *centerLabel = [WTADemoFrameHelperViewController createTestLabel];
     [centerLabel setText:@"Center: V, H"];
     
     [parentView addSubview:leftLabel];
@@ -109,41 +110,34 @@ typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {
     UIView *parentView = [cell parentView];
     
-    UILabel *centeredView = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *centeredView = [WTADemoFrameHelperViewController createTestLabel];
     [parentView addSubview:centeredView];
     [centeredView setText:@"Center: V, H"];
     [centeredView wta_centerAlignInSuperview];
     
-    UILabel *leftView = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *leftView = [WTADemoFrameHelperViewController createTestLabel];
     [parentView addSubview:leftView];
     [leftView setText:@"Adjacent Left"];
     [leftView wta_centerAlignVerticallyInSuperview];
     [leftView wta_setFrameOriginXLeftOfView:centeredView offset:5.0];
     
-    UILabel *rightView = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *rightView = [WTADemoFrameHelperViewController createTestLabel];
     [parentView addSubview:rightView];
     [rightView setText:@"Adjacent Right"];
     [rightView wta_centerAlignVerticallyInSuperview];
     [rightView wta_setFrameOriginXRightOfView:centeredView offset:5.0];
     
-    UILabel *topView = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *topView = [WTADemoFrameHelperViewController createTestLabel];
     [parentView addSubview:topView];
-    [topView setText:@"Adjacent Right"];
+    [topView setText:@"Adjacent Top"];
     [topView wta_centerAlignHorizontallyInSuperview];
     [topView wta_setFrameOriginYAboveView:centeredView offset:5.0];
     
-    UILabel *bottomView = [WTAExampleFrameHelperViewController createTestLabel];
+    UILabel *bottomView = [WTADemoFrameHelperViewController createTestLabel];
     [parentView addSubview:bottomView];
-    [bottomView setText:@"Adjacent Right"];
+    [bottomView setText:@"Adjacent Bottom"];
     [bottomView wta_centerAlignHorizontallyInSuperview];
     [bottomView wta_setFrameOriginYBelowView:centeredView offset:5.0];
-}
-
-#pragma mark - UITableViewDelegate Methods
-
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    return @"UIView+WTAFrameHelpers";
 }
 
 #pragma mark - UITableViewDataSource Methods

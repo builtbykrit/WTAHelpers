@@ -6,32 +6,32 @@
 //  Copyright (c) 2014 WillowTree Apps, Inc. All rights reserved.
 //
 
-#import "WTAExampleAutoLayoutHelperViewController.h"
+#import "WTADemoAutoLayoutHelperViewController.h"
 #import "UIView+WTAAutoLayoutHelpers.h"
 #import "UIView+WTANibLoading.h"
 #import "WTAReusableIdentifier.h"
-#import "WTAExampleAutoLayoutCell.h"
+#import "WTADemoAutoLayoutCell.h"
 
-typedef NS_ENUM(NSInteger, WTAExampleCellType)
+typedef NS_ENUM(NSInteger, WTADemoCellType)
 {
-    WTAExampleCellTypeEdges,
-    WTAExampleCellTypeInset,
-    WTAExampleCellTypeHorizontalSibling,
-    WTAExampleCellTypeVerticalSibling,
-    WTAExampleCellTypeCentering,
-    WTAExampleCellTypeCount,
+    WTADemoCellTypeEdges,
+    WTADemoCellTypeInset,
+    WTADemoCellTypeHorizontalSibling,
+    WTADemoCellTypeVerticalSibling,
+    WTADemoCellTypeCount,
 };
 
-@interface WTAExampleAutoLayoutHelperViewController ()
+@interface WTADemoAutoLayoutHelperViewController ()
 
 @end
 
-@implementation WTAExampleAutoLayoutHelperViewController
+@implementation WTADemoAutoLayoutHelperViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [[self tableView] registerNib:[WTAExampleAutoLayoutCell wta_nib] forCellReuseIdentifier:[WTAExampleAutoLayoutCell wta_reuseableIdentifier]];
+    [self setTitle:@"WTAAutoLayoutHelpers"];
+    [[self tableView] registerNib:[WTADemoAutoLayoutCell wta_nib] forCellReuseIdentifier:[WTADemoAutoLayoutCell wta_reuseableIdentifier]];
 }
 
 #pragma mark - Instance Methods
@@ -39,7 +39,8 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
 + (UILabel *)createTestLabel
 {
     UILabel *testLabel = [UILabel wta_autolayoutView];
-    [testLabel setBackgroundColor:[UIColor greenColor]];
+    [testLabel setBackgroundColor:[UIColor colorWithWhite:1.0f alpha:1.0f]];
+    [testLabel setTextColor:[UIColor colorWithWhite:64.0f/255.0f alpha:1.0]];
     [testLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.0]];
     [testLabel setNumberOfLines:2];
     [testLabel setTextAlignment:NSTextAlignmentCenter];
@@ -47,10 +48,10 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     return testLabel;
 }
 
-- (void)configureEdgesCell:(WTAExampleAutoLayoutCell *)cell
+- (void)configureEdgesCell:(WTADemoAutoLayoutCell *)cell
 {
     // Leading constraint
-    UILabel *leadingLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *leadingLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     {
         [leadingLabel setText:@"Leading, W, H"];
         [[cell parentView] addSubview:leadingLabel];
@@ -60,7 +61,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     }
     
     // Trailing constraint
-    UILabel *trailingLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *trailingLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     {
         [trailingLabel setText:@"Trailing, W, H"];
         [[cell parentView] addSubview:trailingLabel];
@@ -70,7 +71,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     }
     
     // Top constraint
-    UILabel *topLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *topLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     {
         [topLabel setText:@"Top, W, H"];
         [[cell parentView] addSubview:topLabel];
@@ -80,7 +81,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     }
     
     // Bottom constraint
-    UILabel *bottomLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *bottomLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     {
         [bottomLabel setText:@"Bottom, W, H"];
         [[cell parentView] addSubview:bottomLabel];
@@ -90,17 +91,17 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     }
 }
 
-- (void)configureInsetCell:(WTAExampleAutoLayoutCell *)cell
+- (void)configureInsetCell:(WTADemoAutoLayoutCell *)cell
 {
-    UILabel *bottomLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *bottomLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [bottomLabel setText:@"Top, Leading, Bottom, Trailing Constraints"];
     [[cell parentView] addSubview:bottomLabel];
     [bottomLabel wta_addEdgeConstraintsToSuperview:UIEdgeInsetsMake(10.0, 10.0, 10.0, 10.0)];
 }
 
-- (void)configureHorizontalSiblingCell:(WTAExampleAutoLayoutCell *)cell
+- (void)configureHorizontalSiblingCell:(WTADemoAutoLayoutCell *)cell
 {
-    UILabel *firstLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *firstLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [firstLabel setText:@"Leading, Width"];
     [[cell parentView] addSubview:firstLabel];
     [firstLabel wta_addHeightConstraint:50.0];
@@ -108,14 +109,14 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [firstLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
     [firstLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
     
-    UILabel *secondLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *secondLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [secondLabel setText:@"Leading, Trailing"];
     [[cell parentView] addSubview:secondLabel];
     [secondLabel wta_addHeightConstraint:50.0];
     [secondLabel wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
     [secondLabel wta_addConstraintPlacingViewRightOfView:firstLabel separation:5.0];
     
-    UILabel *thirdLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *thirdLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [thirdLabel setText:@"Trailing, Width"];
     [[cell parentView] addSubview:thirdLabel];
     [thirdLabel wta_addHeightConstraint:50.0];
@@ -125,7 +126,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     
     [secondLabel wta_addConstraintPlacingViewLeftOfView:thirdLabel separation:5.0];
     
-    UILabel *alignLeftLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *alignLeftLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [alignLeftLabel setText:@"Left Align"];
     [[cell parentView] addSubview:alignLeftLabel];
     [alignLeftLabel wta_addHeightConstraint:30.0];
@@ -133,7 +134,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [alignLeftLabel wta_addTopConstraintToSuperviewOffset:5.0];
     [alignLeftLabel wta_addLeadingConstraintToView:firstLabel offset:0.0];
     
-    UILabel *alignRightLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *alignRightLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [alignRightLabel setText:@"Right Align"];
     [[cell parentView] addSubview:alignRightLabel];
     [alignRightLabel wta_addHeightConstraint:30.0];
@@ -142,9 +143,9 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [alignRightLabel wta_addTrailingConstraintToView:thirdLabel offset:0.0];
 }
 
-- (void)configureVerticalSiblingCell:(WTAExampleAutoLayoutCell *)cell
+- (void)configureVerticalSiblingCell:(WTADemoAutoLayoutCell *)cell
 {
-    UILabel *firstLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *firstLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [firstLabel setText:@"Top, Height"];
     [[cell parentView] addSubview:firstLabel];
     [firstLabel wta_addHeightConstraint:30.0];
@@ -152,14 +153,14 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [firstLabel wta_addHorizontallyCenterConstraintToSuperviewOffset:0.0];
     [firstLabel wta_addTopConstraintToSuperviewOffset:5.0];
     
-    UILabel *secondLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *secondLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [secondLabel setText:@"Top, Bottom"];
     [[cell parentView] addSubview:secondLabel];
     [secondLabel wta_addWidthConstraint:50.0];
     [secondLabel wta_addHorizontallyCenterConstraintToSuperviewOffset:0.0];
     [secondLabel wta_addConstraintPlacingViewBelowView:firstLabel separation:5.0];
     
-    UILabel *thirdLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *thirdLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [thirdLabel setText:@"Bottom, Height"];
     [[cell parentView] addSubview:thirdLabel];
     [thirdLabel wta_addHeightConstraint:30.0];
@@ -168,7 +169,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [thirdLabel wta_addBottomConstraintToSuperviewOffset:5.0];
     [secondLabel wta_addConstraintPlacingViewAboveView:thirdLabel separation:5.0];
     
-    UILabel *alignTopLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *alignTopLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [alignTopLabel setText:@"Top Align"];
     [[cell parentView] addSubview:alignTopLabel];
     [alignTopLabel wta_addHeightConstraint:30.0];
@@ -176,7 +177,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
     [alignTopLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
     [alignTopLabel wta_addTopConstraintToView:firstLabel offset:0.0];
     
-    UILabel *alignBottomLabel = [WTAExampleAutoLayoutHelperViewController createTestLabel];
+    UILabel *alignBottomLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [alignBottomLabel setText:@"Bottom Align"];
     [[cell parentView] addSubview:alignBottomLabel];
     [alignBottomLabel wta_addHeightConstraint:30.0];
@@ -189,41 +190,36 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    WTAExampleAutoLayoutCell *cell = [tableView dequeueReusableCellWithIdentifier:[WTAExampleAutoLayoutCell wta_reuseableIdentifier]
+    WTADemoAutoLayoutCell *cell = [tableView dequeueReusableCellWithIdentifier:[WTADemoAutoLayoutCell wta_reuseableIdentifier]
                                                                 forIndexPath:indexPath];
     [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
     UILabel *titleLabel = [cell titleLabel];
     NSString *title = nil;
     
-    switch ((WTAExampleCellType)[indexPath row])
+    switch ((WTADemoCellType)[indexPath row])
     {
-        case WTAExampleCellTypeEdges:
+        case WTADemoCellTypeEdges:
             
             [self configureEdgesCell:cell];
             title = @"Edge in Superview";
             break;
             
-        case WTAExampleCellTypeInset:
+        case WTADemoCellTypeInset:
             
             [self configureInsetCell:cell];
             title = @"Inset in Superview";
             break;
             
-        case WTAExampleCellTypeHorizontalSibling:
+        case WTADemoCellTypeHorizontalSibling:
             
             title = @"Horizontal Siblings";
             [self configureHorizontalSiblingCell:cell];
             break;
             
-        case WTAExampleCellTypeVerticalSibling:
+        case WTADemoCellTypeVerticalSibling:
             
             title = @"Vertical Siblings";
             [self configureVerticalSiblingCell:cell];
-            break;
-            
-        case WTAExampleCellTypeCentering:
-            
-            title = @"Centering Views";
             break;
             
         default:
@@ -242,7 +238,7 @@ typedef NS_ENUM(NSInteger, WTAExampleCellType)
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return WTAExampleCellTypeCount;
+    return WTADemoCellTypeCount;
 }
 
 @end
