@@ -105,9 +105,9 @@
  */
 - (NSLayoutConstraint *)wta_addBottomConstraintToView:(UIView *)toView offset:(CGFloat)offset;
 
-///----------------------------------------
-/// @name Separation Between Sibling Views
-///----------------------------------------
+///---------------------------------------------------
+/// @name Placing Sibling Views Adjacent to Eachother
+///---------------------------------------------------
 
 /**
  Places the current view to the right of a view with a separation.
@@ -115,6 +115,7 @@
  @param view that the current view will placed to the right of.
  @param separation between the sibling views.
  */
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view separation:(CGFloat)separation;
 
 /**
@@ -123,6 +124,7 @@
  @param view that the current view will placed to the left of.
  @param separation between the sibling views.
  */
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view separation:(CGFloat)separation;
 
 /**
@@ -131,6 +133,7 @@
  @param view that the current view will placed to the top of.
  @param separation between the sibling views.
  */
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view separation:(CGFloat)separation;
 
 /**
@@ -139,11 +142,21 @@
  @param view that the current view will placed to the bottom of.
  @param separation between the sibling views.
  */
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation;
 
 ///-----------------------------
 /// @name Centering Constraints
 ///-----------------------------
+
+/**
+ Creates vertical and horizontally centering constraints to the superview. These constraints are added to the view's superview.
+ 
+ @return array of the created constraints.
+ @param offset from the center.
+ */
+- (NSArray *)wta_addCenteringConstraintToSuperview;
+- (NSArray *)wta_addCenteringConstraintToSuperviewOffset:(CGPoint)offset;
 
 /**
  Creates a constraint to vertically center the current view. The constraint is added to the view's superview.
