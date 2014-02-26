@@ -42,7 +42,7 @@
 - (NSLayoutConstraint *)wta_addLeadingConstraintToSuperviewOffset:(CGFloat)offset;
 
 /**
- Creates a trailing constraint to the current view with offset. The constraint is added the view's superview. Positive offset moves the view to the right.
+ Creates a trailing constraint to the current view with offset. The constraint is added the view's superview.
  
  @param offset from the edge.
  @return The newly added constraint.
@@ -58,7 +58,7 @@
 - (NSLayoutConstraint *)wta_addTopConstraintToSuperviewOffset:(CGFloat)offset;
 
 /**
- Creates a bottom constraint to the current view with offset. The constraint is added the view's superview. Positive offset moves the view down.
+ Creates a bottom constraint to the current view with offset. The constraint is added the view's superview.
  
  @param offset from the edge.
  @return The newly added constraint.
@@ -151,6 +151,7 @@
  @param offset to move the view vertically from the center.
  @return The newly added constraint.
  */
+- (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToSuperview;
 - (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToSuperviewOffset:(CGFloat)offset;
 
 /**
@@ -159,6 +160,7 @@
  @param offset to move the view horizontally from the center.
  @return The newly added constraint.
  */
+- (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintToSuperview;
 - (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintToSuperviewOffset:(CGFloat)offset;
 
 /**

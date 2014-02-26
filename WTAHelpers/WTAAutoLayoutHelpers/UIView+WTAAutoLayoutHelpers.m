@@ -124,6 +124,16 @@
 
 #pragma mark - Centering Constraints
 
+- (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToSuperview
+{
+    return [self wta_addVerticallyCenterConstraintToSuperviewOffset:0.0];
+}
+
+- (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintToSuperview
+{
+    return [self wta_addHorizontallyCenterConstraintToSuperviewOffset:0.0];
+}
+
 - (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToSuperviewOffset:(CGFloat)offset
 {
     return [UIView wta_addVerticallyCenterConstraintWithView:self toView:[self superview] offset:offset];

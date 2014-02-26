@@ -7,10 +7,8 @@
 //
 
 #import "WTADemoFrameHelperViewController.h"
+#import "WTAHelpers.h"
 #import "WTAFrameHelpersCell.h"
-#import "UIView+WTAFrameHelpers.h"
-#import "WTAReusableIdentifier.h"
-#import "UIView+WTANibLoading.h"
 
 typedef NS_ENUM(NSInteger, WTAExampleViewCellType)
 {

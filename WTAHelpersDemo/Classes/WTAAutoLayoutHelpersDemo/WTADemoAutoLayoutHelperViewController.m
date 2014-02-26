@@ -7,10 +7,8 @@
 //
 
 #import "WTADemoAutoLayoutHelperViewController.h"
-#import "UIView+WTAAutoLayoutHelpers.h"
-#import "UIView+WTANibLoading.h"
-#import "WTAReusableIdentifier.h"
 #import "WTADemoAutoLayoutCell.h"
+#import "WTAHelpers.h"
 
 typedef NS_ENUM(NSInteger, WTADemoCellType)
 {
@@ -18,6 +16,7 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
     WTADemoCellTypeInset,
     WTADemoCellTypeHorizontalSibling,
     WTADemoCellTypeVerticalSibling,
+    WTADemoCellTypeIntrinsicContent,
     WTADemoCellTypeCount,
 };
 
@@ -180,10 +179,26 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
     UILabel *alignBottomLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
     [alignBottomLabel setText:@"Bottom Align"];
     [[cell parentView] addSubview:alignBottomLabel];
-    [alignBottomLabel wta_addHeightConstraint:30.0];
-    [alignBottomLabel wta_addWidthConstraint:50.0];
+    [alignBottomLabel wta_addSizeConstraints:CGSizeMake(50.0, 30.0)];
     [alignBottomLabel wta_addLeadingConstraintToSuperviewOffset:5.0];
     [alignBottomLabel wta_addBottomConstraintToView:thirdLabel offset:0.0];
+}
+
+- (void)configureIntrinsicCell:(WTADemoAutoLayoutCell *)cell
+{
+    UIView *intrinsicView = [UIView wta_autolayoutView];
+    [intrinsicView setBackgroundColor:[UIColor colorWithWhite:62.0f/255.0f alpha:1.0]];
+    [[cell parentView] addSubview:intrinsicView];
+    
+    [intrinsicView wta_addHorizontallyCenterConstraintToSuperview];
+    [intrinsicView wta_addVerticallyCenterConstraintToSuperview];
+    
+    UILabel *intrinsicLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
+    [intrinsicLabel setText:@"Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."];
+    [intrinsicLabel setPreferredMaxLayoutWidth:100.0];
+    [intrinsicLabel setNumberOfLines:0];
+    [intrinsicView addSubview:intrinsicLabel];
+    [intrinsicLabel wta_addEdgeConstraintsToSuperview:UIEdgeInsetsMake(5.0, 5.0, 5.0, 5.0)];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -220,6 +235,11 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
             
             title = @"Vertical Siblings";
             [self configureVerticalSiblingCell:cell];
+            break;
+        case WTADemoCellTypeIntrinsicContent:
+            
+            title = @"Dynamic Fitting Size from a Label's Intrinsic Content Size";
+            [self configureIntrinsicCell:cell];
             break;
             
         default:

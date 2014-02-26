@@ -14,7 +14,7 @@
 @interface UICollectionReusableView (WTAReusableIdentifier)
 
 /**
- @return An NSString of the class's name.
+ @return String of the class's name.
  */
 + (NSString *)wta_reuseableIdentifier;
 
@@ -26,7 +26,7 @@
 @interface UITableViewCell (WTAReusableIdentifier)
 
 /**
- @return An NSString of the class's name.
+ @return String of the class's name.
  */
 + (NSString *)wta_reuseableIdentifier;
 
@@ -38,7 +38,7 @@
 @interface UITableViewHeaderFooterView (WTAReusableIdentifier)
 
 /**
- @return An NSString of the class's name.
+ @return String of the class's name.
  */
 + (NSString *)wta_reuseableIdentifier;
 

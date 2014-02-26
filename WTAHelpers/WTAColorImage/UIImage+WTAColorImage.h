@@ -15,6 +15,6 @@
  @param size of the resulting image
  @return The colored image.
  */
-+ (UIImage *)imageWithSize:(CGSize)size color:(UIColor *)color;
++ (UIImage *)wta_imageWithSize:(CGSize)size color:(UIColor *)color;
 
 @end

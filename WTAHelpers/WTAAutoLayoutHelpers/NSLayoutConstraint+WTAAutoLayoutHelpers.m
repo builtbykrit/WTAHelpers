@@ -26,13 +26,13 @@
 
 + (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:toView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeTrailing
                                                                   relatedBy:NSLayoutRelationEqual
-                                                                     toItem:withView
+                                                                     toItem:toView
                                                                   attribute:NSLayoutAttributeTrailing
                                                                  multiplier:1.0
-                                                                   constant:offset];
+                                                                   constant:-offset];
     return constraint;
 }
 
@@ -50,13 +50,13 @@
 
 + (NSLayoutConstraint *)wta_bottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:toView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeBottom
                                                                   relatedBy:NSLayoutRelationEqual
-                                                                     toItem:withView
+                                                                     toItem:toView
                                                                   attribute:NSLayoutAttributeBottom
                                                                  multiplier:1.0
-                                                                   constant:offset];
+                                                                   constant:-offset];
     return constraint;
 }
 

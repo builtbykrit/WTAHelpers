@@ -8,7 +8,7 @@
 
 @implementation UIImage (WTAColorImage)
 
-+ (UIImage *)imageWithSize:(CGSize)size color:(UIColor *)color
++ (UIImage *)wta_imageWithSize:(CGSize)size color:(UIColor *)color
 {
     UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
     view.backgroundColor = color;

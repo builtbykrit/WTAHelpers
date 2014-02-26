@@ -37,6 +37,7 @@
 		873F3C4318BD24FA0052E0DC /* NSLayoutConstraint+WTAAutoLayoutHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+WTAAutoLayoutHelpers.m"; sourceTree = "<group>"; };
 		873F3C4418BD24FA0052E0DC /* UIView+WTAAutoLayoutHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+WTAAutoLayoutHelpers.h"; sourceTree = "<group>"; };
 		873F3C4518BD24FA0052E0DC /* UIView+WTAAutoLayoutHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+WTAAutoLayoutHelpers.m"; sourceTree = "<group>"; };
+		874A4D7818BE771D009FEC4E /* WTAHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAHelpers.h; sourceTree = "<group>"; };
 		878284B418BE3C20005D1AEB /* UIImage+WTAColorImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+WTAColorImage.h"; sourceTree = "<group>"; };
 		878284B518BE3C20005D1AEB /* UIImage+WTAColorImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+WTAColorImage.m"; sourceTree = "<group>"; };
 		878284BE18BE432A005D1AEB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 				873F3C2F18BD21CE0052E0DC /* WTANibLoading */,
 				873F3C3418BD21CE0052E0DC /* WTAReusableIdentifier */,
 				878CD87C18BB9CCB00C4DCF4 /* WTAFrameHelpers */,
+				874A4D7818BE771D009FEC4E /* WTAHelpers.h */,
 			);
 			name = Source;
 			path = WTAHelpers;

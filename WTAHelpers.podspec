@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'An assortment of useful categories and classes.'
   s.homepage = 'https://github.com/willowtreeapps/WTAHelpers'
   s.authors  = { 'Trung Tran' => 'trung.tran@willowtreeapps.com' }
-  s.source   = { :git => 'https://github.com/willowtreeapps/WTAHelpers', :git => :head, :submodules => true }
+  s.source   = { :git => 'https://github.com/willowtreeapps/WTAHelpers', :git => :head }
   s.requires_arc = true
   s.ios.deployment_target = '6.0'
 
@@ -21,14 +21,14 @@ Pod::Spec.new do |s|
   end
 
   s.subspec 'WTAColorImage' do |ss|
-    ss.source_files = 'WTAHelpers/WTAAutoLayoutHelpers/*.{h,m}'
+    ss.source_files = 'WTAHelpers/WTAColorImage/*.{h,m}'
   end
 
   s.subspec 'WTANibLoading' do |ss|
-    ss.source_files = 'WTAHelpers/WTAAutoLayoutHelpers/*.{h,m}'
+    ss.source_files = 'WTAHelpers/WTANibLoading/*.{h,m}'
   end
 
   s.subspec 'WTAReusableIdentifier' do |ss|
-    ss.source_files = 'WTAHelpers/WTAAutoLayoutHelpers/*.{h,m}'
+    ss.source_files = 'WTAHelpers/WTAReusableIdentifier/*.{h,m}'
   end
 end
