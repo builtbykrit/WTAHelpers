@@ -15,7 +15,7 @@ WTAHelpers is a collection of useful categories for iOS development that will he
 
 [CocoaPods](http://cocoapods.org) is the dependency manager for Objective-C projects. It has thousands of libraries and can help you scale your projects elegantly.
 
-Currently WTAHelpers is not in tbe CocoaPods spec repository because it is still undergoing rapid development.
+Currently WTAHelpers is not in the CocoaPods Spec repository while it is under development. In the meantime you can use the helpers as a pod by pointing the podspec in the repository.
 
 #### Including all of the helpers in your Podfile:
 
@@ -32,7 +32,7 @@ pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WT
 
 ## Usage
 
-Import all of them at once with:
+Import all of the helpers at once with:
 
 ```objective-c
 #import <WTAHelpers/WTAHelpers.h>
