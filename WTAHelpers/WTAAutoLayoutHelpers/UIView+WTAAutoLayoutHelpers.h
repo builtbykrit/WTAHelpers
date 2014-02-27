@@ -180,7 +180,7 @@
  @param offset to move the view vertically from the center.
  @return The newly added constraint.
  */
-+ (NSLayoutConstraint *)wta_addVerticallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToView:(UIView *)toView offset:(CGFloat)offset;
 
 /**
  Creates a constraint to horizontally center a view to a view. The constraint is added to the withView's superview.
@@ -190,7 +190,7 @@
  @param offset to move the view horizontally from the center.
  @return The newly added constraint.
  */
-+ (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintToView:(UIView *)toView offset:(CGFloat)offset;
 
 ///-------------------------
 /// @name Size Constraints

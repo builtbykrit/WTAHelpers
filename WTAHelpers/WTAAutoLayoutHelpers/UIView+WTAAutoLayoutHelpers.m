@@ -148,29 +148,29 @@
 
 - (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToSuperviewOffset:(CGFloat)offset
 {
-    return [UIView wta_addVerticallyCenterConstraintWithView:self toView:[self superview] offset:offset];
+    return [self wta_addVerticallyCenterConstraintToView:[self superview] offset:offset];
 }
 
 - (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintToSuperviewOffset:(CGFloat)offset
 {
-    return [UIView wta_addHorizontallyCenterConstraintWithView:self toView:[self superview] offset:offset];
+    return [self wta_addHorizontallyCenterConstraintToView:[self superview] offset:offset];
 }
 
-+ (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+- (NSLayoutConstraint *)wta_addHorizontallyCenterConstraintToView:(UIView *)toView offset:(CGFloat)offset;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_horizontallyCenterConstraintWithView:withView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_horizontallyCenterConstraintWithView:self
                                                                                            toView:toView
                                                                                            offset:offset];
-    [[withView superview] addConstraint:constraint];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_addVerticallyCenterConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+- (NSLayoutConstraint *)wta_addVerticallyCenterConstraintToView:(UIView *)toView offset:(CGFloat)offset;
 {
-    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_verticallyCenterConstraintWithView:withView
+    NSLayoutConstraint *constraint = [NSLayoutConstraint wta_verticallyCenterConstraintWithView:self
                                                                                          toView:toView
                                                                                          offset:offset];
-    [[withView superview] addConstraint:constraint];
+    [[self superview] addConstraint:constraint];
     return constraint;
 }
 
