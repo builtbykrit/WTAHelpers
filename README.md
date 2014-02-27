@@ -3,11 +3,11 @@
 WTAHelpers is a collection of useful categories for iOS development that will help you make your life easier.
 
 ## About the Helpers
-- `WTAAutoLayoutHelpers` - Categories on `UIView` and `NSLayoutConstraint` for creating common Auto Layout constraints.
-- `WTAFrameHelpers` - A category on `UIView` for common getting and setting methods on frames.
-- `WTANibLoading` - A category on `UIView` to easily create an instance from a nib.
-- `WTAReusableIdentifier` - Categories on reusable cells and view's in `UICollectionView` and `UITableView` for creating reusable identifiers.
-- `WTAColorImage` - A category on `UIImage` for creating images with a solid color as its contents.
+- [`WTAAutoLayoutHelpers`](#wtaautolayouthelpers) - Categories on `UIView` and `NSLayoutConstraint` for creating common Auto Layout constraints.
+- [`WTAFrameHelpers`](#wtaframehelpers) - A category on `UIView` for common getting and setting methods on frames.
+- [`WTANibLoading`](#wtanibloading) - A category on `UIView` to easily create an instance from a nib.
+- [`WTAReusableIdentifier`](#wtareusableidentifier) - Categories on reusable cells and view's in `UICollectionView` and `UITableView` for creating reusable identifiers.
+- [`WTAColorImage`](#wtacolorimage) - A category on `UIImage` for creating images with a solid color as its contents.
 
 ## Installation
 
@@ -32,8 +32,6 @@ pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WT
 
 ## Usage
 
-### Importing the Helpers
-
 Import all of them at once with:
 
 ```objective-c
@@ -46,8 +44,8 @@ Or import each helper separately:
 #import <WTAHelpers/UIView+WTAAutoLayoutHelpers.h>
 #import <WTAHelpers/UIView+WTAFrameHelpers.h>
 ```
-
-## WTAAutoLayoutHelpers
+ 
+## <a name="wtaautolayouthelpers"></a>WTAAutoLayoutHelpers
 
 `WTAAutoLayoutHelpers` is an attempt to make Auto Layout through code less painful. The category methods found in `UIView+WTAAutoLayoutHelpers.h` and `NSLayoutConstraint+WTAAutoLayoutHelpers.h` provide convenience methods for adding and creating common constraints.
 
@@ -82,10 +80,10 @@ UIView *view = [UIView wta_autolayoutView];
 - Setting the size of a view with constraints (e.g. `wta_addHeightConstraint:`).
 
 
-## WTAFrameHelpers
-## WTANibLoading
-## WTAReusableIdentifier
-## WTAColorImage
+## <a name="wtaframehelpers"></a>WTAFrameHelpers
+## <a name="wtanibloading"></a>WTANibLoading
+## <a name="wtareusableidentifier"></a>WTAReusableIdentifier
+## <a name="wtacolorimage"></a>WTAColorImage
 
 ## License
 
