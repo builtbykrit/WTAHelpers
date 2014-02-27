@@ -115,7 +115,6 @@
  @param view that the current view will placed to the right of.
  @param separation between the sibling views.
  */
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view separation:(CGFloat)separation;
 
 /**
@@ -124,7 +123,6 @@
  @param view that the current view will placed to the left of.
  @param separation between the sibling views.
  */
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view separation:(CGFloat)separation;
 
 /**
@@ -133,7 +131,6 @@
  @param view that the current view will placed to the top of.
  @param separation between the sibling views.
  */
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view separation:(CGFloat)separation;
 
 /**
@@ -142,7 +139,6 @@
  @param view that the current view will placed to the bottom of.
  @param separation between the sibling views.
  */
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view;
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation;
 
 ///-----------------------------

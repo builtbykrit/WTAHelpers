@@ -1,5 +1,4 @@
-About WTAHelpers
-================
+#About WTAHelpers
 
 WTAHelpers is a collection of useful categories for iOS development that will help you make your life easier.
 
@@ -35,11 +34,11 @@ pod "WTAHelpers/WTAAutoLayoutHelpers", :git => 'git@github.com:willowtreeapps/WT
 
 ### Importing the Helpers
 
-If you are using a lot of the helpers, you can import all of them at once with:
+Import all of them at once with:
 
 `#import <WTAHelpers/WTAHelpers.h>` 
 
-Otherwise import each helper separately:
+Or import each helper separately:
 
 ```objective-c
 #import <WTAHelpers/UIView+WTAAutoLayoutHelpers.h>
@@ -47,6 +46,26 @@ Otherwise import each helper separately:
 ```
 
 ### WTAAutoLayoutHelpers
+
+`WTAAutoLayoutHelpers` is an attempt to make auto layout through code easier and clear. The category methods found in `UIView+WTAAutoLayoutHelpers.h` and `NSLayoutConstraint+WTAAutoLayoutHelpers.h` provide convenience methods for adding and creating constraints.
+
+#### Adding constraints
+Here is an example that creates a constraint that places a view 5px from the top of its superview and adds the constraint to the view's superview.
+
+Note that some constraints are added to the view's superview. So you will need to make sure the view is added as a subview before using this helper.
+
+```objective-c
+[view wta_addTopConstraintToSuperviewOffset:5.0];
+```
+
+#### Creating constraints
+If you don't want the view's constraint added immediately, you can create the constraint with the `NSLayoutConstraint` category methods. The following two lines are equal to the line in the previous example.
+```objective-c
+NSLayoutConstraint *constraint = [NSLayoutConstraint wta_topConstraintWithView:view toView:[view superview] offset:5.0];
+[[view superview] addConstraint:constraint]
+```
+---
+
 ### WTAFrameHelpers
 ### WTANibLoading
 ### WTAReusableIdentifier

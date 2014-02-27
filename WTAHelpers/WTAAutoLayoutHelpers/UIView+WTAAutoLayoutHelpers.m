@@ -86,11 +86,6 @@
 
 #pragma mark - Placing Sibling Views Adjacent to Eachother
 
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view
-{
-    return [self wta_addConstraintPlacingViewRightOfView:view separation:0.0];
-}
-
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view separation:(CGFloat)separation;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingToLeadingConstraintWithTrailingView:self
@@ -98,11 +93,6 @@
                                                                                               separation:separation];
     [[self superview] addConstraint:constraint];
     return constraint;
-}
-
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view
-{
-    return [self wta_addConstraintPlacingViewLeftOfView:view separation:0.0];
 }
 
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view separation:(CGFloat)separation;
@@ -114,11 +104,6 @@
     return constraint;
 }
 
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view
-{
-    return [self wta_addConstraintPlacingViewAboveView:view separation:0.0];
-}
-
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view separation:(CGFloat)separation;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomToTopConstraintWithTopView:self
@@ -126,11 +111,6 @@
                                                                                    separation:separation];
     [[self superview] addConstraint:constraint];
     return constraint;
-}
-
-- (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view
-{
-    return [self wta_addConstraintPlacingViewBelowView:view separation:0.0];
 }
 
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation
