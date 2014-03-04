@@ -65,10 +65,45 @@ NSLayoutConstraint *constraint = [NSLayoutConstraint wta_topConstraintWithView:v
 [[view superview] addConstraint:constraint]
 ```
 
-### Instantiating a View for Auto Layout
-Commonly enough, we run into a problem with Auto Layout and realize its because we didn't set `translatesAutoresizingMasksIntoConstraints` to `NO`. This constructor will hopefully help you with that. Or at least remind you that you need to set it.
+### Autosetting TranslatesAutoresizingMasksIntoConstraints
+
+If you set `wta_setAutomaticallySetAutoTranslatesAutoresizingMasksToOff:` to `YES`, you will no longer need to set `translatesAutoresizingMasksIntoConstraints` to `NO` when using the WTAutoLayoutHelpers on calling views. 
+
+Example:
+```objective-c
+[UIView wta_setAutomaticallySetAutoTranslatesAutoresizingMasksToOff:YES];
+
+UIView *viewA = [UIView new];
+[viewA wta_addSizeConstraint:CGSizeMake(30.0f, 30.0f)];
+
+UIView *viewB = [UIView new];
+[viewB wta_addSizeConstraint:CGSizeMake(30.0f, 30.0f)];
 ```
+
+is equivalent to:
+
+```objective-c
+UIView *viewA = [UIView new];
+[viewA setTranslatesAutoresizingMasksIntoConstraints:NO];
+[viewA wta_addSizeConstraint:CGSizeMake(30.0f, 30.0f)];
+
+UIView *viewB = [UIView new];
+[viewB setTranslatesAutoresizingMasksIntoConstraints:NO];
+[viewB wta_addSizeConstraint:CGSizeMake(30.0f, 30.0f)];
+```
+
+### Instantiating a View That Sets TranslatesAutoresizingMasksIntoConstraints
+There is also a convenience constructor that will set `translatesAutoresizingMasksIntoConstraints` to `NO`.
+
+Example:
+```objective-c
 UIView *view = [UIView wta_autolayoutView];
+```
+
+is equivalent to:
+```objective-c
+UIView *view = [UIView new];
+[view setTranslatesAutoresizingMasksIntoConstraints:NO];
 ```
 
 ### Common Constraints

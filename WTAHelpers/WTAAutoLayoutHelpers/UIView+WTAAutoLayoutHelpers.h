@@ -21,9 +21,9 @@
  */
 + (id)wta_autolayoutView;
 
-///--------------------------------------------------
-/// @name TranslatesAutoresizingMasksIntoConstraints
-///--------------------------------------------------
+///------------------------------------------------------------------------
+/// @name Automatically Setting TranslatesAutoresizingMasksIntoConstraints
+///------------------------------------------------------------------------
 
 /**
  Method to automatically set translatesAutoresizingMasks to NO when WTAAutoLayoutHelper constraints are added. If this is set to NO, the view's existing value for translatesAutoresizingMasks wil be used.

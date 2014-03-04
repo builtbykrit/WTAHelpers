@@ -22,7 +22,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
     return view;
 }
 
-#pragma mark - Automatic Set of TranslatesAutoresizingMasksIntoConstraints
+#pragma mark - Automatically Setting TranslatesAutoresizingMasksIntoConstraints
 
 + (void)wta_setAutomaticallySetAutoTranslatesAutoresizingMasksToOff:(BOOL)autoOff
 {
