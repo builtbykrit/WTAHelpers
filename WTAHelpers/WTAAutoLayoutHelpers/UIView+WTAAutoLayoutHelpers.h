@@ -22,6 +22,21 @@
 + (id)wta_autolayoutView;
 
 ///--------------------------------------------------
+/// @name TranslatesAutoresizingMasksIntoConstraints
+///--------------------------------------------------
+
+/**
+ Method to automatically set translatesAutoresizingMasks to NO when WTAAutoLayoutHelper constraints are added. If this is set to NO, the view's existing value for translatesAutoresizingMasks wil be used.
+ @param autoOff whether translatesAutoresizingMasks should be set to NO.
+ */
++ (void)wta_setAutomaticallySetAutoTranslatesAutoresizingMasksToOff:(BOOL)autoOff;
+
+/**
+ @return whether translatesAutoresizingMasks should be set to NO.
+ */
++ (BOOL)wta_automaticallySetAutoTranslatesAutoresizingMasksToOff;
+
+///--------------------------------------------------
 /// @name Edge Constraints to Superview
 ///--------------------------------------------------
 
