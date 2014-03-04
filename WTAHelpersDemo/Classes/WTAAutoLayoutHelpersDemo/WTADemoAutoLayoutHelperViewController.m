@@ -32,13 +32,16 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
     [super viewDidLoad];
     [self setTitle:@"WTAAutoLayoutHelpers"];
     [[self tableView] registerNib:[WTADemoAutoLayoutCell wta_nib] forCellReuseIdentifier:[WTADemoAutoLayoutCell wta_reuseableIdentifier]];
+    
+    // Automatically sets TranslatesAutoresizingMasksToConstraints to NO for all constraints added using helpers
+    [UIView wta_setAutomaticallySetAutoTranslatesAutoresizingMasksToOff:YES];
 }
 
 #pragma mark - Instance Methods
 
 + (UILabel *)createTestLabel
 {
-    UILabel *testLabel = [UILabel wta_autolayoutView];
+    UILabel *testLabel = [UILabel new];
     [testLabel setBackgroundColor:[UIColor colorWithWhite:1.0f alpha:1.0f]];
     [testLabel setTextColor:[UIColor colorWithWhite:64.0f/255.0f alpha:1.0]];
     [testLabel setFont:[UIFont fontWithName:@"HelveticaNeue-Light" size:10.0]];

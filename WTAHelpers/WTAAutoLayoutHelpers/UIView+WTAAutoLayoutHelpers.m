@@ -9,7 +9,7 @@
 #import "UIView+WTAAutoLayoutHelpers.h"
 #import "NSLayoutConstraint+WTAAutoLayoutHelpers.h"
 
-static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = YES;
+static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 
 @implementation UIView (WTAAutoLayoutHelpers)
 
