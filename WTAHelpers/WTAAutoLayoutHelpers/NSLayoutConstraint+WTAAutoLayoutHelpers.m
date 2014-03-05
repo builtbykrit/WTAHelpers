@@ -14,9 +14,14 @@
 
 + (NSLayoutConstraint *)wta_leadingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
 {
+    return [self wta_leadingConstraintWithView:withView toView:toView offset:offset relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_leadingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation
+{
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeLeading
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:toView
                                                                   attribute:NSLayoutAttributeLeading
                                                                  multiplier:1.0
@@ -24,11 +29,16 @@
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+{
+    return [self wta_trailingConstraintWithView:withView toView:toView offset:offset relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_trailingConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeTrailing
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:toView
                                                                   attribute:NSLayoutAttributeTrailing
                                                                  multiplier:1.0
@@ -36,7 +46,12 @@
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_topConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_topConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+{
+    return [self wta_topConstraintWithView:withView toView:toView offset:offset relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_topConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeTop
@@ -48,11 +63,16 @@
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_bottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset;
++ (NSLayoutConstraint *)wta_bottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset
+{
+    return [self wta_bottomConstraintWithView:withView toView:toView offset:offset relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_bottomConstraintWithView:(UIView *)withView toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeBottom
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:toView
                                                                   attribute:NSLayoutAttributeBottom
                                                                  multiplier:1.0
@@ -62,11 +82,16 @@
 
 #pragma mark - Side-by-Side separation Constraints
 
-+ (NSLayoutConstraint *)wta_trailingToLeadingConstraintWithTrailingView:(UIView *)trailingView leadingView:(UIView *)leadingView separation:(CGFloat)separation;
++ (NSLayoutConstraint *)wta_trailingToLeadingConstraintWithTrailingView:(UIView *)trailingView leadingView:(UIView *)leadingView separation:(CGFloat)separation
+{
+    return [self wta_trailingToLeadingConstraintWithTrailingView:trailingView leadingView:leadingView separation:separation relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_trailingToLeadingConstraintWithTrailingView:(UIView *)trailingView leadingView:(UIView *)leadingView separation:(CGFloat)separation relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:trailingView
                                                                   attribute:NSLayoutAttributeLeading
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:leadingView
                                                                   attribute:NSLayoutAttributeTrailing
                                                                  multiplier:1.0
@@ -74,11 +99,16 @@
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_bottomToTopConstraintWithTopView:(UIView *)topView bottomView:(UIView *)bottomView separation:(CGFloat)separation;
++ (NSLayoutConstraint *)wta_bottomToTopConstraintWithTopView:(UIView *)topView bottomView:(UIView *)bottomView separation:(CGFloat)separation
+{
+    return [self wta_bottomToTopConstraintWithTopView:topView bottomView:bottomView separation:separation relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_bottomToTopConstraintWithTopView:(UIView *)topView bottomView:(UIView *)bottomView separation:(CGFloat)separation relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:bottomView
                                                                   attribute:NSLayoutAttributeTop
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:topView
                                                                   attribute:NSLayoutAttributeBottom
                                                                  multiplier:1.0
@@ -114,11 +144,17 @@
 
 #pragma mark - Size Constraints
 
-+ (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height;
+
++ (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height
+{
+    return [self wta_heightConstraintWithView:view height:height relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
                                                                   attribute:NSLayoutAttributeHeight
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:nil
                                                                   attribute:NSLayoutAttributeNotAnAttribute
                                                                  multiplier:1.0
@@ -126,11 +162,16 @@
     return constraint;
 }
 
-+ (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width;
++ (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width
+{
+    return [self wta_widthConstraintWithView:view width:width relation:NSLayoutRelationEqual];
+}
+
++ (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
                                                                   attribute:NSLayoutAttributeWidth
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:nil
                                                                   attribute:NSLayoutAttributeNotAnAttribute
                                                                  multiplier:1.0
