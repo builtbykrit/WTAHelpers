@@ -52,33 +52,41 @@
  Creates a leading constraint to the current view with offset. The constraint is added the view's superview
  
  @param offset from the edge.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addLeadingConstraintToSuperviewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addLeadingConstraintToSuperviewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 /**
  Creates a trailing constraint to the current view with offset. The constraint is added the view's superview.
  
  @param offset from the edge.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addTrailingConstraintToSuperviewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addTrailingConstraintToSuperviewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 /**
  Creates a top constraint to the current view with offset. The constraint is added the view's superview.
  
  @param offset from the edge.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addTopConstraintToSuperviewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addTopConstraintToSuperviewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 /**
  Creates a bottom constraint to the current view with offset. The constraint is added the view's superview.
  
  @param offset from the edge.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addBottomConstraintToSuperviewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addBottomConstraintToSuperviewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 ///-------------------------------------
 /// @name Align Edges for Sibling Views
@@ -89,36 +97,44 @@
  
  @param withView View that will be effected by the constraint.
  @param offset between the withView and toView.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addLeadingConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addLeadingConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 /**
  Aligns trailing edge of a view with another view. The constraint is added to the view's superview.
  
  @param toView View that the constraint is related to.
  @param offset from the edge.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addTrailingConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addTrailingConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 /**
  Aligns top edge of a view with another view. The constraint is added to the view's superview.
  
  @param toView View that the constraint is related to.
  @param offset between the withView and toView.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addTopConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addTopConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 /**
  Aligns bottom edge of a view with another view. The constraint is added to the view's superview.
  
  @param toView View that the constraint is related to.
  @param offset between the withView and toView.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addBottomConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addBottomConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 
 ///---------------------------------------------------
 /// @name Placing Sibling Views Adjacent to Eachother
@@ -128,33 +144,41 @@
  Places the current view to the right of a view with a separation.
  
  @param view that the current view will placed to the right of.
+ @param relation of the offset.
  @param separation between the sibling views.
  */
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view separation:(CGFloat)separation;
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewRightOfView:(UIView *)view separation:(CGFloat)separation relation:(NSLayoutRelation)relation;
 
 /**
  Places the current view to the left of a view with a separation.
  
  @param view that the current view will placed to the left of.
+ @param relation of the offset.
  @param separation between the sibling views.
  */
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view separation:(CGFloat)separation;
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewLeftOfView:(UIView *)view separation:(CGFloat)separation relation:(NSLayoutRelation)relation;
 
 /**
  Places the current view to the Top of a view with a separation.
  
  @param view that the current view will placed to the top of.
+ @param relation of the offset.
  @param separation between the sibling views.
  */
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view separation:(CGFloat)separation;
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewAboveView:(UIView *)view separation:(CGFloat)separation relation:(NSLayoutRelation)relation;
 
 /**
  Places the current view to the bottom of a view with a separation.
  
  @param view that the current view will placed to the bottom of.
+ @param relation of the offset.
  @param separation between the sibling views.
  */
 - (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation;
+- (NSLayoutConstraint *)wta_addConstraintPlacingViewBelowView:(UIView *)view separation:(CGFloat)separation relation:(NSLayoutRelation)relation;
 
 ///-----------------------------
 /// @name Centering Constraints
@@ -215,6 +239,7 @@
  Adds constraints for height and width from the given size struct.
  
  @param size for the view.
+ @param relation of the offset.
  @return array of size constraints.
  */
 - (NSArray *)wta_addSizeConstraints:(CGSize)size;
@@ -223,16 +248,20 @@
  Adds a constraint to set the height of the current view.
  
  @param height of the view.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addHeightConstraint:(CGFloat)height;
+- (NSLayoutConstraint *)wta_addHeightConstraint:(CGFloat)height relation:(NSLayoutRelation)relation;
 
 /**
  Adds a constraint to set the width of the current view.
  
  @param width of the view.
+ @param relation of the offset.
  @return The newly added constraint.
  */
 - (NSLayoutConstraint *)wta_addWidthConstraint:(CGFloat)width;
+- (NSLayoutConstraint *)wta_addWidthConstraint:(CGFloat)width relation:(NSLayoutRelation)relation;
 
 @end

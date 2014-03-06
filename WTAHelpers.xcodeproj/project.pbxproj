@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		87300AC018C8C7A20099E24A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87300ABF18C8C7A20099E24A /* Images.xcassets */; };
 		873F3C3D18BD22160052E0DC /* WTAReusableIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F3C3C18BD22160052E0DC /* WTAReusableIdentifier.m */; };
 		873F3C3F18BD22200052E0DC /* UIView+WTANibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F3C3A18BD21EC0052E0DC /* UIView+WTANibLoading.m */; };
 		873F3C4618BD24FA0052E0DC /* NSLayoutConstraint+WTAAutoLayoutHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F3C4318BD24FA0052E0DC /* NSLayoutConstraint+WTAAutoLayoutHelpers.m */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		87300ABF18C8C7A20099E24A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		873F3C3918BD21EC0052E0DC /* UIView+WTANibLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WTANibLoading.h"; sourceTree = "<group>"; };
 		873F3C3A18BD21EC0052E0DC /* UIView+WTANibLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WTANibLoading.m"; sourceTree = "<group>"; };
 		873F3C3B18BD22160052E0DC /* WTAReusableIdentifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WTAReusableIdentifier.h; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				878284BF18BE432A005D1AEB /* Classes */,
 				878284CE18BE432A005D1AEB /* main.m */,
 				878284CF18BE432A005D1AEB /* WTAAppDelegate.h */,
+				87300ABF18C8C7A20099E24A /* Images.xcassets */,
 				878284D018BE432A005D1AEB /* WTAAppDelegate.m */,
 				878284D118BE432A005D1AEB /* WTAHelpersDemo-Info.plist */,
 				878284D218BE432A005D1AEB /* WTAHelpersDemo-Prefix.pch */,
@@ -291,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				878284D518BE432A005D1AEB /* WTADemoAutoLayoutCell.xib in Resources */,
+				87300AC018C8C7A20099E24A /* Images.xcassets in Resources */,
 				878284D918BE432A005D1AEB /* WTAFrameHelpersCell.xib in Resources */,
 				878284D318BE432A005D1AEB /* Main.storyboard in Resources */,
 			);
@@ -338,7 +342,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTAHelpersDemo/WTAHelpersDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -356,7 +359,6 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTAHelpersDemo/WTAHelpersDemo-Prefix.pch";
 				INFOPLIST_FILE = "WTAHelpersDemo/WTAHelpersDemo-Info.plist";
