@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		87220A1C19489ECF000A6881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87220A1B19489ECF000A6881 /* Main.storyboard */; };
 		87220A1E19489F2B000A6881 /* LayoutHelpersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A1D19489F2B000A6881 /* LayoutHelpersViewController.swift */; };
-		87220A201948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift */; };
-		87220A221948AA0C000A6881 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A211948AA0C000A6881 /* UIView.swift */; };
+		87220A201948A2B2000A6881 /* NSLayoutConstraint+WTAHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAHelpers.swift */; };
+		87220A221948AA0C000A6881 /* UIView+WTAHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A211948AA0C000A6881 /* UIView+WTAHelpers.swift */; };
 		8751CEDD19489E73002B7598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8751CEDC19489E73002B7598 /* AppDelegate.swift */; };
 		8751CEDF19489E73002B7598 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8751CEDE19489E73002B7598 /* Images.xcassets */; };
 		8751CEEB19489E73002B7598 /* WTAHelpers_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8751CEEA19489E73002B7598 /* WTAHelpers_SwiftTests.swift */; };
@@ -29,8 +29,8 @@
 /* Begin PBXFileReference section */
 		87220A1B19489ECF000A6881 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		87220A1D19489F2B000A6881 /* LayoutHelpersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutHelpersViewController.swift; sourceTree = "<group>"; };
-		87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+WTAAutoLayoutHelpers.swift"; sourceTree = "<group>"; };
-		87220A211948AA0C000A6881 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+WTAHelpers.swift"; sourceTree = "<group>"; };
+		87220A211948AA0C000A6881 /* UIView+WTAHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+WTAHelpers.swift"; sourceTree = "<group>"; };
 		8751CED719489E73002B7598 /* WTAHelpers-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WTAHelpers-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8751CEDB19489E73002B7598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8751CEDC19489E73002B7598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -62,8 +62,8 @@
 			isa = PBXGroup;
 			children = (
 				87220A1B19489ECF000A6881 /* Main.storyboard */,
-				87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift */,
-				87220A211948AA0C000A6881 /* UIView.swift */,
+				87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAHelpers.swift */,
+				87220A211948AA0C000A6881 /* UIView+WTAHelpers.swift */,
 				8751CED919489E73002B7598 /* WTAHelpers-Swift */,
 				8751CEE719489E73002B7598 /* WTAHelpers-SwiftTests */,
 				8751CED819489E73002B7598 /* Products */,
@@ -213,9 +213,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87220A221948AA0C000A6881 /* UIView.swift in Sources */,
+				87220A221948AA0C000A6881 /* UIView+WTAHelpers.swift in Sources */,
 				87220A1E19489F2B000A6881 /* LayoutHelpersViewController.swift in Sources */,
-				87220A201948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift in Sources */,
+				87220A201948A2B2000A6881 /* NSLayoutConstraint+WTAHelpers.swift in Sources */,
 				8751CEDD19489E73002B7598 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
