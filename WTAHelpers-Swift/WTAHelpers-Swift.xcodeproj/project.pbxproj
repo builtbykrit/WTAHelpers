@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		87220A1C19489ECF000A6881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 87220A1B19489ECF000A6881 /* Main.storyboard */; };
+		87220A1E19489F2B000A6881 /* LayoutHelpersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A1D19489F2B000A6881 /* LayoutHelpersViewController.swift */; };
+		87220A201948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift */; };
+		87220A221948AA0C000A6881 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87220A211948AA0C000A6881 /* UIView.swift */; };
+		8751CEDD19489E73002B7598 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8751CEDC19489E73002B7598 /* AppDelegate.swift */; };
+		8751CEDF19489E73002B7598 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8751CEDE19489E73002B7598 /* Images.xcassets */; };
+		8751CEEB19489E73002B7598 /* WTAHelpers_SwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8751CEEA19489E73002B7598 /* WTAHelpers_SwiftTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8751CEE519489E73002B7598 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8751CECF19489E73002B7598 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8751CED619489E73002B7598;
+			remoteInfo = "WTAHelpers-Swift";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		87220A1B19489ECF000A6881 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		87220A1D19489F2B000A6881 /* LayoutHelpersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutHelpersViewController.swift; sourceTree = "<group>"; };
+		87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSLayoutConstraint+WTAAutoLayoutHelpers.swift"; sourceTree = "<group>"; };
+		87220A211948AA0C000A6881 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		8751CED719489E73002B7598 /* WTAHelpers-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WTAHelpers-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8751CEDB19489E73002B7598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8751CEDC19489E73002B7598 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8751CEDE19489E73002B7598 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8751CEE419489E73002B7598 /* WTAHelpers-SwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "WTAHelpers-SwiftTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8751CEE919489E73002B7598 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8751CEEA19489E73002B7598 /* WTAHelpers_SwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WTAHelpers_SwiftTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8751CED419489E73002B7598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8751CEE119489E73002B7598 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8751CECE19489E73002B7598 = {
+			isa = PBXGroup;
+			children = (
+				87220A1B19489ECF000A6881 /* Main.storyboard */,
+				87220A1F1948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift */,
+				87220A211948AA0C000A6881 /* UIView.swift */,
+				8751CED919489E73002B7598 /* WTAHelpers-Swift */,
+				8751CEE719489E73002B7598 /* WTAHelpers-SwiftTests */,
+				8751CED819489E73002B7598 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8751CED819489E73002B7598 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8751CED719489E73002B7598 /* WTAHelpers-Swift.app */,
+				8751CEE419489E73002B7598 /* WTAHelpers-SwiftTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8751CED919489E73002B7598 /* WTAHelpers-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				8751CEDC19489E73002B7598 /* AppDelegate.swift */,
+				87220A1D19489F2B000A6881 /* LayoutHelpersViewController.swift */,
+				8751CEDE19489E73002B7598 /* Images.xcassets */,
+				8751CEDA19489E73002B7598 /* Supporting Files */,
+			);
+			path = "WTAHelpers-Swift";
+			sourceTree = "<group>";
+		};
+		8751CEDA19489E73002B7598 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8751CEDB19489E73002B7598 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8751CEE719489E73002B7598 /* WTAHelpers-SwiftTests */ = {
+			isa = PBXGroup;
+			children = (
+				8751CEEA19489E73002B7598 /* WTAHelpers_SwiftTests.swift */,
+				8751CEE819489E73002B7598 /* Supporting Files */,
+			);
+			path = "WTAHelpers-SwiftTests";
+			sourceTree = "<group>";
+		};
+		8751CEE819489E73002B7598 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8751CEE919489E73002B7598 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8751CED619489E73002B7598 /* WTAHelpers-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8751CEEE19489E73002B7598 /* Build configuration list for PBXNativeTarget "WTAHelpers-Swift" */;
+			buildPhases = (
+				8751CED319489E73002B7598 /* Sources */,
+				8751CED419489E73002B7598 /* Frameworks */,
+				8751CED519489E73002B7598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WTAHelpers-Swift";
+			productName = "WTAHelpers-Swift";
+			productReference = 8751CED719489E73002B7598 /* WTAHelpers-Swift.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8751CEE319489E73002B7598 /* WTAHelpers-SwiftTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8751CEF119489E73002B7598 /* Build configuration list for PBXNativeTarget "WTAHelpers-SwiftTests" */;
+			buildPhases = (
+				8751CEE019489E73002B7598 /* Sources */,
+				8751CEE119489E73002B7598 /* Frameworks */,
+				8751CEE219489E73002B7598 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8751CEE619489E73002B7598 /* PBXTargetDependency */,
+			);
+			name = "WTAHelpers-SwiftTests";
+			productName = "WTAHelpers-SwiftTests";
+			productReference = 8751CEE419489E73002B7598 /* WTAHelpers-SwiftTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8751CECF19489E73002B7598 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "WillowTree Apps, Inc.";
+				TargetAttributes = {
+					8751CED619489E73002B7598 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					8751CEE319489E73002B7598 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 8751CED619489E73002B7598;
+					};
+				};
+			};
+			buildConfigurationList = 8751CED219489E73002B7598 /* Build configuration list for PBXProject "WTAHelpers-Swift" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 8751CECE19489E73002B7598;
+			productRefGroup = 8751CED819489E73002B7598 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8751CED619489E73002B7598 /* WTAHelpers-Swift */,
+				8751CEE319489E73002B7598 /* WTAHelpers-SwiftTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8751CED519489E73002B7598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8751CEDF19489E73002B7598 /* Images.xcassets in Resources */,
+				87220A1C19489ECF000A6881 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8751CEE219489E73002B7598 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8751CED319489E73002B7598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				87220A221948AA0C000A6881 /* UIView.swift in Sources */,
+				87220A1E19489F2B000A6881 /* LayoutHelpersViewController.swift in Sources */,
+				87220A201948A2B2000A6881 /* NSLayoutConstraint+WTAAutoLayoutHelpers.swift in Sources */,
+				8751CEDD19489E73002B7598 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8751CEE019489E73002B7598 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8751CEEB19489E73002B7598 /* WTAHelpers_SwiftTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8751CEE619489E73002B7598 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8751CED619489E73002B7598 /* WTAHelpers-Swift */;
+			targetProxy = 8751CEE519489E73002B7598 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		8751CEEC19489E73002B7598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8751CEED19489E73002B7598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				METAL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8751CEEF19489E73002B7598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "WTAHelpers-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8751CEF019489E73002B7598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = "WTAHelpers-Swift/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8751CEF219489E73002B7598 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WTAHelpers-Swift.app/WTAHelpers-Swift";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WTAHelpers-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Debug;
+		};
+		8751CEF319489E73002B7598 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WTAHelpers-Swift.app/WTAHelpers-Swift";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WTAHelpers-SwiftTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				METAL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8751CED219489E73002B7598 /* Build configuration list for PBXProject "WTAHelpers-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8751CEEC19489E73002B7598 /* Debug */,
+				8751CEED19489E73002B7598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8751CEEE19489E73002B7598 /* Build configuration list for PBXNativeTarget "WTAHelpers-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8751CEEF19489E73002B7598 /* Debug */,
+				8751CEF019489E73002B7598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8751CEF119489E73002B7598 /* Build configuration list for PBXNativeTarget "WTAHelpers-SwiftTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8751CEF219489E73002B7598 /* Debug */,
+				8751CEF319489E73002B7598 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8751CECF19489E73002B7598 /* Project object */;
+}
