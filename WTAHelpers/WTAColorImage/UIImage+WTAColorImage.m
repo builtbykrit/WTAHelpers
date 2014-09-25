@@ -118,4 +118,18 @@
     [view addSubview:borderView];
 }
 
+- (UIImage *)wta_desaturatedImage
+{
+    CIContext *context = [CIContext contextWithOptions:nil];
+    CIImage *image = [CIImage imageWithCGImage:self.CGImage];
+    CIFilter *filter = [CIFilter filterWithName:@"CIColorControls"];
+    [filter setValue:image forKey:@"inputImage"];
+    [filter setValue:[NSNumber numberWithFloat:0.0f] forKey:@"inputSaturation"];
+    CIImage *result = [filter valueForKey:kCIOutputImageKey];
+    CGImageRef imageRef = [context createCGImage:result fromRect:[result extent]];
+    UIImage *desaturatedImage = [UIImage imageWithCGImage:imageRef];
+    CGImageRelease(imageRef);
+    return desaturatedImage;
+}
+
 @end

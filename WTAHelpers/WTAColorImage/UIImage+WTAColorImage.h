@@ -36,4 +36,14 @@
                    borderColor:(UIColor *)borderColor
                    borderWidth:(CGFloat)borderWidth;
 
+/**
+ *  Creates a desaturated image from the
+ *  current image. This can be used to 
+ *  create disabled state images for use in
+ *  buttons and controls.
+ *
+ *  @return the desaturated image
+ */
+- (UIImage *)wta_desaturatedImage;
+
 @end
