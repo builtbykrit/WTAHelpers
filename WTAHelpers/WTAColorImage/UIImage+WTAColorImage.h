@@ -17,4 +17,23 @@
  */
 + (UIImage *)wta_imageWithSize:(CGSize)size color:(UIColor *)color;
 
+/**
+ *  Creates an image with the given background
+ *  and border colors. Desired bordered edges
+ *  can be masked in using UIRectEdge.
+ *
+ *  @param size            size of the resulting image
+ *  @param backgroundColor the background color
+ *  @param borderEdge      the edge mask to apply border color and width
+ *  @param borderColor     the border color
+ *  @param borderWidth     the border stroke width
+ *
+ *  @return the color image with borders
+ */
++ (UIImage *)wta_imageWithSize:(CGSize)size
+               backgroundColor:(UIColor *)backgroundColor
+                    borderEdge:(UIRectEdge)borderEdge
+                   borderColor:(UIColor *)borderColor
+                   borderWidth:(CGFloat)borderWidth;
+
 @end
