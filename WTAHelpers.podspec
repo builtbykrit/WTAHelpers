@@ -29,4 +29,8 @@ Pod::Spec.new do |s|
   s.subspec 'WTAReusableIdentifier' do |ss|
     ss.source_files = 'WTAHelpers/WTAReusableIdentifier/*.{h,m}'
   end
+
+  s.subspec 'WTAColorHelpers' do |ss|
+  	ss.source_files = 'WTAHelpers/WTAColorHelpers/*.{h,m}'
+  end
 end

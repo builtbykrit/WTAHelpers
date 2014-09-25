@@ -14,6 +14,7 @@
     #import "NSLayoutConstraint+WTAAutoLayoutHelpers.h"
     #import "UIView+WTAAutoLayoutHelpers.h"
     #import "UIView+WTAFrameHelpers.h"
+    #import "UIColor+WTAColorHelpers.h"
     #import "WTAReusableIdentifier.h"
 
 #endif
