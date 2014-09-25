@@ -33,4 +33,9 @@ Pod::Spec.new do |s|
   s.subspec 'WTAColorHelpers' do |ss|
   	ss.source_files = 'WTAHelpers/WTAColorHelpers/*.{h,m}'
   end
+
+  s.subspec 'WTADeviceHelpers' do |ss|
+    ss.source_files = 'WTAHelpers/WTADeviceHelpers/*.{h,m}'
+    ss.frameworks = 'SystemConfiguration', 'AVFoundation'
+  end
 end
