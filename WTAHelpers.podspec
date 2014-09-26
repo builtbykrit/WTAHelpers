@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.summary  = 'An assortment of useful categories and classes.'
   s.homepage = 'https://github.com/willowtreeapps/WTAHelpers'
   s.authors  = { 'Trung Tran' => 'trung.tran@willowtreeapps.com' }
-  s.source   = { :git => 'https://github.com/willowtreeapps/WTAHelpers', :tag => '0.0.2' }
+  s.source   = { :git => 'https://github.com/willowtreeapps/WTAHelpers', :tag => s.version }
   s.requires_arc = true
   s.ios.deployment_target = '6.0'
   s.source_files = 'WTAHelpers/*.{h,m}'
