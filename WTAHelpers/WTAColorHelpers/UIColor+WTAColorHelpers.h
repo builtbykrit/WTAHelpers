@@ -61,7 +61,7 @@ CG_INLINE CGColorRef WTACGColorCreateWithHexString(NSString *hexString)
     hexString = [hexString wta_hexColorString];
     if (hexString != nil)
     {
-        NSUInteger RGBA = 0x0;
+        unsigned int RGBA = 0x0;
         [[NSScanner scannerWithString:hexString] scanHexInt:&RGBA];
         return WTACGColorCreateWithHexRGBA(RGBA);
     }

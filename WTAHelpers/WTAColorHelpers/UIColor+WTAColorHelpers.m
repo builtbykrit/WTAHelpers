@@ -120,7 +120,7 @@
 
 + (instancetype)wta_colorWithHexRGBA:(NSUInteger)RGBA
 {
-    CGColorRef colorRef = WTACGColorCreateWithHexRGBA(RGBA);
+    CGColorRef colorRef = WTACGColorCreateWithHexRGBA((u_int32_t)RGBA);
     UIColor *color = [UIColor colorWithCGColor:colorRef];
     CGColorRelease(colorRef);
     return color;
@@ -164,10 +164,10 @@
     {
         hexString = @"0x";
         const CGFloat *components = CGColorGetComponents(colorRef);
-        int count = CGColorGetNumberOfComponents(colorRef);
+        size_t count = CGColorGetNumberOfComponents(colorRef);
         for (int index = 0; index < count; index++)
         {
-            NSUInteger hex = components[index] * 0xFF;
+            u_int32_t hex = components[index] * 0xFF;
             NSString *component = [NSString stringWithFormat:@"%02X", hex];
             hexString = [hexString stringByAppendingString:component];
         }
@@ -186,7 +186,7 @@
     {
         NSMutableArray *components = [NSMutableArray new];
         const CGFloat *colorComponents = CGColorGetComponents(colorRef);
-        int count = CGColorGetNumberOfComponents(colorRef);
+        size_t count = CGColorGetNumberOfComponents(colorRef);
         for (int index = 0; index < count; index++)
         {
            [components addObject:@(colorComponents[index] * 255.0)];
