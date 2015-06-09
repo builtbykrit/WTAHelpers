@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		22E799D61B273BE900215452 /* NSArray+WTAFunctionalHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = 22E799D51B273BE900215452 /* NSArray+WTAFunctionalHelpers.m */; };
 		87300AC018C8C7A20099E24A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 87300ABF18C8C7A20099E24A /* Images.xcassets */; };
 		873F3C3D18BD22160052E0DC /* WTAReusableIdentifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F3C3C18BD22160052E0DC /* WTAReusableIdentifier.m */; };
 		873F3C3F18BD22200052E0DC /* UIView+WTANibLoading.m in Sources */ = {isa = PBXBuildFile; fileRef = 873F3C3A18BD21EC0052E0DC /* UIView+WTANibLoading.m */; };
@@ -32,6 +33,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		22E799D41B273BE900215452 /* NSArray+WTAFunctionalHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WTAFunctionalHelpers.h"; sourceTree = "<group>"; };
+		22E799D51B273BE900215452 /* NSArray+WTAFunctionalHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+WTAFunctionalHelpers.m"; sourceTree = "<group>"; };
 		87300ABF18C8C7A20099E24A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		873F3C3918BD21EC0052E0DC /* UIView+WTANibLoading.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+WTANibLoading.h"; sourceTree = "<group>"; };
 		873F3C3A18BD21EC0052E0DC /* UIView+WTANibLoading.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+WTANibLoading.m"; sourceTree = "<group>"; };
@@ -89,6 +92,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22E799D31B2734F100215452 /* WTAFunctionalHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				22E799D41B273BE900215452 /* NSArray+WTAFunctionalHelpers.h */,
+				22E799D51B273BE900215452 /* NSArray+WTAFunctionalHelpers.m */,
+			);
+			path = WTAFunctionalHelpers;
+			sourceTree = "<group>";
+		};
 		873F3C2F18BD21CE0052E0DC /* WTANibLoading */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +200,7 @@
 		878CD87B18BB9CCB00C4DCF4 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				22E799D31B2734F100215452 /* WTAFunctionalHelpers */,
 				BDCB7B9719D4636D0077A547 /* WTADeviceHelpers */,
 				BDCB7B9319D45ED30077A547 /* WTAColorHelpers */,
 				878284B318BE3C20005D1AEB /* WTAColorImage */,
@@ -339,6 +352,7 @@
 				BDCB7B9A19D4636D0077A547 /* UIDevice+WTADeviceHelpers.m in Sources */,
 				878284DA18BE432A005D1AEB /* WTANavigationController.m in Sources */,
 				878284D818BE432A005D1AEB /* WTAFrameHelpersCell.m in Sources */,
+				22E799D61B273BE900215452 /* NSArray+WTAFunctionalHelpers.m in Sources */,
 				878284D718BE432A005D1AEB /* WTADemoFrameHelperViewController.m in Sources */,
 				873F3C4818BD24FA0052E0DC /* UIView+WTAAutoLayoutHelpers.m in Sources */,
 				878284B618BE3C20005D1AEB /* UIImage+WTAColorImage.m in Sources */,

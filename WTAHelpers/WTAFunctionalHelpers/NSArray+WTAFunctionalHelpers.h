@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface NSArray (FunctionalHelpers)
+@interface NSArray (WTAFunctionalHelpers)
 
 -(NSArray*)wta_mapWithBlock:(id (^)(id))block;
 

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'WTAHelpers'
-  s.version  = '0.1.1'
+  s.version  = '0.1.2'
   s.license  = 'MIT'
   s.summary  = 'An assortment of useful categories and classes.'
   s.homepage = 'https://github.com/willowtreeapps/WTAHelpers'
@@ -9,6 +9,10 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target = '6.0'
   s.source_files = 'WTAHelpers/*.{h,m}'
+
+  s.subspec 'WTAFunctionalHelpers' do |ss|
+    ss.source_files = 'WTAHelpers/WTAFunctionalHelpers/*.{h,m}'
+  end
 
   s.subspec 'WTAFrameHelpers' do |ss|
     ss.source_files = 'WTAHelpers/WTAFrameHelpers/*.{h,m}'

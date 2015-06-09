@@ -6,9 +6,9 @@
 //  Copyright (c) 2014 Willowtree Apps. All rights reserved.
 //
 
-#import "NSArray+FunctionalHelpers.h"
+#import "NSArray+WTAFunctionalHelpers.h"
 
-@implementation NSArray (FunctionalHelpers)
+@implementation NSArray (WTAFunctionalHelpers)
 
 -(NSArray*)wta_mapWithBlock:(id (^)(id))block
 {
