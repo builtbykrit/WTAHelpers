@@ -1,5 +1,5 @@
 //
-//  NSArray+FunctionalHelpers.m
+//  NSArray+WTAFunctionalHelpers.m
 //  GrowmarkRecruiting-iOS
 //
 //  Created by Matthew Baranowski on 7/24/14.
@@ -10,7 +10,7 @@
 
 @implementation NSArray (WTAFunctionalHelpers)
 
--(NSArray*)wta_mapWithBlock:(id (^)(id))block
+-(NSMutableArray*)wta_mapWithBlock:(id (^)(id))block
 {
     NSMutableArray *result = [NSMutableArray arrayWithCapacity:self.count];
     for (id obj in self) {
@@ -30,7 +30,7 @@
     }
 }
 
--(NSArray*)wta_reduceWithBlock:(id (^)(id memo, id element))block
+-(id)wta_reduceWithBlock:(id (^)(id memo, id element))block
                     startValue:(id)memo
 {
     for (id obj in self) {
@@ -40,8 +40,8 @@
     return memo;
 }
 
--(NSArray*)wta_reduceRightWithBlock:(id (^)(id memo, id element))block
-                         startValue:(id)memo
+-(id)wta_reduceRightWithBlock:(id (^)(id memo, id element))block
+                   startValue:(id)memo
 {
     for (id obj in self.reverseObjectEnumerator) {
         memo = block(memo, obj);
@@ -56,14 +56,14 @@
     return [set array];
 }
 
--(NSArray*)wta_pluckAtKeyPath:(NSString*)keyPath
+-(NSMutableArray*)wta_pluckAtKeyPath:(NSString*)keyPath
 {
     return [self wta_mapWithBlock:^id(id obj) {
         return [obj valueForKeyPath:keyPath];
     }];
 };
 
--(NSArray*)wta_shuffle
+-(NSMutableArray*)wta_shuffle
 {
     NSMutableArray *result = [self mutableCopy];
     
@@ -128,14 +128,14 @@
     }
     return maxObject;
 }
--(NSArray*)wta_filterWithTest:(BOOL (^)(id))test
+-(NSMutableArray*)wta_filterWithTest:(BOOL (^)(id))test
 {
     return [self wta_mapWithBlock:^id(id obj) {
         return test(obj) ? obj : nil;
     }];
 }
 
--(NSArray*)wta_rejectWithTest:(BOOL (^)(id))test
+-(NSMutableArray*)wta_rejectWithTest:(BOOL (^)(id))test
 {
     return [self wta_mapWithBlock:^id(id obj) {
         return test(obj) ? nil : obj;
