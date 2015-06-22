@@ -23,13 +23,6 @@
     return result;
 }
 
--(void)wta_enumerateWithBlock:(id (^)(id))block
-{
-    for (id obj in self) {
-        block(obj);
-    }
-}
-
 -(id)wta_reduceWithBlock:(id (^)(id memo, id element))block
                     startValue:(id)memo
 {
@@ -128,6 +121,7 @@
     }
     return maxObject;
 }
+
 -(NSMutableArray*)wta_filterWithTest:(BOOL (^)(id))test
 {
     return [self wta_mapWithBlock:^id(id obj) {

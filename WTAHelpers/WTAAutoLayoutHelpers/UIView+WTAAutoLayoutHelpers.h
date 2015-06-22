@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @interface UIView (WTAAutoLayoutHelpers)
 
@@ -19,7 +20,7 @@
  
  @return The newly created view.
  */
-+ (id)wta_autolayoutView;
++ (__kindof UIView*)wta_autolayoutView;
 
 ///------------------------------------------------------------------------
 /// @name Automatically Setting TranslatesAutoresizingMasksIntoConstraints
@@ -46,7 +47,7 @@
  @param inset for the constraints.
  @return array of constraints
  */
-- (NSArray *)wta_addEdgeConstraintsToSuperview:(UIEdgeInsets)inset;
+- (NSArray<NSLayoutConstraint*> *)wta_addEdgeConstraintsToSuperview:(UIEdgeInsets)inset;
 
 /**
  Creates a leading constraint to the current view with offset. The constraint is added the view's superview
@@ -190,8 +191,8 @@
  @return array of the created constraints.
  @param offset from the center.
  */
-- (NSArray *)wta_addCenteringConstraintToSuperview;
-- (NSArray *)wta_addCenteringConstraintToSuperviewOffset:(CGPoint)offset;
+- (NSArray<NSLayoutConstraint*> *)wta_addCenteringConstraintToSuperview;
+- (NSArray<NSLayoutConstraint*> *)wta_addCenteringConstraintToSuperviewOffset:(CGPoint)offset;
 
 /**
  Creates a constraint to vertically center the current view. The constraint is added to the view's superview.
@@ -242,7 +243,7 @@
  @param relation of the offset.
  @return array of size constraints.
  */
-- (NSArray *)wta_addSizeConstraints:(CGSize)size;
+- (NSArray<NSLayoutConstraint*> *)wta_addSizeConstraints:(CGSize)size;
 
 /**
  Adds a constraint to set the height of the current view.
@@ -264,4 +265,13 @@
 - (NSLayoutConstraint *)wta_addWidthConstraint:(CGFloat)width;
 - (NSLayoutConstraint *)wta_addWidthConstraint:(CGFloat)width relation:(NSLayoutRelation)relation;
 
+/**
+ Adds constraints to set the size of the view equal to the size of another
+ 
+ @param toView the view that the current view will be set equal in size to
+ @param offset to shrink or grow the view by a fixed amount in both width and height relative to toView
+ @return array of size constraints
+ */
+- (NSArray<NSLayoutConstraint*> *)wta_addEqualSizeConstraintsToView:(UIView*)toView offset:(CGFloat)offset;
 @end
+NS_ASSUME_NONNULL_END

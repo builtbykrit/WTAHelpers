@@ -7,43 +7,42 @@
 
 #import <Foundation/Foundation.h>
 
+NS_ASSUME_NONNULL_BEGIN
+@interface NSArray<ObjectType> (WTAFunctionalHelpers)
 
-@interface NSArray (WTAFunctionalHelpers)
+-(NSMutableArray*)wta_mapWithBlock:(__nullable id (^)(ObjectType))block;
 
--(NSMutableArray*)wta_mapWithBlock:(id (^)(id))block;
-
--(void)wta_enumerateWithBlock:(id (^)(id))block;
-
--(id)wta_reduceWithBlock:(id (^)(id memo, id element))block
+-(id)wta_reduceWithBlock:(id (^)(id memo, ObjectType element))block
                     startValue:(id)memo;
 
--(id)wta_reduceRightWithBlock:(id (^)(id memo, id element))block
+-(id)wta_reduceRightWithBlock:(id (^)(id memo, ObjectType element))block
                          startValue:(id)memo;
 
 -(NSMutableArray*)wta_pluckAtKeyPath:(NSString*)keyPath;
 
--(NSArray*)wta_makeUnique;
+-(NSArray<ObjectType>*)wta_makeUnique;
 
--(NSMutableArray*)wta_shuffle;
+-(NSMutableArray<ObjectType>*)wta_shuffle;
 
 -(NSArray*)wta_flatten;
 
--(id)wta_findWithTest:(BOOL (^)(id))test;
+-(__nullable id)wta_findWithTest:(BOOL (^)(ObjectType))test;
 
--(id)wta_findWithMaximumValue:(NSInteger (^)(id))test;
+-(__nullable id)wta_findWithMaximumValue:(NSInteger (^)(ObjectType))test;
 
--(NSMutableArray*)wta_filterWithTest:(BOOL (^)(id))test;
+-(NSMutableArray<ObjectType>*)wta_filterWithTest:(BOOL (^)(ObjectType))test;
 
--(NSMutableArray*)wta_rejectWithTest:(BOOL (^)(id))test;
+-(NSMutableArray<ObjectType>*)wta_rejectWithTest:(BOOL (^)(ObjectType))test;
 
--(BOOL)wta_allPassTest:(BOOL (^)(id))test;
+-(BOOL)wta_allPassTest:(BOOL (^)(ObjectType))test;
 
--(BOOL)wta_anyPassTest:(BOOL (^)(id))test;
+-(BOOL)wta_anyPassTest:(BOOL (^)(ObjectType))test;
 
--(NSDictionary*)wta_groupByKeyFromElement:(id (^)(id))keyFromElement;
+-(NSDictionary*)wta_groupByKeyFromElement:(id (^)(ObjectType))keyFromElement;
 
 -(NSDictionary*)wta_groupByKeyPath:(NSString*)keyPath;
 
-- (NSArray*)wta_arrayByInsertingObject:(id)object atIndex:(NSInteger)index;
+- (NSArray<ObjectType>*)wta_arrayByInsertingObject:(ObjectType)object atIndex:(NSInteger)index;
 
 @end
+NS_ASSUME_NONNULL_END

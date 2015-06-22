@@ -15,7 +15,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 
 #pragma mark - Convenience Constructors
 
-+ (id)wta_autolayoutView;
++ (__kindof UIView*)wta_autolayoutView;
 {
     id view = [self new];
     [view setTranslatesAutoresizingMaskIntoConstraints:NO];
@@ -44,7 +44,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 
 #pragma mark - Edge Constraints to Superview
 
-- (NSArray *)wta_addEdgeConstraintsToSuperview:(UIEdgeInsets)inset
+- (NSArray<NSLayoutConstraint*> *)wta_addEdgeConstraintsToSuperview:(UIEdgeInsets)inset
 {
     NSLayoutConstraint *topConstraint = [self wta_addTopConstraintToSuperviewOffset:inset.top];
     NSLayoutConstraint *leadingConstraint = [self wta_addLeadingConstraintToSuperviewOffset:inset.left];
@@ -105,7 +105,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_leadingConstraintWithView:self toView:toView offset:offset relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -118,7 +118,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_trailingConstraintWithView:self toView:toView offset:offset relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -131,7 +131,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_topConstraintWithView:self toView:toView offset:offset relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -143,7 +143,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
 - (NSLayoutConstraint *)wta_addBottomConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint wta_bottomConstraintWithView:self toView:toView offset:offset relation:relation];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -161,7 +161,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                               separation:separation
                                                                                                 relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -177,7 +177,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                               separation:separation
                                                                                                 relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -192,7 +192,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                    bottomView:view
                                                                                    separation:separation
                                                                                      relation:relation];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -208,18 +208,18 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                    separation:separation
                                                                                      relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
 #pragma mark - Centering Constraints
 
-- (NSArray *)wta_addCenteringConstraintToSuperview
+- (NSArray<NSLayoutConstraint*> *)wta_addCenteringConstraintToSuperview
 {
     return [self wta_addCenteringConstraintToSuperviewOffset:CGPointZero];
 }
 
-- (NSArray *)wta_addCenteringConstraintToSuperviewOffset:(CGPoint)offset
+- (NSArray<NSLayoutConstraint*> *)wta_addCenteringConstraintToSuperviewOffset:(CGPoint)offset
 {
     NSLayoutConstraint *verticalConstraint = [self wta_addVerticallyCenterConstraintToSuperviewOffset:offset.y];
     NSLayoutConstraint *horizontalConstraint = [self wta_addHorizontallyCenterConstraintToSuperviewOffset:offset.x];
@@ -252,7 +252,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                            toView:toView
                                                                                            offset:offset];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -262,13 +262,13 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                          toView:toView
                                                                                          offset:offset];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [[self superview] addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
 #pragma mark - Size Constraints
 
-- (NSArray *)wta_addSizeConstraints:(CGSize)size
+- (NSArray<NSLayoutConstraint*> *)wta_addSizeConstraints:(CGSize)size
 {
     NSLayoutConstraint *widthConstraint = [self wta_addWidthConstraint:size.width];
     NSLayoutConstraint *heightConstraint = [self wta_addHeightConstraint:size.height];
@@ -286,7 +286,7 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                                height:height
                                                                              relation:relation];
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [self addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
 }
 
@@ -302,8 +302,21 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
                                                                             relation:relation];
     
     [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    [self addConstraint:constraint];
+    [NSLayoutConstraint activateConstraints:@[constraint]];
     return constraint;
+}
+
+- (NSArray<NSLayoutConstraint*> *)wta_addEqualSizeConstraintsToView:(UIView*)toView offset:(CGFloat)offset
+{
+    [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
+    
+    NSArray<NSLayoutConstraint*>* constraints = @[[NSLayoutConstraint wta_equalWidthConstraintWithView:self toView:toView offset:offset],
+                                                  [NSLayoutConstraint wta_equalHeightConstraintWithView:self
+                                                                                                 toView:toView
+                                                                                                 offset:offset]];
+    [NSLayoutConstraint activateConstraints:constraints];
+    
+    return constraints;
 }
 
 @end
