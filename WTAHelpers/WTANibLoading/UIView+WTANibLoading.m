@@ -17,7 +17,7 @@
 
 + (UINib *)wta_nib
 {
-    return [self wta_nibNamed:NSStringFromClass([self class])];
+    return [self wta_nibNamed:[[NSStringFromClass([self class]) componentsSeparatedByString:@"."] lastObject]];
 }
 
 + (instancetype)wta_loadInstanceWithNib:(UINib *)nib
