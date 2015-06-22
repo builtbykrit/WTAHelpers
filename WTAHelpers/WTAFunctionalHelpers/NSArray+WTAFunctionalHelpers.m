@@ -1,14 +1,14 @@
 //
-//  NSArray+FunctionalHelpers.m
+//  NSArray+WTAFunctionalHelpers.m
 //  GrowmarkRecruiting-iOS
 //
 //  Created by Matthew Baranowski on 7/24/14.
 //  Copyright (c) 2014 Willowtree Apps. All rights reserved.
 //
 
-#import "NSArray+FunctionalHelpers.h"
+#import "NSArray+WTAFunctionalHelpers.h"
 
-@implementation NSArray (FunctionalHelpers)
+@implementation NSArray (WTAFunctionalHelpers)
 
 -(NSMutableArray*)wta_mapWithBlock:(id (^)(id))block
 {
