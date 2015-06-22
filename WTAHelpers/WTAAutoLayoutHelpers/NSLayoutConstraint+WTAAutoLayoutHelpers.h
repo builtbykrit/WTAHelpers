@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+NS_ASSUME_NONNULL_BEGIN
 
 @interface NSLayoutConstraint (WTAAutoLayoutHelpers)
 
@@ -55,3 +56,4 @@
 + (NSLayoutConstraint *)wta_equalHeightConstraintWithView:(UIView*)view toView:(UIView*)toView offset:(CGFloat)offset;
 
 @end
+NS_ASSUME_NONNULL_END
