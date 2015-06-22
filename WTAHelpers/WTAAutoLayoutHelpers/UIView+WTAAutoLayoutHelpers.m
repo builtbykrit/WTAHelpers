@@ -319,4 +319,25 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
     return constraints;
 }
 
+- (nonnull NSLayoutConstraint*)wta_addEqualWidthConstraintToView:(nonnull UIView *)toView offset:(CGFloat)offset
+{
+    [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
+    
+    NSLayoutConstraint* constraint = [NSLayoutConstraint wta_equalWidthConstraintWithView:self toView:toView offset:offset];
+    
+    [NSLayoutConstraint activateConstraints:@[constraint]];
+    
+    return constraint;
+}
+
+- (nonnull NSLayoutConstraint*)wta_addEqualHeightConstraintToView:(nonnull UIView *)toView offset:(CGFloat)offset
+{
+    [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
+    
+    NSLayoutConstraint* constraint = [NSLayoutConstraint wta_equalHeightConstraintWithView:self toView:toView offset:offset];
+    
+    [NSLayoutConstraint activateConstraints:@[constraint]];
+    
+    return constraint;
+}
 @end

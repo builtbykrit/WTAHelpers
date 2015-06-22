@@ -273,5 +273,23 @@ NS_ASSUME_NONNULL_BEGIN
  @return array of size constraints
  */
 - (NSArray<NSLayoutConstraint*> *)wta_addEqualSizeConstraintsToView:(UIView*)toView offset:(CGFloat)offset;
+
+/**
+ Adds a constraint to set the width of the view equal to the width of another
+ 
+ @param toView the view that the current view will be set equal in width to
+ @param offset to shrink or grow the view by a fixed amount in width relative to toView
+ @return the newly activated constraint
+ */
+- (NSLayoutConstraint*)wta_addEqualWidthConstraintToView:(UIView*)toView offset:(CGFloat)offset;
+
+/**
+ Adds a constraint to set the height of the view equal to the height of another
+ 
+ @param toView the view that the current view will be set equal in height to
+ @param offset to shrink or grow the view by a fixed amount in height relative to toView
+ @return the newly activated constraint
+ */
+- (NSLayoutConstraint *)wta_addEqualHeightConstraintToView:(UIView*)toView offset:(CGFloat)offset;
 @end
 NS_ASSUME_NONNULL_END
