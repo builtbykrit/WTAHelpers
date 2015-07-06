@@ -281,4 +281,45 @@
 - (NSLayoutConstraint *)wta_addWidthConstraint:(CGFloat)width;
 - (NSLayoutConstraint *)wta_addWidthConstraint:(CGFloat)width relation:(NSLayoutRelation)relation;
 
+/**
+ Adds a constraint to set the width of the current view to the width of the superview.
+ 
+ @param offet the amount added to the width.
+ @param relation of the width constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addWidthConstraintToSuperView;
+- (NSLayoutConstraint *)wta_addWidthConstraintToSuperViewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addWidthConstraintToSuperViewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
+/**
+ Adds a constraint to set the width of the current view to toView.
+ 
+ @param toView the view the constraint will be in relation to.
+ @param offet the amount added to the width.
+ @param relation of the width constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addWidthConstraintToView:(UIView *)toView;
+- (NSLayoutConstraint *)wta_addWidthConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addWidthConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
+/**
+ Adds a constraint to set the height of the current view to the height of the superview.
+ 
+ @param offet the amount added to the height.
+ @param relation of the height constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addHeightConstraintToSuperView;
+- (NSLayoutConstraint *)wta_addHeightConstraintToSuperViewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addHeightConstraintToSuperViewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
+/**
+ Adds a constraint to set the height of the current view to toView.
+ 
+ @param toView the view the constraint will be in relation to.
+ @param offet the amount added to the height.
+ @param relation of the height constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addHeightConstraintToView:(UIView *)toView;
+- (NSLayoutConstraint *)wta_addHeightConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addHeightConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 @end

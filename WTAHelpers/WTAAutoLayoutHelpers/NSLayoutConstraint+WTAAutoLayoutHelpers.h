@@ -68,4 +68,7 @@
 + (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view height:(CGFloat)height relation:(NSLayoutRelation)relation;
 + (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view width:(CGFloat)width relation:(NSLayoutRelation)relation;
 
++ (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
++ (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
 @end

@@ -31,11 +31,13 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
 {
     WTADemoCellTypeEdges,
     WTADemoCellTypeInset,
+    WTADemoCellTypeHeight,
+    WTADemoCellTypeWidth,
     WTADemoCellTypeHorizontalSibling,
     WTADemoCellTypeVerticalSibling,
     WTADemoCellTypeIntrinsicContent,
     WTADemoCellTypeCentering,
-    WTADemoCellTypeCount,
+    WTADemoCellTypeCount
 };
 
 @interface WTADemoAutoLayoutHelperViewController ()
@@ -219,6 +221,25 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
     [testLabel3 wta_addVerticallyCenterConstraintToView:testLabel offset:0.0];
 }
 
+- (void)configureHeightCell:(WTADemoAutoLayoutCell *)cell
+{
+    UILabel *testLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
+    [[cell parentView] addSubview:testLabel];
+    [testLabel wta_addHeightConstraintToSuperView];
+    [testLabel wta_addWidthConstraint:55];
+    [testLabel wta_addCenteringConstraintToSuperviewOffset:CGPointMake(0, 0)];
+    
+}
+
+- (void)configureWidthCell:(WTADemoAutoLayoutCell *)cell
+{
+    UILabel *testLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
+    [[cell parentView] addSubview:testLabel];
+    [testLabel wta_addWidthConstraintToSuperView];
+    [testLabel wta_addHeightConstraint:55];
+    [testLabel wta_addCenteringConstraintToSuperviewOffset:CGPointMake(0, 0)];
+}
+
 #pragma mark - UITableViewDataSource Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -241,6 +262,18 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
             
             [self configureInsetCell:cell];
             title = @"Inset in Superview";
+            break;
+            
+        case WTADemoCellTypeHeight:
+            
+            title = @"Height of Superview";
+            [self configureHeightCell:cell];
+            break;
+            
+        case WTADemoCellTypeWidth:
+            
+            title = @"Width of Superview";
+            [self configureWidthCell:cell];
             break;
             
         case WTADemoCellTypeHorizontalSibling:

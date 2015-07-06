@@ -196,4 +196,26 @@
     return constraint;
 }
 
++ (NSLayoutConstraint *)wta_heightConstraintWithView:(UIView *)view toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
+                                                                  attribute:NSLayoutAttributeHeight
+                                                                  relatedBy:relation
+                                                                     toItem:toView
+                                                                  attribute:NSLayoutAttributeHeight
+                                                                 multiplier:1.0
+                                                                   constant:offset];
+    return constraint;
+}
+
++ (NSLayoutConstraint *)wta_widthConstraintWithView:(UIView *)view toView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation{
+    NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:view
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                  relatedBy:relation
+                                                                     toItem:toView
+                                                                  attribute:NSLayoutAttributeWidth
+                                                                 multiplier:1.0
+                                                                   constant:offset];
+    return constraint;
+}
+
 @end
