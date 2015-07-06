@@ -72,7 +72,7 @@
 {
     NSLayoutConstraint *constraint = [NSLayoutConstraint constraintWithItem:withView
                                                                   attribute:NSLayoutAttributeTop
-                                                                  relatedBy:NSLayoutRelationEqual
+                                                                  relatedBy:relation
                                                                      toItem:toView
                                                                   attribute:NSLayoutAttributeTop
                                                                  multiplier:1.0
