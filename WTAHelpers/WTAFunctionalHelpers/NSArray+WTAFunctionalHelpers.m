@@ -92,6 +92,14 @@
     return result;
 }
 
+-(id)wta_randomItem {
+    if (!self.count) {
+        return nil;
+    }
+    
+    return self[arc4random_uniform(self.count)];
+}
+
 -(NSArray*)wta_flatten
 {
     __weak NSArray *array = self;
@@ -241,4 +249,23 @@
     
     return [NSArray arrayWithArray:newArray];
 }
+
++(NSArray*)wta_concatenate:(id)firstArg, ...
+{
+    NSMutableArray *array = [NSMutableArray array];
+    va_list args;
+    va_start(args, firstArg);
+    for (id arg = firstArg; arg != nil; arg = va_arg(args, id))
+    {
+        if ([arg isKindOfClass:[NSArray class]]) {
+            [array addObjectsFromArray:arg];
+        } else {
+            [array addObject:arg];
+        }
+    }
+    va_end(args);
+    
+    return array;
+}
+
 @end

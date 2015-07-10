@@ -28,9 +28,24 @@
 		878CD8D918BBA59D00C4DCF4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61618B3FDF8002DCDAA /* Foundation.framework */; };
 		878CD8DA18BBA59D00C4DCF4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61818B3FDF8002DCDAA /* CoreGraphics.framework */; };
 		878CD8DB18BBA59D00C4DCF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61A18B3FDF8002DCDAA /* UIKit.framework */; };
+		B096753D1B4F1B6B00665C42 /* NSArray_WTAFunctionalHelpersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B096753C1B4F1B6B00665C42 /* NSArray_WTAFunctionalHelpersTests.m */; };
+		B09675451B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B09675441B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.m */; };
+		B09675481B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = B09675471B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.m */; };
+		B096754A1B4F1EB200665C42 /* NSDictionary_WTAFunctionalHelpersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B09675491B4F1EB200665C42 /* NSDictionary_WTAFunctionalHelpersTests.m */; };
+		B096754C1B4F22D900665C42 /* NSMutableDictionary_WTAFunctionalHelpersTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B096754B1B4F22D900665C42 /* NSMutableDictionary_WTAFunctionalHelpersTests.m */; };
 		BDCB7B9619D45ED30077A547 /* UIColor+WTAColorHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCB7B9519D45ED30077A547 /* UIColor+WTAColorHelpers.m */; };
 		BDCB7B9A19D4636D0077A547 /* UIDevice+WTADeviceHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCB7B9919D4636D0077A547 /* UIDevice+WTADeviceHelpers.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B096753E1B4F1B6B00665C42 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 879CB60B18B3FDF8002DCDAA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 878CD8D718BBA59D00C4DCF4;
+			remoteInfo = WTAHelpersDemo;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		22E799D41B273BE900215452 /* NSArray+WTAFunctionalHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+WTAFunctionalHelpers.h"; sourceTree = "<group>"; };
@@ -72,6 +87,15 @@
 		879CB61818B3FDF8002DCDAA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		879CB61A18B3FDF8002DCDAA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		879CB63518B3FDF8002DCDAA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		B09675381B4F1B6B00665C42 /* WTAHelpersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WTAHelpersTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B096753B1B4F1B6B00665C42 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B096753C1B4F1B6B00665C42 /* NSArray_WTAFunctionalHelpersTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSArray_WTAFunctionalHelpersTests.m; sourceTree = "<group>"; };
+		B09675431B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+WTAFunctionalHelpers.h"; sourceTree = "<group>"; };
+		B09675441B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+WTAFunctionalHelpers.m"; sourceTree = "<group>"; };
+		B09675461B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+WTAFunctionalHelpers.h"; sourceTree = "<group>"; };
+		B09675471B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+WTAFunctionalHelpers.m"; sourceTree = "<group>"; };
+		B09675491B4F1EB200665C42 /* NSDictionary_WTAFunctionalHelpersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSDictionary_WTAFunctionalHelpersTests.m; sourceTree = "<group>"; };
+		B096754B1B4F22D900665C42 /* NSMutableDictionary_WTAFunctionalHelpersTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSMutableDictionary_WTAFunctionalHelpersTests.m; sourceTree = "<group>"; };
 		BDCB7B9419D45ED30077A547 /* UIColor+WTAColorHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+WTAColorHelpers.h"; sourceTree = "<group>"; };
 		BDCB7B9519D45ED30077A547 /* UIColor+WTAColorHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WTAColorHelpers.m"; sourceTree = "<group>"; };
 		BDCB7B9819D4636D0077A547 /* UIDevice+WTADeviceHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+WTADeviceHelpers.h"; sourceTree = "<group>"; };
@@ -89,6 +113,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B09675351B4F1B6B00665C42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -97,6 +128,10 @@
 			children = (
 				22E799D41B273BE900215452 /* NSArray+WTAFunctionalHelpers.h */,
 				22E799D51B273BE900215452 /* NSArray+WTAFunctionalHelpers.m */,
+				B09675431B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.h */,
+				B09675441B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.m */,
+				B09675461B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.h */,
+				B09675471B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.m */,
 			);
 			path = WTAFunctionalHelpers;
 			sourceTree = "<group>";
@@ -227,6 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				879CB61C18B3FDF8002DCDAA /* WTAHelpers */,
+				B09675391B4F1B6B00665C42 /* WTAHelpersTests */,
 				879CB61518B3FDF8002DCDAA /* Frameworks */,
 				879CB61418B3FDF8002DCDAA /* Products */,
 			);
@@ -236,6 +272,7 @@
 			isa = PBXGroup;
 			children = (
 				878CD8D818BBA59D00C4DCF4 /* WTAHelpersDemo.app */,
+				B09675381B4F1B6B00665C42 /* WTAHelpersTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -259,6 +296,25 @@
 			);
 			name = WTAHelpers;
 			path = WTALayoutHelpers;
+			sourceTree = "<group>";
+		};
+		B09675391B4F1B6B00665C42 /* WTAHelpersTests */ = {
+			isa = PBXGroup;
+			children = (
+				B096753C1B4F1B6B00665C42 /* NSArray_WTAFunctionalHelpersTests.m */,
+				B09675491B4F1EB200665C42 /* NSDictionary_WTAFunctionalHelpersTests.m */,
+				B096754B1B4F22D900665C42 /* NSMutableDictionary_WTAFunctionalHelpersTests.m */,
+				B096753A1B4F1B6B00665C42 /* Supporting Files */,
+			);
+			path = WTAHelpersTests;
+			sourceTree = "<group>";
+		};
+		B096753A1B4F1B6B00665C42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B096753B1B4F1B6B00665C42 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		BDCB7B9319D45ED30077A547 /* WTAColorHelpers */ = {
@@ -299,6 +355,24 @@
 			productReference = 878CD8D818BBA59D00C4DCF4 /* WTAHelpersDemo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		B09675371B4F1B6B00665C42 /* WTAHelpersTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B09675401B4F1B6B00665C42 /* Build configuration list for PBXNativeTarget "WTAHelpersTests" */;
+			buildPhases = (
+				B09675341B4F1B6B00665C42 /* Sources */,
+				B09675351B4F1B6B00665C42 /* Frameworks */,
+				B09675361B4F1B6B00665C42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B096753F1B4F1B6B00665C42 /* PBXTargetDependency */,
+			);
+			name = WTAHelpersTests;
+			productName = WTAHelpersTests;
+			productReference = B09675381B4F1B6B00665C42 /* WTAHelpersTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -308,6 +382,12 @@
 				CLASSPREFIX = WTA;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "WillowTree Apps, Inc.";
+				TargetAttributes = {
+					B09675371B4F1B6B00665C42 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 878CD8D718BBA59D00C4DCF4;
+					};
+				};
 			};
 			buildConfigurationList = 879CB60E18B3FDF8002DCDAA /* Build configuration list for PBXProject "WTAHelpers" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -323,6 +403,7 @@
 			projectRoot = "";
 			targets = (
 				878CD8D718BBA59D00C4DCF4 /* WTAHelpersDemo */,
+				B09675371B4F1B6B00665C42 /* WTAHelpersTests */,
 			);
 		};
 /* End PBXProject section */
@@ -336,6 +417,13 @@
 				87300AC018C8C7A20099E24A /* Images.xcassets in Resources */,
 				878284D918BE432A005D1AEB /* WTAFrameHelpersCell.xib in Resources */,
 				878284D318BE432A005D1AEB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B09675361B4F1B6B00665C42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -353,7 +441,9 @@
 				878284DA18BE432A005D1AEB /* WTANavigationController.m in Sources */,
 				878284D818BE432A005D1AEB /* WTAFrameHelpersCell.m in Sources */,
 				22E799D61B273BE900215452 /* NSArray+WTAFunctionalHelpers.m in Sources */,
+				B09675451B4F1D0F00665C42 /* NSDictionary+WTAFunctionalHelpers.m in Sources */,
 				878284D718BE432A005D1AEB /* WTADemoFrameHelperViewController.m in Sources */,
+				B09675481B4F1E4300665C42 /* NSMutableDictionary+WTAFunctionalHelpers.m in Sources */,
 				873F3C4818BD24FA0052E0DC /* UIView+WTAAutoLayoutHelpers.m in Sources */,
 				878284B618BE3C20005D1AEB /* UIImage+WTAColorImage.m in Sources */,
 				873F3C3D18BD22160052E0DC /* WTAReusableIdentifier.m in Sources */,
@@ -365,7 +455,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B09675341B4F1B6B00665C42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B096754A1B4F1EB200665C42 /* NSDictionary_WTAFunctionalHelpersTests.m in Sources */,
+				B096753D1B4F1B6B00665C42 /* NSArray_WTAFunctionalHelpersTests.m in Sources */,
+				B096754C1B4F22D900665C42 /* NSMutableDictionary_WTAFunctionalHelpersTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B096753F1B4F1B6B00665C42 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 878CD8D718BBA59D00C4DCF4 /* WTAHelpersDemo */;
+			targetProxy = B096753E1B4F1B6B00665C42 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		878284BD18BE432A005D1AEB /* Main.storyboard */ = {
@@ -491,6 +599,55 @@
 			};
 			name = Release;
 		};
+		B09675411B4F1B6B00665C42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = WTAHelpersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WTAHelpersDemo.app/WTAHelpersDemo";
+			};
+			name = Debug;
+		};
+		B09675421B4F1B6B00665C42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				INFOPLIST_FILE = WTAHelpersTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WTAHelpersDemo.app/WTAHelpersDemo";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -511,6 +668,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		B09675401B4F1B6B00665C42 /* Build configuration list for PBXNativeTarget "WTAHelpersTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B09675411B4F1B6B00665C42 /* Debug */,
+				B09675421B4F1B6B00665C42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

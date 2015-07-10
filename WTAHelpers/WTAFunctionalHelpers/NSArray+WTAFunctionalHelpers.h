@@ -43,6 +43,8 @@
 
 -(NSMutableArray*)wta_shuffle;
 
+-(id)wta_randomItem;
+
 -(NSArray*)wta_flatten;
 
 -(id)wta_findWithTest:(BOOL (^)(id))test;
@@ -62,5 +64,7 @@
 -(NSDictionary*)wta_groupByKeyPath:(NSString*)keyPath;
 
 - (NSArray*)wta_arrayByInsertingObject:(id)object atIndex:(NSInteger)index;
+
++(NSArray*)wta_concatenate:(id)firstArg, ... NS_REQUIRES_NIL_TERMINATION;
 
 @end
