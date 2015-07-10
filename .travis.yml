@@ -1,6 +1,6 @@
 language: objective-c
 xcode_project: WTAHelpers.xcodeproj
-xcode_scheme: WTAHelpersTests
+xcode_scheme: WTAHelpersDemo
 xcode_sdk: iphonesimulator8.1
 notifications:
   email: false
