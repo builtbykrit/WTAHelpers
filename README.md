@@ -1,4 +1,4 @@
-#About WTAHelpers
+#About WTAHelpers [![Build Status](https://travis-ci.org/willowtreeapps/WTAHelpers.svg?branch=feature%2Ffunctionalv2)](https://travis-ci.org/willowtreeapps/WTAHelpers)
 
 WTAHelpers is a collection of useful categories for iOS development that will help you make your life easier.
 
