@@ -29,7 +29,7 @@
 
 -(NSMutableArray*)wta_mapWithBlock:(id (^)(id))block;
 
--(void)wta_enumerateWithBlock:(id (^)(id))block;
+-(void)wta_enumerateWithBlock:(void (^)(id))block;
 
 -(id)wta_reduceWithBlock:(id (^)(id memo, id element))block
                     startValue:(id)memo;
@@ -37,7 +37,7 @@
 -(id)wta_reduceRightWithBlock:(id (^)(id memo, id element))block
                          startValue:(id)memo;
 
--(NSMutableArray*)wta_pluckAtKeyPath:(NSString*)keyPath;
+-(NSMutableArray*)wta_pluckAtKeyPath:(NSString*)keyPath DEPRECATED_MSG_ATTRIBUTE("deprecated(use method valueForKeyPath: instead");
 
 -(NSArray*)wta_makeUnique;
 

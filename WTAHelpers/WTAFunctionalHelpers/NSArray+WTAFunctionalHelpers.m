@@ -40,7 +40,7 @@
     return result;
 }
 
--(void)wta_enumerateWithBlock:(id (^)(id))block
+-(void)wta_enumerateWithBlock:(void (^)(id))block
 {
     for (id obj in self) {
         block(obj);
