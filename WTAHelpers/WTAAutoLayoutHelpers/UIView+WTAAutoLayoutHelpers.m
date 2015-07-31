@@ -241,11 +241,6 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
     NSLayoutConstraint *verticalConstraint = [self wta_addVerticallyCenterConstraintToSuperviewOffset:offset.y];
     NSLayoutConstraint *horizontalConstraint = [self wta_addHorizontallyCenterConstraintToSuperviewOffset:offset.x];
     
-    [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    
-    [self.superview addConstraint:verticalConstraint];
-    [self.superview addConstraint:horizontalConstraint];
-    
     return @[verticalConstraint, horizontalConstraint];
 }
 
@@ -296,11 +291,6 @@ static BOOL __wta_automaticallySetAutoTranslatesAutoresizingMasksToOff = NO;
     NSLayoutConstraint *widthConstraint = [self wta_addWidthConstraint:size.width];
     NSLayoutConstraint *heightConstraint = [self wta_addHeightConstraint:size.height];
 
-    [self wta_setTranslatesAutoresizingMasksIntoConstraintsIfNeeded];
-    
-    [self addConstraint:heightConstraint];
-    [self addConstraint:widthConstraint];
-    
     return @[heightConstraint, widthConstraint];
 }
 
