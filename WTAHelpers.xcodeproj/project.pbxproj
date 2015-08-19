@@ -30,6 +30,7 @@
 		878CD8DB18BBA59D00C4DCF4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 879CB61A18B3FDF8002DCDAA /* UIKit.framework */; };
 		BDCB7B9619D45ED30077A547 /* UIColor+WTAColorHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCB7B9519D45ED30077A547 /* UIColor+WTAColorHelpers.m */; };
 		BDCB7B9A19D4636D0077A547 /* UIDevice+WTADeviceHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = BDCB7B9919D4636D0077A547 /* UIDevice+WTADeviceHelpers.m */; };
+		E1B0F0481B84C9CC0023AF4D /* UIControl+ActionBinding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1B0F0471B84C9CC0023AF4D /* UIControl+ActionBinding.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,8 @@
 		BDCB7B9519D45ED30077A547 /* UIColor+WTAColorHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+WTAColorHelpers.m"; sourceTree = "<group>"; };
 		BDCB7B9819D4636D0077A547 /* UIDevice+WTADeviceHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIDevice+WTADeviceHelpers.h"; sourceTree = "<group>"; };
 		BDCB7B9919D4636D0077A547 /* UIDevice+WTADeviceHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIDevice+WTADeviceHelpers.m"; sourceTree = "<group>"; };
+		E1B0F0461B84C9CC0023AF4D /* WTAHelpersDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WTAHelpersDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		E1B0F0471B84C9CC0023AF4D /* UIControl+ActionBinding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIControl+ActionBinding.swift"; path = "WTAHelpers/WTASwiftHelpers/UIControl+ActionBinding.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +211,7 @@
 				873F3C2F18BD21CE0052E0DC /* WTANibLoading */,
 				873F3C3418BD21CE0052E0DC /* WTAReusableIdentifier */,
 				878CD87C18BB9CCB00C4DCF4 /* WTAFrameHelpers */,
+				E1B0F0451B84C9A10023AF4D /* WTASwiftHelpers */,
 				874A4D7818BE771D009FEC4E /* WTAHelpers.h */,
 			);
 			name = Source;
@@ -279,6 +283,16 @@
 			path = WTADeviceHelpers;
 			sourceTree = "<group>";
 		};
+		E1B0F0451B84C9A10023AF4D /* WTASwiftHelpers */ = {
+			isa = PBXGroup;
+			children = (
+				E1B0F0471B84C9CC0023AF4D /* UIControl+ActionBinding.swift */,
+				E1B0F0461B84C9CC0023AF4D /* WTAHelpersDemo-Bridging-Header.h */,
+			);
+			name = WTASwiftHelpers;
+			path = WTAFrameHelpers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -306,6 +320,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = WTA;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "WillowTree Apps, Inc.";
 			};
@@ -349,6 +364,7 @@
 				878284D618BE432A005D1AEB /* WTADemoAutoLayoutHelperViewController.m in Sources */,
 				873F3C4618BD24FA0052E0DC /* NSLayoutConstraint+WTAAutoLayoutHelpers.m in Sources */,
 				BDCB7B9619D45ED30077A547 /* UIColor+WTAColorHelpers.m in Sources */,
+				E1B0F0481B84C9CC0023AF4D /* UIControl+ActionBinding.swift in Sources */,
 				BDCB7B9A19D4636D0077A547 /* UIDevice+WTADeviceHelpers.m in Sources */,
 				878284DA18BE432A005D1AEB /* WTANavigationController.m in Sources */,
 				878284D818BE432A005D1AEB /* WTAFrameHelpersCell.m in Sources */,
@@ -384,6 +400,7 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTAHelpersDemo/WTAHelpersDemo-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -391,7 +408,10 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "WTAHelpersDemo/WTAHelpersDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WTAHelpers/WTAFrameHelpers/WTAHelpersDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -401,10 +421,13 @@
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "WTAHelpersDemo/WTAHelpersDemo-Prefix.pch";
 				INFOPLIST_FILE = "WTAHelpersDemo/WTAHelpersDemo-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WTAHelpers/WTAFrameHelpers/WTAHelpersDemo-Bridging-Header.h";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

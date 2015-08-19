@@ -42,4 +42,8 @@ Pod::Spec.new do |s|
     ss.source_files = 'WTAHelpers/WTADeviceHelpers/*.{h,m}'
     ss.frameworks = 'SystemConfiguration', 'AVFoundation'
   end
+
+  s.subspec 'WTASwiftHelpers' do |ss|
+    ss.source_files = 'WTAHelpers/WTASwiftHelpers/*.swift'
+  end
 end
