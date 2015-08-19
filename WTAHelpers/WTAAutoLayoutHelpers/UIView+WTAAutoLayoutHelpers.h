@@ -2,8 +2,25 @@
 //  UIView+WTAAutoLayoutHelpers.h
 //  WTALayoutHelpers
 //
-//  Created by Trung Tran on 2/19/14.
-//  Copyright (c) 2014 WillowTree Apps, Inc. All rights reserved.
+//  Copyright (c) 2015 WillowTree, Inc.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import <UIKit/UIKit.h>
@@ -16,8 +33,8 @@ NS_ASSUME_NONNULL_BEGIN
 ///---------------------------------
 
 /**
- Method to create a view with translatesAutoresizingMasks set to NO. 
- 
+ Method to create a view with translatesAutoresizingMasks set to NO.
+
  @return The newly created view.
  */
 + (__kindof UIView*)wta_autolayoutView;
@@ -43,7 +60,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates Top, Leading, Bottom and Trailing constraints with inset. The constraints are added to the view's superview.
- 
+
  @param inset for the constraints.
  @return array of constraints
  */
@@ -51,7 +68,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a leading constraint to the current view with offset. The constraint is added the view's superview
- 
+
  @param offset from the edge.
  @param relation of the offset.
  @return The newly added constraint.
@@ -61,7 +78,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a trailing constraint to the current view with offset. The constraint is added the view's superview.
- 
+
  @param offset from the edge.
  @param relation of the offset.
  @return The newly added constraint.
@@ -71,7 +88,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a top constraint to the current view with offset. The constraint is added the view's superview.
- 
+
  @param offset from the edge.
  @param relation of the offset.
  @return The newly added constraint.
@@ -81,7 +98,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a bottom constraint to the current view with offset. The constraint is added the view's superview.
- 
+
  @param offset from the edge.
  @param relation of the offset.
  @return The newly added constraint.
@@ -95,7 +112,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Aligns leading edge of view with another view. The constraint is added to the view's superview.
- 
+
  @param withView View that will be effected by the constraint.
  @param offset between the withView and toView.
  @param relation of the offset.
@@ -106,7 +123,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Aligns trailing edge of a view with another view. The constraint is added to the view's superview.
- 
+
  @param toView View that the constraint is related to.
  @param offset from the edge.
  @param relation of the offset.
@@ -117,7 +134,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Aligns top edge of a view with another view. The constraint is added to the view's superview.
- 
+
  @param toView View that the constraint is related to.
  @param offset between the withView and toView.
  @param relation of the offset.
@@ -128,7 +145,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Aligns bottom edge of a view with another view. The constraint is added to the view's superview.
- 
+
  @param toView View that the constraint is related to.
  @param offset between the withView and toView.
  @param relation of the offset.
@@ -143,7 +160,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Places the current view to the right of a view with a separation.
- 
+
  @param view that the current view will placed to the right of.
  @param relation of the offset.
  @param separation between the sibling views.
@@ -153,7 +170,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Places the current view to the left of a view with a separation.
- 
+
  @param view that the current view will placed to the left of.
  @param relation of the offset.
  @param separation between the sibling views.
@@ -163,7 +180,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Places the current view to the Top of a view with a separation.
- 
+
  @param view that the current view will placed to the top of.
  @param relation of the offset.
  @param separation between the sibling views.
@@ -173,7 +190,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Places the current view to the bottom of a view with a separation.
- 
+
  @param view that the current view will placed to the bottom of.
  @param relation of the offset.
  @param separation between the sibling views.
@@ -187,7 +204,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates vertical and horizontally centering constraints to the superview. These constraints are added to the view's superview.
- 
+
  @return array of the created constraints.
  @param offset from the center.
  */
@@ -196,7 +213,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a constraint to vertically center the current view. The constraint is added to the view's superview.
- 
+
  @param offset to move the view vertically from the center.
  @return The newly added constraint.
  */
@@ -205,7 +222,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a constraint to horizontally center the current view. The constraint is added to the view's superview.
- 
+
  @param offset to move the view horizontally from the center.
  @return The newly added constraint.
  */
@@ -214,7 +231,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a constraint to vertically center a view to a view. The constraint is added to the withView's superview.
- 
+
  @param withView the view to be centered
  @param toView the view that the withView will be centered in relation to.
  @param offset to move the view vertically from the center.
@@ -224,7 +241,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Creates a constraint to horizontally center a view to a view. The constraint is added to the withView's superview.
- 
+
  @param withView the view to be centered
  @param toView the view that the withView will be centered in relation to.
  @param offset to move the view horizontally from the center.
@@ -238,7 +255,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Adds constraints for height and width from the given size struct.
- 
+
  @param size for the view.
  @param relation of the offset.
  @return array of size constraints.
@@ -247,7 +264,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Adds a constraint to set the height of the current view.
- 
+
  @param height of the view.
  @param relation of the offset.
  @return The newly added constraint.
@@ -257,7 +274,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Adds a constraint to set the width of the current view.
- 
+
  @param width of the view.
  @param relation of the offset.
  @return The newly added constraint.
@@ -267,7 +284,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Adds constraints to set the size of the view equal to the size of another
- 
+
  @param toView the view that the current view will be set equal in size to
  @param offset to shrink or grow the view by a fixed amount in both width and height relative to toView
  @return array of size constraints
@@ -276,7 +293,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Adds a constraint to set the width of the view equal to the width of another
- 
+
  @param toView the view that the current view will be set equal in width to
  @param offset to shrink or grow the view by a fixed amount in width relative to toView
  @return the newly activated constraint
@@ -285,11 +302,53 @@ NS_ASSUME_NONNULL_BEGIN
 
 /**
  Adds a constraint to set the height of the view equal to the height of another
- 
+
  @param toView the view that the current view will be set equal in height to
  @param offset to shrink or grow the view by a fixed amount in height relative to toView
  @return the newly activated constraint
  */
 - (NSLayoutConstraint *)wta_addEqualHeightConstraintToView:(UIView*)toView offset:(CGFloat)offset;
+
+/**
+ Adds a constraint to set the width of the current view to the width of the superview.
+
+ @param offet the amount added to the width.
+ @param relation of the width constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addWidthConstraintToSuperView;
+- (NSLayoutConstraint *)wta_addWidthConstraintToSuperViewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addWidthConstraintToSuperViewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
+/**
+ Adds a constraint to set the width of the current view to toView.
+
+ @param toView the view the constraint will be in relation to.
+ @param offet the amount added to the width.
+ @param relation of the width constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addWidthConstraintToView:(UIView *)toView;
+- (NSLayoutConstraint *)wta_addWidthConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addWidthConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
+/**
+ Adds a constraint to set the height of the current view to the height of the superview.
+
+ @param offet the amount added to the height.
+ @param relation of the height constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addHeightConstraintToSuperView;
+- (NSLayoutConstraint *)wta_addHeightConstraintToSuperViewOffset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addHeightConstraintToSuperViewOffset:(CGFloat)offset relation:(NSLayoutRelation)relation;
+
+/**
+ Adds a constraint to set the height of the current view to toView.
+
+ @param toView the view the constraint will be in relation to.
+ @param offet the amount added to the height.
+ @param relation of the height constraint to the superview.
+ */
+- (NSLayoutConstraint *)wta_addHeightConstraintToView:(UIView *)toView;
+- (NSLayoutConstraint *)wta_addHeightConstraintToView:(UIView *)toView offset:(CGFloat)offset;
+- (NSLayoutConstraint *)wta_addHeightConstraintToView:(UIView *)toView offset:(CGFloat)offset relation:(NSLayoutRelation)relation;
 @end
 NS_ASSUME_NONNULL_END

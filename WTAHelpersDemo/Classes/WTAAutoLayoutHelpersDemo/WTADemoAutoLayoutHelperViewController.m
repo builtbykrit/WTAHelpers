@@ -2,8 +2,25 @@
 //  WTAExampleAutoLayoutHelperViewController.m
 //  WTALayoutHelpers
 //
-//  Created by Trung Tran on 2/19/14.
-//  Copyright (c) 2014 WillowTree Apps, Inc. All rights reserved.
+//  Copyright (c) 2015 WillowTree, Inc.
+//
+//  Permission is hereby granted, free of charge, to any person obtaining a copy
+//  of this software and associated documentation files (the "Software"), to deal
+//  in the Software without restriction, including without limitation the rights
+//  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//  copies of the Software, and to permit persons to whom the Software is
+//  furnished to do so, subject to the following conditions:
+//
+//  The above copyright notice and this permission notice shall be included in
+//  all copies or substantial portions of the Software.
+//
+//  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+//  THE SOFTWARE.
 //
 
 #import "WTADemoAutoLayoutHelperViewController.h"
@@ -14,11 +31,13 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
 {
     WTADemoCellTypeEdges,
     WTADemoCellTypeInset,
+    WTADemoCellTypeHeight,
+    WTADemoCellTypeWidth,
     WTADemoCellTypeHorizontalSibling,
     WTADemoCellTypeVerticalSibling,
     WTADemoCellTypeIntrinsicContent,
     WTADemoCellTypeCentering,
-    WTADemoCellTypeCount,
+    WTADemoCellTypeCount
 };
 
 @interface WTADemoAutoLayoutHelperViewController ()
@@ -202,6 +221,25 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
     [testLabel3 wta_addVerticallyCenterConstraintToView:testLabel offset:0.0];
 }
 
+- (void)configureHeightCell:(WTADemoAutoLayoutCell *)cell
+{
+    UILabel *testLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
+    [[cell parentView] addSubview:testLabel];
+    [testLabel wta_addHeightConstraintToSuperView];
+    [testLabel wta_addWidthConstraint:55];
+    [testLabel wta_addCenteringConstraintToSuperviewOffset:CGPointMake(0, 0)];
+    
+}
+
+- (void)configureWidthCell:(WTADemoAutoLayoutCell *)cell
+{
+    UILabel *testLabel = [WTADemoAutoLayoutHelperViewController createTestLabel];
+    [[cell parentView] addSubview:testLabel];
+    [testLabel wta_addWidthConstraintToSuperView];
+    [testLabel wta_addHeightConstraint:55];
+    [testLabel wta_addCenteringConstraintToSuperviewOffset:CGPointMake(0, 0)];
+}
+
 #pragma mark - UITableViewDataSource Methods
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -224,6 +262,18 @@ typedef NS_ENUM(NSInteger, WTADemoCellType)
             
             [self configureInsetCell:cell];
             title = @"Inset in Superview";
+            break;
+            
+        case WTADemoCellTypeHeight:
+            
+            title = @"Height of Superview";
+            [self configureHeightCell:cell];
+            break;
+            
+        case WTADemoCellTypeWidth:
+            
+            title = @"Width of Superview";
+            [self configureWidthCell:cell];
             break;
             
         case WTADemoCellTypeHorizontalSibling:
