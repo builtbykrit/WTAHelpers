@@ -27,7 +27,7 @@
 
 @implementation UIColor (WTAColorHelpers)
 
-+ (NSMutableDictionary *)wta_colors
++ ( NSMutableDictionary * _Nonnull )wta_colors
 {
     static NSMutableDictionary *_colorDictionary = nil;
     static dispatch_once_t onceToken;
@@ -37,12 +37,12 @@
     return _colorDictionary;
 }
 
-+ (instancetype)wta_colorNamed:(NSString *)colorName
++ (nullable instancetype)wta_colorNamed:(NSString *)colorName
 {
     return [[self wta_colors] objectForKey:colorName];
 }
 
-+ (void)wta_setColor:(UIColor *)color forName:(NSString *)colorName
++ (void)wta_setColor:(nullable UIColor *)color forName:(nonnull NSString *)colorName
 {
     NSParameterAssert(colorName);
     if (color == nil)
@@ -247,14 +247,14 @@
     return nil;
 }
 
-- (NSArray *)wta_RGBColorComponents
+- (NSArray<NSString*> *)wta_RGBColorComponents
 {
     NSString *RGBAString = self;
     NSRange range = [RGBAString rangeOfString:@"("];
     range.location ++;
     range.length = [RGBAString rangeOfString:@")"].location - range.location;
     RGBAString = [RGBAString substringWithRange:range];
-    NSArray *components = [RGBAString componentsSeparatedByString:@","];
+    NSArray<NSString*> *components = [RGBAString componentsSeparatedByString:@","];
     if ([components count] == 3)
     {
         components = [components arrayByAddingObject:@"1.0"];

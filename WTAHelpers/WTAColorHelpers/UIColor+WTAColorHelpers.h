@@ -25,38 +25,40 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIColor (WTAColorHelpers)
 
-+ (instancetype)wta_colorNamed:(NSString *)colorName;
++ (nullable instancetype)wta_colorNamed:(NSString *)colorName;
 
-+ (void)wta_setColor:(UIColor *)color forName:(NSString *)colorName;
++ (void)wta_setColor:(nullable UIColor *)color forName:(NSString *)colorName;
 + (BOOL)wta_setColors:(NSDictionary *)colors;
 + (BOOL)wta_setColorsWithContentsOfFile:(NSString *)path;
 
-+ (instancetype)wta_colorWithString:(NSString *)colorString;
-+ (instancetype)wta_colorWithHexString:(NSString *)hexString; // #f2f2f2, 0xcbcbcbff
-+ (instancetype)wta_colorWithHexRGB:(NSUInteger)RGB;
-+ (instancetype)wta_colorWithHexRGBA:(NSUInteger)RGBA;
-+ (instancetype)wta_colorWithRGBAString:(NSString *)RGBAString; // rgba(0.0, 0.0, 0.0, 0.0)
-+ (instancetype)wta_colorWith8BitRGBAColorComponents:(const CGFloat *)components;
-+ (instancetype)wta_colorWith8BitRed:(CGFloat)red
++ (nullable instancetype)wta_colorWithString:(NSString *)colorString;
++ (nullable instancetype)wta_colorWithHexString:(NSString *)hexString; // #f2f2f2, 0xcbcbcbff
++ (nullable instancetype)wta_colorWithHexRGB:(NSUInteger)RGB;
++ (nullable instancetype)wta_colorWithHexRGBA:(NSUInteger)RGBA;
++ (nullable instancetype)wta_colorWithRGBAString:(NSString *)RGBAString; // rgba(0.0, 0.0, 0.0, 0.0)
++ (nullable instancetype)wta_colorWith8BitRGBAColorComponents:(const CGFloat *)components;
++ (nullable instancetype)wta_colorWith8BitRed:(CGFloat)red
                            green:(CGFloat)green
                             blue:(CGFloat)blue
                            alpha:(CGFloat)alpha;
 
-- (NSString *)wta_hexStringValue;
-- (NSString *)wta_RGBAStringValue;
+- (nullable NSString *)wta_hexStringValue;
+- (nullable NSString *)wta_RGBAStringValue;
 
 @end
 
 @interface NSString (WTAColorHelpers)
 
-- (NSString *)wta_hexColorString;
-- (NSArray *)wta_RGBColorComponents;
+- (nullable NSString *)wta_hexColorString;
+- (nullable NSArray<NSString*> *)wta_RGBColorComponents;
 
 @end
 
-CG_INLINE CGColorRef WTACGColorCreateWith8BitRGBA(CGFloat r, CGFloat g, CGFloat b, CGFloat a)
+CG_INLINE __nullable CGColorRef WTACGColorCreateWith8BitRGBA(CGFloat r, CGFloat g, CGFloat b, CGFloat a)
 {
     const CGFloat components[] = {(r / 255.0), (g / 255.0), (b / 255.0), a};
     CGColorSpaceRef spaceRef = CGColorSpaceCreateDeviceRGB();
@@ -65,7 +67,7 @@ CG_INLINE CGColorRef WTACGColorCreateWith8BitRGBA(CGFloat r, CGFloat g, CGFloat 
     return colorRef;
 }
 
-CG_INLINE CGColorRef WTACGColorCreateWithHexRGBA(u_int32_t RBGA)
+CG_INLINE __nullable CGColorRef WTACGColorCreateWithHexRGBA(u_int32_t RBGA)
 {
     return WTACGColorCreateWith8BitRGBA(((RBGA & 0xFF000000) >> 24),
                                      ((RBGA & 0xFF0000) >> 16),
@@ -73,7 +75,7 @@ CG_INLINE CGColorRef WTACGColorCreateWithHexRGBA(u_int32_t RBGA)
                                      (RBGA & 0xFF));
 }
 
-CG_INLINE CGColorRef WTACGColorCreateWithHexString(NSString *hexString)
+CG_INLINE __nullable CGColorRef WTACGColorCreateWithHexString(NSString * __nullable hexString)
 {
     hexString = [hexString wta_hexColorString];
     if (hexString != nil)
@@ -85,7 +87,7 @@ CG_INLINE CGColorRef WTACGColorCreateWithHexString(NSString *hexString)
     return NULL;
 }
 
-CG_INLINE CGColorRef WTACGColorCreateWithRGBAString(NSString *RGBAString)
+CG_INLINE __nullable CGColorRef WTACGColorCreateWithRGBAString(NSString * __nonnull RGBAString)
 {
     NSArray *components = [RGBAString wta_RGBColorComponents];
     if ([components count] == 4)
@@ -98,3 +100,5 @@ CG_INLINE CGColorRef WTACGColorCreateWithRGBAString(NSString *RGBAString)
     
     return NULL;
 }
+
+NS_ASSUME_NONNULL_END

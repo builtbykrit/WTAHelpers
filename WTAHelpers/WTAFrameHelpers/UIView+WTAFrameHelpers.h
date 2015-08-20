@@ -25,6 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  WTAFrameHelpers provides convenience methods for view placement and frame information.
  */
@@ -329,3 +331,5 @@
 - (void)wta_setFrameOriginYAboveView:(UIView *)view offset:(CGFloat)offset;
 
 @end
+
+NS_ASSUME_NONNULL_END

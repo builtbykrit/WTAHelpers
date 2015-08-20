@@ -6,6 +6,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 @interface UIImage (WTAColorImage)
 
 /**
@@ -33,7 +35,7 @@
 + (UIImage *)wta_imageWithSize:(CGSize)size
                backgroundColor:(UIColor *)backgroundColor
                     borderEdge:(UIRectEdge)borderEdge
-                   borderColor:(UIColor *)borderColor
+                   borderColor:(UIColor * __nullable)borderColor
                    borderWidth:(CGFloat)borderWidth;
 
 /**
@@ -47,3 +49,5 @@
 - (UIImage *)wta_desaturatedImage;
 
 @end
+
+NS_ASSUME_NONNULL_END

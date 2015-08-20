@@ -25,6 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  This category adds a method to `UIView` to make nib loading easier.
  */
@@ -51,13 +53,15 @@
  @param nib to load the view from.
  @return The newly instantiated view.
  */
-+ (instancetype)wta_loadInstanceWithNib:(UINib *)nib;
++ (__nullable instancetype)wta_loadInstanceWithNib:(UINib *)nib;
 
 /**
  Instantiates the first occurence of the view's class in the nib. This method loads the nib with the name equal to the view's class.
  
  @return The newly instantiated view.
  */
-+ (instancetype)wta_loadInstanceFromNib;
++ (__nullable instancetype)wta_loadInstanceFromNib;
 
 @end
+
+NS_ASSUME_NONNULL_END

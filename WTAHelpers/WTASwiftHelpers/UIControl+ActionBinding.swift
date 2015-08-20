@@ -11,7 +11,7 @@ import UIKit
 private class ActionBinding<T: UIControl>: NSObject
 {
     private weak var control: T?
-    private let action: (T) -> Void
+    private let action: T -> Void
     private let event: UIControlEvents
     
     /**
@@ -23,7 +23,7 @@ private class ActionBinding<T: UIControl>: NSObject
     
     - returns: The ActionBinding object
     */
-    private init(control: T, event: UIControlEvents, action: (T) -> Void)
+    private init(control: T, event: UIControlEvents, action: T -> Void)
     {
         self.control = control
         self.action = action
@@ -31,7 +31,7 @@ private class ActionBinding<T: UIControl>: NSObject
         
         super.init()
         
-        control.addTarget(self, action: "actionHappened:", forControlEvents: event)
+        control.addTarget(self, action: "eventHappened:", forControlEvents: event)
     }
    
     /**
@@ -40,7 +40,7 @@ private class ActionBinding<T: UIControl>: NSObject
     - parameter sender: This is sent by the system when the UIControl's action fires.
     It's defined as a UIControl here and not T because this method must be visible to Objective-C
     */
-    private dynamic func actionHappened(sender: UIControl)
+    private dynamic func eventHappened(sender: UIControl)
     {
         if let control = control
         {
@@ -49,7 +49,7 @@ private class ActionBinding<T: UIControl>: NSObject
     }
     
     deinit {
-        control?.removeTarget(self, action: "actionHappened:", forControlEvents: event)
+        control?.removeTarget(self, action: "eventHappened:", forControlEvents: event)
     }
 }
 
@@ -63,7 +63,7 @@ the protocol extension.
 
 - returns: The ActionBinding object
 */
-private func createBinding<T: UIControl>(control: T, event: UIControlEvents, action: (T) -> Void) -> ActionBinding<T>
+private func createBinding<T: UIControl>(control: T, event: UIControlEvents, action: T -> Void) -> ActionBinding<T>
 {
     return ActionBinding<T>(control: control, event: event, action: action)
 }

@@ -25,6 +25,8 @@
 
 #import <UIKit/UIKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 /**
  This category adds a method to `UICollectionReusableView` to make reusableIdentifiers easier.
  */
@@ -60,3 +62,5 @@
 + (NSString *)wta_reuseableIdentifier;
 
 @end
+
+NS_ASSUME_NONNULL_END
