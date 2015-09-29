@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = 'WTAHelpers'
-  s.version  = '0.1.2'
+  s.version  = '0.1.3'
   s.license  = { :type => "MIT", :file => "LICENSE" }
   s.summary  = 'An assortment of useful categories and classes.'
   s.homepage = 'https://github.com/willowtreeapps/WTAHelpers'
