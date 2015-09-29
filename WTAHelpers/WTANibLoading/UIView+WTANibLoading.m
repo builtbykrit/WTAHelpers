@@ -34,7 +34,20 @@
 
 + (UINib *)wta_nib
 {
-    return [self wta_nibNamed:NSStringFromClass([self class])];
+    NSString* className = NSStringFromClass([self class]);
+    NSString *file = [[NSBundle mainBundle] pathForResource:className ofType:@"nib"];
+    if (file) {
+        return [self wta_nibNamed:className];
+    }
+    
+    className = [[className componentsSeparatedByString:@"."] lastObject];
+    file = [[NSBundle mainBundle] pathForResource:className ofType:@"nib"];
+    
+    if (file) {
+        return [self wta_nibNamed:className];
+    }
+    
+    return nil;
 }
 
 + (instancetype)wta_loadInstanceWithNib:(UINib *)nib
